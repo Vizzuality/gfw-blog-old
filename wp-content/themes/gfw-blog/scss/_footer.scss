@@ -1,0 +1,76 @@
+/* =Footer
+----------------------------------------------- */
+
+.site-footer {
+  height: 301px;
+  background-color: #DFDFDC;
+  border-top: 1px solid #C8C8C6;
+}
+
+.site-info {
+  margin: 0 auto;
+  width: 960px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #999;
+
+  strong {
+    font-weight: normal;
+    color: #666;
+  }
+
+  a {
+    color: #666;
+    text-decoration: underline;
+
+    &:hover {
+      color: #444;
+    }
+  }
+}
+
+.footer-share {
+  overflow: hidden;
+  display: block;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #C8C8C6;
+  height: 22px;
+  padding: 20px 0;
+  @extend .fira_sans_medium;
+  font-size: 17px;
+
+  p {
+    float: left;
+    line-height: 22px;
+  }
+}
+
+.footer-logos {
+  float: left;
+  width: 640px;
+
+  p { margin-bottom: 10px; }
+}
+
+.footer-address {
+  float: left;
+
+  p, .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px 10px 0;
+  width: 88px;
+
+  &.wri { height: 31px; @include footer-icons-sprite(wri); }
+  &.google { height: 52px; @include footer-icons-sprite(google); }
+  &.cfgd { height: 52px; @include footer-icons-sprite(cfgd); }
+  &.universitymaryland { height: 52px; @include footer-icons-sprite(universitymaryland); }
+  &.imazon { height: 52px; @include footer-icons-sprite(imazon); }
+  &.esri { height: 28px; @include footer-icons-sprite(esri); }
+  &.unep { height: 52px; @include footer-icons-sprite(unep); }
+}
