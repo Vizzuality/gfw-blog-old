@@ -399,7 +399,21 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 	}
 
 	// Set to use PHP's mail()
-	$phpmailer->IsMail();
+	// $phpmailer->IsMail();
+
+	// Over ride and set to use SMTP. Set enviromental variables.
+	$phpmailer->IsSMTP();
+	$phpmailer->SMTPAuth = true; // enable SMTP authentication
+	$phpmailer->Port = 587; //25; // set the SMTP server port
+
+	$phpmailer->Host = 'smtp.mandrillapp.com'; // SMTP server
+	$phpmailer->Username = $_ENV["MANDRILL_USERNAME"]; // SMTP server username
+	$phpmailer->Password = $_ENV["MANDRILL_API_KEY"]; // SMTP server password
+
+	$phpmailer->From = $bloginfo = get_bloginfo( 'admin_email', 'raw' );
+	$phpmailer->FromName = $bloginfo = get_bloginfo( 'name', 'raw' );
+	$phpmailer->Sender = $bloginfo = get_bloginfo( 'admin_email', 'raw' );
+	//$phpmailer->AddReplyTo($bloginfo = get_bloginfo( 'admin_email', 'raw' );, $bloginfo = get_bloginfo( 'name', 'raw' ););
 
 	// Set Content-Type and charset
 	// If we don't have a content-type from the input headers
