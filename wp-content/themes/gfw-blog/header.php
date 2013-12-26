@@ -25,7 +25,7 @@
   <header id="masthead" role="banner" <?php if (is_single() && in_category( 'News roundups' )) : ?>class="site-header news-header"<?php elseif (is_single()) : ?>style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header"<?php else : ?>class="site-header"<?php endif; ?>>
     <div class="header-inner">
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <a href="http://localhost:8888/" title="Home" class="logo">Blog</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">Blog</a>
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav><!-- #site-navigation -->
