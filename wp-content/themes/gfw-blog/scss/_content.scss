@@ -335,15 +335,20 @@ a {
 .nav-previous {
   float: left;
   width: 50%;
+  border-right: 1px solid #ddd;
+  margin-right: -1px;
 
   .meta-nav { @include content-icons-sprite(larrow); }
+
+  + .nav-next {
+    border-left: 0;
+  }
 }
 
 .nav-next {
   float: right;
   width: 50%;
   border-left: 1px solid #ddd;
-  margin-left: -1px;
 
   .meta-nav { @include content-icons-sprite(rarrow); }
 }
