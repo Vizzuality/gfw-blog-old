@@ -2,17 +2,15 @@
 ----------------------------------------------- */
 
 .site-footer {
-  height: 301px;
-  background-color: #DFDFDC;
-  border-top: 1px solid #C8C8C6;
+  height: 495px;
+  font-size: 13px;
+  color: #999;
+  background-color: #444;
 }
 
 .site-info {
-  margin: 0 auto;
-  width: 960px;
-  padding: 0 10px;
-  font-size: 13px;
-  color: #999;
+  border-bottom: 1px solid #666;
+  margin-bottom: 30px;
 
   strong {
     font-weight: normal;
@@ -32,45 +30,83 @@
 .footer-share {
   overflow: hidden;
   display: block;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #C8C8C6;
-  height: 22px;
-  padding: 20px 0;
-  @extend .fira_sans_medium;
-  font-size: 17px;
+  margin: 0 auto;
+  width: 620px;
+  height: 45px;
+  padding: 15px 10px;
+  font-size: 21px;
+  @extend .fira_sans;
+  color: #fff;
 
   p {
     float: left;
-    line-height: 22px;
+    line-height: 45px;
   }
 }
 
-.footer-logos {
-  float: left;
+.visit-link {
+  float: right;
+
+  a {
+    display: block;
+    padding: 0 15px;
+    font-size: 21px;
+    line-height: 45px;
+    @extend .fira_sans_medium;
+    color: #fff;
+    text-decoration: none;
+    background: #A1BA42;
+    @include border-radius(23px);
+
+    &:hover {
+      color: #fff;
+      background: darken(#A1BA42, 5%);
+    }
+  }
+}
+
+.footer-logos,
+.footer-address {
+  margin: 0 auto;
   width: 640px;
+}
+
+.footer-logos {
+  margin-bottom: 30px;
+
+  .logos {
+    border-bottom: 1px solid #666;
+    margin: 0 10px;
+    padding-bottom: 10px;
+  }
 
   p { margin-bottom: 10px; }
 }
 
 .footer-address {
-  float: left;
+  text-align: center;
 
-  p, .footer-logo {
-    margin-bottom: 20px;
-  }
+  .footer-logo { margin-bottom: 30px; }
 }
 
 .footer-logo {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 15px 10px 0;
+  margin: 0 40px 20px 0;
   width: 88px;
 
-  &.wri { height: 31px; @include footer-icons-sprite(wri); }
+  &.last { margin-right: 0; }
+
+  &.wri { height: 31px; width: 269px; @include footer-icons-sprite(wri); }
   &.google { height: 52px; @include footer-icons-sprite(google); }
-  &.cfgd { height: 52px; @include footer-icons-sprite(cfgd); }
-  &.universitymaryland { height: 52px; @include footer-icons-sprite(universitymaryland); }
-  &.imazon { height: 52px; @include footer-icons-sprite(imazon); }
   &.esri { height: 28px; @include footer-icons-sprite(esri); }
+  &.universitymaryland { height: 52px; @include footer-icons-sprite(universitymaryland); }
+  &.twrus { height: 20px; @include footer-icons-sprite(twrus); }
+  &.cfgd { height: 52px; @include footer-icons-sprite(cfgd); }
+  &.imazon { height: 52px; @include footer-icons-sprite(imazon); }
   &.unep { height: 52px; @include footer-icons-sprite(unep); }
+  &.gef { height: 42px; @include footer-icons-sprite(gef); }
+  &.scannex { height: 16px; @include footer-icons-sprite(scannex); }
+  &.gfwca { height: 44px; @include footer-icons-sprite(gfwca); }
+  &.usaid { height: 53px; @include footer-icons-sprite(usaid); }
 }

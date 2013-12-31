@@ -15,39 +15,35 @@
       <?php do_action( 'gfw_blog_credits' ); ?>
 
       <div class="footer-share">
-        <p>Spread the word. <strong>Share Global Forest Watch.</strong></p>
+        <p>Because deforestation matters</p>
 
-        <div class="share_buttons">
-          <div id="fb-root"></div>
-          <a href="http://twitter.com/share" target="_blank" class="twitter-share-button" data-url="http://www.gfw-beta.org/" data-text="Global Forest Watch">Tweet</a>
-          <div class="g-plusone" data-size="medium" data-href="http://www.gfw-beta.org/"></div>
-          <div class="fb-like" data-href="http://www.gfw-beta.org/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        <div class="visit-link">
+          <a href="http://www.gfw-beta.org/">Visit GFW website</a>
         </div>
       </div>
+    </div>
 
-      <div class="footer-logos">
-        <p>A partnership of</p>
-        <a href="http://www.wri.org" class="footer-logo wri" target="_blank"></a>
+    <div class="footer-logos">
+      <div class="logos">
+        <p><strong>Partners</strong></p>
         <a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a>
-        <a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a>
-        <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
-        <a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon" target="_blank"></a>
-        <a href="http://www.unep.org/" class="footer-logo unep" target="_blank"></a>
         <a href="http://www.esri.com/" class="footer-logo esri" target="_blank"></a>
+        <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
+        <a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus" target="_blank"></a>
+        <a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon last" target="_blank"></a>
+        <a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a>
+        <a href="http://www.unep.org/" class="footer-logo unep" target="_blank"></a>
+        <a href="http://www.thegef.org/gef/" class="footer-logo gef" target="_blank"></a>
+        <a href="http://www.scanex.ru/ru/index.html" class="footer-logo scannex" target="_blank"></a>
+        <a href="http://globalforestwatch.ca/" class="footer-logo gfwca last" target="_blank"></a>
+        <a href="http://www.usaid.gov/climate/tfa2020" class="footer-logo usaid" target="_blank"></a>
       </div>
+    </div>
 
-      <div class="footer-address">
-        <p>A strategic initiative of</p>
-        <a href="http://www.wri.org" class="footer-logo wri" target="_blank"></a>
-        <address>
-          10 G Street NE Suite 800, Washington, DC 20002, USA<br>
-          <br>
-          Phone +1 (202) 729-7600<br>
-          Fax +1 (202) 729-7610
-          Email <a href="mailto:gfw@wri.org">gfw@wri.org</a>
-        </address>
-      </div>
-    </div><!-- .site-info -->
+    <div class="footer-address">
+      <a href="http://www.wri.org" class="footer-logo wri" target="_blank"></a>
+      <address>10 G Street NE Suite 800, Washington, DC 20002, USA — Phone +1 (202) 729-7600 / Fax +1 (202) 729-7610</address>
+    </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
 
