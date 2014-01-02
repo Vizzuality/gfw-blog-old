@@ -44,11 +44,15 @@ a {
 }
 
 .home .site-header {
-  background: #00D9A3 image-url('header-bg.png');
   @include background-size(cover);
 }
 
 .news-header {
+  background: #00D9A3 image-url('header-bg.png');
+  @include background-size(cover);
+}
+
+.news-single-header {
   background: #ccc image-url('news-bg.png');
   @include background-size(cover);
 }
@@ -102,7 +106,8 @@ a {
   }
 }
 
-.menu-item a:hover {
+.menu-item a:hover,
+.current-menu-item a {
   color: rgba(#000, .5);
 }
 
@@ -197,7 +202,9 @@ a {
 ----------------------------------------------- */
 
 .site-content {
-  margin-top: 20px;
+  margin: 20px auto 50px;
+  max-width: 640px;
+  padding: 0 10px;
 }
 
 .hentry {
@@ -207,13 +214,6 @@ a {
 .byline {
   float: left;
   line-height: 22px;
-}
-
-.entry-meta,
-.entry-title {
-  margin: 0 auto;
-  max-width: 640px;
-  padding: 0 10px;
 }
 
 .entry-meta {
@@ -273,15 +273,13 @@ a {
 }
 
 .entry-content {
-  margin: 0 auto;
-  max-width: 660px;
   font-size: 17px;
   line-height: 1.4;
   color: #555;
 
   .inner {
     border-top: 1px solid #ddd;
-    margin: 20px 10px 0;
+    margin: 20px auto 0;
     padding-top: 20px;
   }
 
@@ -294,26 +292,13 @@ a {
 ----------------------------------------------- */
 
 .navigation {
-  margin: 0 auto 50px;
-  max-width: 660px;
   text-align: center;
-}
-
-.home {
-  .navigation {
-    margin: 0 auto;
-  }
-
-  .nav-links {
-    border-bottom: 0;
-  }
 }
 
 .nav-links {
   overflow: hidden;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin: 20px 10px 0;
 
   a {
     display: block;
@@ -376,9 +361,6 @@ a {
 
     .inner {
       border: 0;
-      margin: 0 auto;
-      padding: 0 10px;
-      max-width: 640px;
     }
   }
 }

@@ -22,7 +22,17 @@
 <div id="page" class="hfeed site">
   <?php do_action( 'before' ); ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-  <header id="masthead" role="banner" <?php if (is_single() && in_category( 'News roundups' )) : ?>class="site-header news-header"<?php elseif (is_single()) : ?>style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header"<?php else : ?>class="site-header"<?php endif; ?>>
+
+  <?php if (is_category() && in_category( 'News Roundups' )) : ?>
+    <header id="masthead" role="banner" class="site-header news-header">
+  <?php elseif (is_single() && in_category( 'News Roundups' )) : ?>
+    <header id="masthead" role="banner" class="site-header news-single-header">
+  <?php elseif (is_single()) : ?>
+    <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
+  <?php else : ?>
+    <header id="masthead" role="banner" class="site-header">
+  <?php endif; ?>
+
     <div class="header-inner">
       <nav id="site-navigation" class="main-navigation" role="navigation">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">Blog</a>
@@ -71,6 +81,27 @@
             <?php edit_post_link( __( 'Edit', 'gfw-blog' ), '<span class="sep"><span>·</span></span><span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-meta -->
         </div>
+      <?php elseif (is_category() && in_category( 'News Roundups' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> News</a></h1>
+          <p class="site-description">Recurring posts which present a digestible collection of high-quality news stories demonstrating the power of geospatial analysis to fight deforestation</p>
+          <div class="site-branding-sep"></div>
+        </div>
+      <?php elseif (is_category() && in_category( 'Feature Stories' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Stories</a></h1>
+          <p class="site-description">stories description</p>
+          <div class="site-branding-sep"></div>
+        </div>
+      <?php elseif (is_category() && in_category( 'GFW Updates' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Updates</a></h1>
+          <p class="site-description">updates description</p>
+          <div class="site-branding-sep"></div>
+        </div>
       <?php else : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
@@ -81,15 +112,12 @@
       <?php endif; ?>
     </div><!-- .header-inner -->
 
-    <?php if (is_single() && in_category( 'News roundups' )) : ?>
-      <div class="badge badge-news"><i></i>News roundups</div>
-    <?php elseif (is_single() && in_category( 'Feature stories' )) : ?>
-      <div class="badge badge-feature"><i></i>Feature stories</div>
-    <?php elseif (is_single()) : ?>
+    <?php if (is_single() && in_category( 'News Roundups' )) : ?>
+      <div class="badge badge-news"><i></i>News Roundups</div>
+    <?php elseif (is_single() && in_category( 'Feature Stories' )) : ?>
+      <div class="badge badge-feature"><i></i>Feature Stories</div>
+    <?php elseif (is_single() && in_category( 'GFW Updates' )) : ?>
       <div class="badge badge-updates"><i></i>Updates</div>
-    <?php else : ?>
-      <div class="badge">
-      </div>
     <?php endif; ?>
   </header><!-- #masthead -->
 
