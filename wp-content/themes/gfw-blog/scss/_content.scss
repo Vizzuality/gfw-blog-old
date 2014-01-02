@@ -202,7 +202,7 @@ a {
 ----------------------------------------------- */
 
 .site-content {
-  margin: 20px auto 50px;
+  margin: 20px auto 0;
   max-width: 640px;
   padding: 0 10px;
 }
@@ -292,10 +292,12 @@ a {
 ----------------------------------------------- */
 
 .navigation {
+  margin-bottom: 50px;
   text-align: center;
 }
 
 .nav-links {
+  display: table;
   overflow: hidden;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -317,21 +319,15 @@ a {
 }
 
 .nav-previous {
-  float: left;
+  display: table-cell;
   width: 280px;
   padding: 40px 20px;
-  border-right: 1px solid #ddd;
-  margin-right: -1px;
 
   .meta-nav { @include content-icons-sprite(larrow); }
-
-  + .nav-next {
-    border-left: 0;
-  }
 }
 
 .nav-next {
-  float: right;
+  display: table-cell;
   width: 280px;
   padding: 40px 20px;
   border-left: 1px solid #ddd;
