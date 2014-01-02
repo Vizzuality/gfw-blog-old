@@ -17,14 +17,12 @@
   </div><!-- .entry-meta -->
 
   <div class="entry-content">
-    <div class="inner">
-      <?php the_content(); ?>
-      <?php
-        wp_link_pages( array(
-          'before' => '<div class="page-links">' . __( 'Pages:', 'gfw-blog' ),
-          'after'  => '</div>',
-        ) );
-      ?>
-    </div><!-- .entry-content -->
+    <?php the_content(); ?>
+    <?php
+      wp_link_pages( array(
+        'before' => '<div class="page-links">' . __( 'Pages:', 'gfw-blog' ),
+        'after'  => '</div>',
+      ) );
+    ?>
   </div><!-- .entry-content -->
 </article><!-- #post-## -->

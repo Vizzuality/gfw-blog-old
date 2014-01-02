@@ -274,15 +274,12 @@ a {
 }
 
 .entry-content {
+  border-top: 1px solid #ddd;
+  margin: 20px auto 0;
+  padding-top: 20px;
   font-size: 17px;
   line-height: 1.4;
   color: #555;
-
-  .inner {
-    border-top: 1px solid #ddd;
-    margin: 20px auto 0;
-    padding-top: 20px;
-  }
 
   p { margin-bottom: 20px; }
 }
@@ -294,14 +291,14 @@ a {
 
 .navigation {
   margin-bottom: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
 .nav-links {
   display: table;
-  overflow: hidden;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  width: 100%;
 
   a {
     display: block;
@@ -336,7 +333,22 @@ a {
   .meta-nav { @include content-icons-sprite(rarrow); }
 }
 
+.paging-navigation {
+  .nav-previous {
+    float: left;
+    border-right: 1px solid #ddd;
+  }
 
+  .nav-next {
+    float: right;
+    border-left: 1px solid #ddd;
+  }
+
+  .nav-previous + .nav-next {
+    border-left: 0;
+    margin-left: -1px;
+  }
+}
 
 .single-post {
   .header-inner {
@@ -351,14 +363,6 @@ a {
     border-top: 1px solid #ddd;
     padding-top: 30px;
     margin-top: 20px;
-  }
-
-  .entry-content {
-    max-width: none;
-
-    .inner {
-      border: 0;
-    }
   }
 }
 

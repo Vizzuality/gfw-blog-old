@@ -51,9 +51,7 @@
   </div><!-- .entry-summary -->
   <?php else : ?>
   <div class="entry-content">
-    <div class="inner">
-      <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gfw-blog' ) ); ?>
-    </div><!-- .entry-content -->
+    <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'gfw-blog' ) ); ?>
   </div><!-- .entry-content -->
   <?php endif; ?>
 </article><!-- #post-## -->
