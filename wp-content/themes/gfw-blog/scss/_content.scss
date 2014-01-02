@@ -210,6 +210,12 @@ a {
 
 .hentry {
   margin: 0 0 50px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .byline {
@@ -283,20 +289,31 @@ a {
 
   p { margin-bottom: 20px; }
 
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 20px;
+    @extend .fira_sans_medium;
+    color: #444;
+  }
+
   h1 {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: 20px 0;
-    margin-bottom: 20px;
     font-size: 27px;
-    @extend .fira_sans_medium;
-    color: #444;
   }
+
+  h2 { font-size: 21px; }
+
+  h3 { font-size: 19px; }
 
   li {
     margin-bottom: 10px;
     list-style: square;
   }
+
+  strong { font-weight: bold; }
 }
 
 
@@ -439,4 +456,12 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+img.alignright {
+  float: right;
+  margin-right: -80px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background: #FFF;
 }
