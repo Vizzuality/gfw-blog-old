@@ -107,7 +107,8 @@ a {
 }
 
 .menu-item a:hover,
-.current-menu-item a {
+.current-menu-item a,
+.current-menu-parent a {
   color: rgba(#000, .5);
 }
 
