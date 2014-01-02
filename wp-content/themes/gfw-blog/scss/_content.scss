@@ -317,7 +317,6 @@ a {
 
   a {
     display: block;
-    padding: 40px 20px;
     @extend .fira_sans_medium;
     font-size: 19px;
   }
@@ -334,7 +333,8 @@ a {
 
 .nav-previous {
   float: left;
-  width: 50%;
+  width: 280px;
+  padding: 40px 20px;
   border-right: 1px solid #ddd;
   margin-right: -1px;
 
@@ -347,7 +347,8 @@ a {
 
 .nav-next {
   float: right;
-  width: 50%;
+  width: 280px;
+  padding: 40px 20px;
   border-left: 1px solid #ddd;
 
   .meta-nav { @include content-icons-sprite(rarrow); }

@@ -54,8 +54,8 @@ function gfw_blog_post_nav() {
 	<nav class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
 
-			<div class="nav-previous"><?php previous_post_link( '%link', _x( '<span class="meta-nav"><span>&larr;</span></span>Previous article', 'Previous post link', 'gfw-blog' ) ); ?></div>
-			<div class="nav-next"><?php next_post_link(     '%link', _x( '<span class="meta-nav"><span>&rarr;</span></span>Newer article', 'Next post link', 'gfw-blog' ) ); ?></div>
+			<div class="nav-previous"><?php previous_post('<span class="meta-nav"><span>&larr;</span></span>%', '', 'yes'); ?></div>
+			<div class="nav-next"><?php next_post('<span class="meta-nav"><span>&rarr;</span></span>%', '', 'yes'); ?></div>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
