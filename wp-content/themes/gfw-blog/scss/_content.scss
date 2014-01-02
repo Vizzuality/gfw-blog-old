@@ -282,6 +282,21 @@ a {
   color: #555;
 
   p { margin-bottom: 20px; }
+
+  h1 {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 27px;
+    @extend .fira_sans_medium;
+    color: #444;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style: square;
+  }
 }
 
 
