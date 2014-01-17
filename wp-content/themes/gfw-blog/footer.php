@@ -18,7 +18,7 @@
         <p>Because deforestation matters.</p>
 
         <div class="visit-link">
-          <a href="http://www.gfw-beta.org/">Visit GFW website</a>
+          <a href="http://www.globalforestwatch.org/">Visit GFW website</a>
         </div>
       </div>
     </div>
