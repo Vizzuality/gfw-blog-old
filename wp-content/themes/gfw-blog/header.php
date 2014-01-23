@@ -23,9 +23,9 @@
   <?php do_action( 'before' ); ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-  <?php if (is_category() && in_category( 'News Roundups' )) : ?>
+  <?php if (is_category() && in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
-  <?php elseif (is_single() && in_category( 'News Roundups' )) : ?>
+  <?php elseif (is_single() && in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-single-header">
   <?php elseif (is_single()) : ?>
     <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
@@ -81,25 +81,25 @@
             <?php edit_post_link( __( 'Edit', 'gfw-blog' ), '<span class="sep"><span>·</span></span><span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-meta -->
         </div>
-      <?php elseif (is_category() && in_category( 'News Roundups' )) : ?>
+      <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> News</a></h1>
-          <p class="site-description">Recurring posts which present a digestible collection of high-quality news stories demonstrating the power of geospatial analysis to fight deforestation</p>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW News roundups</a></h1>
+          <p class="site-description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
           <div class="site-branding-sep"></div>
         </div>
-      <?php elseif (is_category() && in_category( 'Feature Stories' )) : ?>
+      <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Stories</a></h1>
-          <p class="site-description">stories description</p>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Feature posts</a></h1>
+          <p class="site-description">Original analysis and commentary authored by GFW experts and partners.</p>
           <div class="site-branding-sep"></div>
         </div>
-      <?php elseif (is_category() && in_category( 'GFW Updates' )) : ?>
+      <?php elseif (is_category() && in_category( 'Update' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Updates</a></h1>
-          <p class="site-description">updates description</p>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Update</a></h1>
+          <p class="site-description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
           <div class="site-branding-sep"></div>
         </div>
       <?php else : ?>
@@ -112,12 +112,12 @@
       <?php endif; ?>
     </div><!-- .header-inner -->
 
-    <?php if (is_single() && in_category( 'News Roundups' )) : ?>
-      <div class="badge badge-news"><i></i>News Roundups</div>
-    <?php elseif (is_single() && in_category( 'Feature Stories' )) : ?>
-      <div class="badge badge-feature"><i></i>Feature Stories</div>
-    <?php elseif (is_single() && in_category( 'GFW Updates' )) : ?>
-      <div class="badge badge-updates"><i></i>Updates</div>
+    <?php if (is_single() && in_category( 'News roundups' )) : ?>
+      <div class="badge badge-news"><i></i>News roundups</div>
+    <?php elseif (is_single() && in_category( 'Feature posts' )) : ?>
+      <div class="badge badge-feature"><i></i>Feature posts</div>
+    <?php elseif (is_single() && in_category( 'Update' )) : ?>
+      <div class="badge badge-updates"><i></i>Update</div>
     <?php endif; ?>
   </header><!-- #masthead -->
 
