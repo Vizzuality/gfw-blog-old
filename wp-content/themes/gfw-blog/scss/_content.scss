@@ -3,7 +3,7 @@
 
 .site {
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -44,17 +44,24 @@ a {
 }
 
 .home .site-header {
+  background: #ccc image-url('8898631382_a66b6f0bc0_o.jpg');
   @include background-size(cover);
+}
+
+.update-header {
+  background-image: image-url('7995487280_629defa4e9_o.jpg');
+}
+
+.feature-header {
+  background-image: image-url('9080912651_35bf7a28c4_k.jpg');
 }
 
 .news-header {
-  background: #00D9A3 image-url('header-bg.png');
-  @include background-size(cover);
+  background-image: image-url('8018537027_7af7e33c6b_o.jpg');
 }
 
 .news-single-header {
-  background: #ccc image-url('news-bg.png');
-  @include background-size(cover);
+  background-image: #ccc image-url('8018537027_7af7e33c6b_o.jpg');
 }
 
 .main-navigation {

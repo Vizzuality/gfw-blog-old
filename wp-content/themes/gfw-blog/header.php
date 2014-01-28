@@ -23,7 +23,11 @@
   <?php do_action( 'before' ); ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-  <?php if (is_category() && in_category( 'News roundups' )) : ?>
+  <?php if (is_category() && in_category( 'Update' )) : ?>
+    <header id="masthead" role="banner" class="site-header update-header">
+  <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
+    <header id="masthead" role="banner" class="site-header feature-header">
+  <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
   <?php elseif (is_single() && in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-single-header">
