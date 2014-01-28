@@ -88,21 +88,33 @@
       <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
+<<<<<<< HEAD
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW News roundups</a></h1>
+=======
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> News roundups</a></h1>
+>>>>>>> 445563412f5579816277d57208b52d2b07272dd6
           <p class="site-description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
           <div class="site-branding-sep"></div>
         </div>
       <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
+<<<<<<< HEAD
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Feature posts</a></h1>
+=======
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Feature posts</a></h1>
+>>>>>>> 445563412f5579816277d57208b52d2b07272dd6
           <p class="site-description">Original analysis and commentary authored by GFW experts and partners.</p>
           <div class="site-branding-sep"></div>
         </div>
       <?php elseif (is_category() && in_category( 'Update' )) : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
+<<<<<<< HEAD
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Update</a></h1>
+=======
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Update</a></h1>
+>>>>>>> 445563412f5579816277d57208b52d2b07272dd6
           <p class="site-description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
           <div class="site-branding-sep"></div>
         </div>
