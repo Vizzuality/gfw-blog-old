@@ -60,10 +60,6 @@ a {
   background-image: image-url('8018537027_7af7e33c6b_o.jpg');
 }
 
-.news-single-header {
-  background-image: #ccc image-url('8018537027_7af7e33c6b_o.jpg');
-}
-
 .main-navigation {
   overflow: hidden;
   display: block;
@@ -116,7 +112,7 @@ a {
 .menu-item a:hover,
 .current-menu-item a,
 .current-menu-parent a {
-  color: rgba(#000, .5);
+  color: #ccc;
 }
 
 .site-branding {
@@ -389,11 +385,11 @@ a {
   }
 }
 
-.single-post {
-  .header-inner {
-    background: rgba(#000, .2);
-  }
+.header-inner {
+  background: rgba(#000, .3);
+}
 
+.single-post {
   .main-navigation a.logo {
     background: image-url('logo-color.png') no-repeat;
   }

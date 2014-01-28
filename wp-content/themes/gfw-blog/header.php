@@ -27,10 +27,8 @@
     <header id="masthead" role="banner" class="site-header update-header">
   <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
     <header id="masthead" role="banner" class="site-header feature-header">
-  <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
+  <?php elseif (in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
-  <?php elseif (is_single() && in_category( 'News roundups' )) : ?>
-    <header id="masthead" role="banner" class="site-header news-single-header">
   <?php elseif (is_single()) : ?>
     <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
   <?php else : ?>
