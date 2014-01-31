@@ -43,21 +43,21 @@ a {
   }
 }
 
-.home .site-header {
-  background: #ccc image-url('8898631382_a66b6f0bc0_o.jpg');
+.site-header {
+  background: #ccc image-url('8898631382_a66b6f0bc0_o.jpg') 50%;
   @include background-size(cover);
-}
 
-.update-header {
-  background-image: image-url('7995487280_629defa4e9_o.jpg');
-}
+  &.update-header {
+    background-image: image-url('7995487280_629defa4e9_o.jpg');
+  }
 
-.feature-header {
-  background-image: image-url('9080912651_35bf7a28c4_k.jpg');
-}
+  &.feature-header {
+    background-image: image-url('9080912651_35bf7a28c4_k.jpg');
+  }
 
-.news-header {
-  background-image: image-url('8018537027_7af7e33c6b_o.jpg');
+  &.news-header {
+    background-image: image-url('8018537027_7af7e33c6b_o.jpg');
+  }
 }
 
 .main-navigation {
