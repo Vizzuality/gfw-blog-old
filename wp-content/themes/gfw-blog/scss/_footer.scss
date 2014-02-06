@@ -2,7 +2,7 @@
 ----------------------------------------------- */
 
 .site-footer {
-  height: 495px;
+  height: 545px;
   font-size: 13px;
   color: #999;
   background-color: #444;
@@ -85,6 +85,12 @@
 
 .footer-address {
   text-align: center;
+  line-height: 1.4;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
 
   .footer-logo { margin-bottom: 30px; }
 }
@@ -101,12 +107,16 @@
   &.google { height: 52px; @include footer-icons-sprite(google); }
   &.esri { height: 28px; @include footer-icons-sprite(esri); }
   &.universitymaryland { height: 52px; @include footer-icons-sprite(universitymaryland); }
-  &.twrus { height: 20px; @include footer-icons-sprite(twrus); }
   &.cfgd { height: 52px; @include footer-icons-sprite(cfgd); }
   &.imazon { height: 52px; @include footer-icons-sprite(imazon); }
   &.unep { height: 52px; @include footer-icons-sprite(unep); }
   &.gef { height: 42px; @include footer-icons-sprite(gef); }
   &.scannex { height: 16px; @include footer-icons-sprite(scannex); }
+  &.osfac { height: 57px; @include footer-icons-sprite(osfac); }
   &.gfwca { height: 44px; @include footer-icons-sprite(gfwca); }
-  &.usaid { height: 53px; @include footer-icons-sprite(usaid); }
+  &.twrus { height: 62px; @include footer-icons-sprite(twrus); }
+  &.norwegian { height: 42px; @include footer-icons-sprite(norwegian); }
+  &.usaid { height: 64px; @include footer-icons-sprite(usaid); }
+  &.ukaid { height: 52px; @include footer-icons-sprite(ukaid); }
+  &.tilia { height: 38px; @include footer-icons-sprite(tilia); }
 }
