@@ -27,7 +27,7 @@
       <div class="logos">
         <p><strong>Partners</strong></p>
         <a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a>
-        <a href="http://www.esri.com/" class="footer-logo esri" target="_blank"></a>
+        <a href="http://www.esri.com/gfw" class="footer-logo esri" target="_blank"></a>
         <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
         <a href="http://www.unep.org/" class="footer-logo unep" target="_blank"></a>
         <a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon last" target="_blank"></a>
@@ -37,7 +37,7 @@
         <a href="http://www.scanex.ru/ru/index.html" class="footer-logo scannex" target="_blank"></a>
         <a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus last" target="_blank"></a>
         <a href="http://www.regjeringen.no/nb/dep/kld.html?id=668" class="footer-logo norwegian" target="_blank"></a>
-        <a href="http://www.usaid.gov/climate/tfa2020" class="footer-logo usaid" target="_blank"></a>
+        <a href="http://www.usaid.gov/" class="footer-logo usaid" target="_blank"></a>
         <a href="http://www.thegef.org/gef/" class="footer-logo gef" target="_blank"></a>
         <a href="https://www.gov.uk/government/organisations/department-for-international-development" class="footer-logo ukaid" target="_blank"></a>
         <a href="http://tiliafund.org/" class="footer-logo tilia last" target="_blank"></a>
