@@ -179,6 +179,12 @@ a {
   color: rgba(#000, .35);
   background: #00D9A3;
 
+  &.badge-credit {
+    right: auto; left: 0;
+    background: rgba(#333, .8);
+    color: #fff;
+  }
+
   &.badge-updates {
     background: #FFC926;
     i { @include header-icons-sprite(badge-updates); }

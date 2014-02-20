@@ -25,14 +25,18 @@
 
   <?php if (is_category() && in_category( 'Update' )) : ?>
     <header id="masthead" role="banner" class="site-header update-header">
+    <div class="badge badge-credit">Photo: Ollivier Girard/ CIFOR</div>
   <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
     <header id="masthead" role="banner" class="site-header feature-header">
+    <div class="badge badge-credit">Photo: Kate Evans/ CIFOR</div>
   <?php elseif (in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
+    <div class="badge badge-credit">Photo: Ollivier Girard/ CIFOR</div>
   <?php elseif (is_single()) : ?>
     <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
   <?php else : ?>
     <header id="masthead" role="banner" class="site-header">
+    <div class="badge badge-credit">Photo: Marco Simola/ CIFOR</div>
   <?php endif; ?>
 
     <div class="header-inner">
