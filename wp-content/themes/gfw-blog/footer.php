@@ -25,7 +25,7 @@
 
     <div class="footer-logos">
       <div class="logos">
-        <p><strong>Partners</strong></p>
+        <p><strong>Core partners</strong></p>
         <a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a>
         <a href="http://www.esri.com/gfw" class="footer-logo esri" target="_blank"></a>
         <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
@@ -34,19 +34,21 @@
         <a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a>
         <a href="http://osfac.net/index.php?lang=en" class="footer-logo osfac" target="_blank"></a>
         <a href="http://globalforestwatch.ca/" class="footer-logo gfwca" target="_blank"></a>
-        <a href="http://www.scanex.ru/ru/index.html" class="footer-logo scannex" target="_blank"></a>
-        <a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus last" target="_blank"></a>
-        <a href="http://www.regjeringen.no/nb/dep/kld.html?id=668" class="footer-logo norwegian" target="_blank"></a>
-        <a href="http://www.usaid.gov/" class="footer-logo usaid" target="_blank"></a>
+        <a href="http://www.scanex.ru/en/" class="footer-logo scannex" target="_blank"></a>
+        <a href="http://www.vizzuality.com/" class="footer-logo vizzuality last" target="_blank"></a>
+        <a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus" target="_blank"></a>
+        <a href="http://www.janegoodall.org/" class="footer-logo goodall" target="_blank"></a>
+        <a href="http://www.regjeringen.no/en/dep/kld/kampanjer/the-governments-climate-and-tree-project.html?id=733947" class="footer-logo norwegian" target="_blank"></a>
+        <a href="http://www.usaid.gov/" class="footer-logo usaid last" target="_blank"></a>
         <a href="http://www.thegef.org/gef/" class="footer-logo gef" target="_blank"></a>
-        <a href="https://www.gov.uk/government/organisations/department-for-international-development" class="footer-logo ukaid" target="_blank"></a>
-        <a href="http://tiliafund.org/" class="footer-logo tilia last" target="_blank"></a>
+        <a href="http://www.gov.uk/government/organisations/department-for-international-development" class="footer-logo ukaid" target="_blank"></a>
+        <a href="http://www.tiliafund.org/" class="footer-logo tilia" target="_blank"></a>
       </div>
     </div>
 
     <div class="footer-address">
       <a href="http://www.wri.org" class="footer-logo wri last" target="_blank"></a>
-      <address>10 G Street NE Suite 800, Washington, DC 20002, USA<br />Phone +1 (202) 729-7600 / Fax +1 (202) 729-7610 Email <a href="mailto:gfw@wri.org">gfw@wri.org</a></address>
+      <address>10 G Street NE Suite 800, Washington, DC 20002, USA<br />Phone +1 (202) 729-7600 / Fax +1 (202) 729-7610 / Email <a href="mailto:gfw@wri.org">gfw@wri.org</a></address>
     </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
