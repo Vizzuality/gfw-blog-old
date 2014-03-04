@@ -310,10 +310,9 @@ a {
   h2 { font-size: 19px; }
   h3 { font-size: 17px; }
 
-  li {
-    margin-bottom: 10px;
-    list-style: square;
-  }
+  li {margin-bottom: 10px; }
+  ul { list-style: square; }
+  ol { list-style: decimal; }
 
   strong { font-weight: bold; }
 
