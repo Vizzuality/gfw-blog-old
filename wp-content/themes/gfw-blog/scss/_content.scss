@@ -306,16 +306,9 @@ a {
     color: #444;
   }
 
-  h1 {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-    font-size: 27px;
-  }
-
-  h2 { font-size: 21px; }
-
-  h3 { font-size: 19px; }
+  h1 { font-size: 21px; }
+  h2 { font-size: 19px; }
+  h3 { font-size: 17px; }
 
   li {
     margin-bottom: 10px;
@@ -323,6 +316,8 @@ a {
   }
 
   strong { font-weight: bold; }
+
+  em { font-style: italic; }
 }
 
 
