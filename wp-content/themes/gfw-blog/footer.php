@@ -15,7 +15,7 @@
       <?php do_action( 'gfw_blog_credits' ); ?>
 
       <div class="footer-share">
-        <p>Because deforestation matters.</p>
+        <p>Join the movement.</p>
 
         <div class="visit-link">
           <a href="http://www.globalforestwatch.org/">Visit GFW website</a>
