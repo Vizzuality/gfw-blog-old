@@ -7,7 +7,7 @@
 
 function accept_terms() {
 	if ( ! $_COOKIE['accepted_v3'] ) {
-		setcookie('go_to_from_blog', true, time()+3600, 'globalforestwatch.org', false);
+		setcookie('go_to_from_blog', true, time()+3600, '/', '.globalforestwatch.org');
 
 		wp_redirect( $_ENV['GFW_API_HOST'] );
 		exit;
