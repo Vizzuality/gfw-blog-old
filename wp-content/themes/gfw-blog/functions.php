@@ -5,6 +5,17 @@
  * @package GFW blog
  */
 
+function accept_terms() {
+	if ( ! $_COOKIE[$_ENV['TERMS_COOKIE']] ) {
+		setcookie('go_to_from_blog', true, time()+3600);
+
+		wp_redirect( $_ENV['GFW_API_HOST'] );
+		exit;
+	}
+}
+
+add_action( 'init', 'accept_terms');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
