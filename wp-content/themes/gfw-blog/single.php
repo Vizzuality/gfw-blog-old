@@ -5,6 +5,13 @@
  * @package GFW blog
  */
 
+if ( ! $_COOKIE['accepted_v3'] ) {
+  setcookie('go_to_from_blog', true, time()+3600, '/', '.globalforestwatch.org');
+
+  wp_redirect( 'http://www.globalforestwatch.org/map' );
+  exit;
+}
+
 get_header(); ?>
 
   <div id="primary" class="content-area">
