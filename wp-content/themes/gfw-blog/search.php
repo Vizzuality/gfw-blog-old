@@ -6,10 +6,10 @@
  */
 
 if ( ! $_COOKIE['accepted_v3'] ) {
-	setcookie('go_to_from_blog', true, time()+3600, '/', '.globalforestwatch.org');
+  setcookie('go_to_from_blog', home_url(add_query_arg(array(), $wp->request)), time()+3600, '/', '.globalforestwatch.org');
 
-	wp_redirect( 'http://www.globalforestwatch.org/map' );
-	exit;
+  wp_redirect( 'http://www.globalforestwatch.org/map' );
+  exit;
 }
 
 get_header(); ?>
