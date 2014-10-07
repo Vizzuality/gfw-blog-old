@@ -33,6 +33,9 @@
   <?php elseif (in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
     <div class="badge badge-credit">Photo: Ollivier Girard/ CIFOR</div>
+  <?php elseif (in_category( 'Map of the day' )) : ?>
+    <header id="masthead" role="banner" class="site-header mapoftheday-header">
+    <div class="badge badge-credit">Photo: CIFOR</div>
   <?php elseif (is_single()) : ?>
     <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
   <?php else : ?>
@@ -42,8 +45,10 @@
 
     <div class="header-inner">
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">Blog</a>
+        <a href="http://www.globalforestwatch.org/" title="GLOBAL FOREST WATCH" class="logo">&nbsp;</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="home">Blog</a>
 
+        <div id="google_translate_element"></div>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav><!-- #site-navigation -->
 
@@ -93,6 +98,13 @@
           <div class="site-branding-sep top"></div>
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW News roundups</a></h1>
           <p class="site-description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
+          <div class="site-branding-sep"></div>
+        </div>
+      <?php elseif (is_category() && in_category( 'Map of the day' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Map of the day</a></h1>
+          <p class="site-description">Connecting Global Forest Watch to current events</p>
           <div class="site-branding-sep"></div>
         </div>
       <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>

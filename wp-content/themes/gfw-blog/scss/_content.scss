@@ -58,6 +58,10 @@ a {
   &.news-header {
     background-image: image-url('8018537027_7af7e33c6b_o.jpg');
   }
+  
+  &.mapoftheday-header {
+    background-image: image-url('mapoftheday.jpg');
+  }
 }
 
 .main-navigation {
@@ -82,7 +86,12 @@ a {
     @extend .fira_sans;
     color: #fff;
 
-    &.logo {
+    &.logo,
+    &.home {
+      float: left;
+    }
+    
+    &.logo{
       float: left;
       margin-left: 45px;
       padding-left: 80px;
@@ -92,11 +101,22 @@ a {
     }
 
   }
+
+  #google_translate_element {
+    float: right;
+    padding: 20px 0;
+    margin-right: 45px;
+
+    a {
+      line-height: 12px;
+      font-size: 13px;
+    }
+  }
 }
 
 .menu {
   list-style: none;
-  margin: 0 45px 0 0;
+  margin: 0 36px 0 0;
   padding-left: 0;
   float: right;
 }

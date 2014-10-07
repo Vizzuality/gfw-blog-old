@@ -54,6 +54,13 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<!-- translate -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,es,fr,id,pt,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-48182293-1'}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- social -->
 <script>(function(d, s, id) {
