@@ -33,6 +33,9 @@
   <?php elseif (in_category( 'News roundups' )) : ?>
     <header id="masthead" role="banner" class="site-header news-header">
     <div class="badge badge-credit">Photo: Ollivier Girard/ CIFOR</div>
+  <?php elseif (in_category( 'Map of the day' )) : ?>
+    <header id="masthead" role="banner" class="site-header mapoftheday-header">
+    <div class="badge badge-credit">Photo: CIFOR</div>
   <?php elseif (is_single()) : ?>
     <header id="masthead" role="banner" style="background-image: url('<?php echo $image[0]; ?>'); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="site-header">
   <?php else : ?>
