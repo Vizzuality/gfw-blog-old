@@ -29,6 +29,26 @@
         <a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a>
         <a href="http://www.esri.com/gfw" class="footer-logo esri" target="_blank"></a>
         <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
+        <a href="http://www.unep.org/" class="footer-logo unep last" target="_blank"></a>
+        <a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon" target="_blank"></a>
+        <a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a>
+        <a href="http://osfac.net/index.php?lang=en" class="footer-logo osfac" target="_blank"></a>
+        <a href="http://globalforestwatch.ca/" class="footer-logo gfwca last" target="_blank"></a>
+        <a href="http://www.scanex.ru/en/" class="footer-logo scanex" target="_blank"></a>
+        <a href="http://cartodb.com/" class="footer-logo cartodb" target="_blank"></a>
+        <a href="http://vizzuality.com/" class="footer-logo vizzuality" target="_blank"></a>
+        <a href="http://blueraster.com/" class="footer-logo blueraster" target="_blank"></a>
+        <a href="http://www.regjeringen.no/en/dep/kld/kampanjer/the-governments-climate-and-tree-project.html?id=733947" class="footer-logo norwegian last" target="_blank"></a>
+        <a href="http://www.usaid.gov/" class="footer-logo usaid" target="_blank"></a>
+        <a href="http://www.thegef.org/gef/" class="footer-logo gef last" target="_blank"></a>
+        <a href="http://www.gov.uk/government/organisations/department-for-international-development" class="footer-logo ukaid" target="_blank"></a>
+        <a href="http://www.tiliafund.org/" class="footer-logo tilia" target="_blank"></a>
+        <a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus" target="_blank"></a>
+        <a href="http://www.janegoodall.org/" class="footer-logo goodall last" target="_blank"></a>
+
+<!--         <a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a>
+        <a href="http://www.esri.com/gfw" class="footer-logo esri" target="_blank"></a>
+        <a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a>
         <a href="http://www.unep.org/" class="footer-logo unep" target="_blank"></a>
         <a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon last" target="_blank"></a>
         <a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a>
@@ -43,7 +63,7 @@
         <a href="http://www.thegef.org/gef/" class="footer-logo gef" target="_blank"></a>
         <a href="http://www.gov.uk/government/organisations/department-for-international-development" class="footer-logo ukaid" target="_blank"></a>
         <a href="http://www.tiliafund.org/" class="footer-logo tilia" target="_blank"></a>
-      </div>
+ -->      </div>
     </div>
 
     <div class="footer-address">

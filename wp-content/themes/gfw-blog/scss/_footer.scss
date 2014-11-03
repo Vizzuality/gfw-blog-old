@@ -98,10 +98,10 @@
 .footer-logo {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 40px 20px 0;
+  margin: 0 5.5% 20px 0;
   width: 88px;
 
-  &.last { margin-right: 0; }
+  // &.last { margin-right: 0; }
 
   &.wri { height: 31px; width: 269px; @include footer-icons-sprite(wri); }
   &.google { height: 52px; @include footer-icons-sprite(google); }
@@ -111,7 +111,7 @@
   &.imazon { height: 52px; @include footer-icons-sprite(imazon); }
   &.unep { height: 52px; @include footer-icons-sprite(unep); }
   &.gef { height: 59px; @include footer-icons-sprite(gef); }
-  &.scannex { height: 16px; @include footer-icons-sprite(scannex); }
+  &.scanex { height: 16px; @include footer-icons-sprite(scannex); }
   &.osfac { height: 57px; @include footer-icons-sprite(osfac); }
   &.gfwca { height: 44px; @include footer-icons-sprite(gfwca); }
   &.twrus { height: 37px; width: 152px; @include footer-icons-sprite(twrus); }
@@ -121,4 +121,6 @@
   &.tilia { height: 38px; @include footer-icons-sprite(tilia); }
   &.goodall { height: 38px;  width: 152px; @include footer-icons-sprite(goodall); }
   &.vizzuality { height: 47px; @include footer-icons-sprite(vizzuality); }
+  &.cartodb { height: 45px; @include footer-icons-sprite(cartodb); }
+  &.blueraster { height: 45px; @include footer-icons-sprite(blueraster); }
 }

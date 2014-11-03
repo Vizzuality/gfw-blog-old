@@ -82,7 +82,7 @@ a {
 
   a {
     font-size: 17px;
-    line-height: 65px;
+    line-height: 95px;
     @extend .fira_sans;
     color: #fff;
 
@@ -94,7 +94,7 @@ a {
     &.logo{
       float: left;
       margin-left: 45px;
-      padding-left: 80px;
+      padding-left: 95px;
       font-size: 21px;
       @extend .fira_sans_medium;
       background: image-url('logo.png') no-repeat;
