@@ -1,0 +1,62 @@
+/*
+Error: File to import not found or unreadable: compass/reset.
+       Load path: /Library/WebServer/Documents/prj/wordpress-heroku/wp-content/themes/gfw-blog/scss
+        on line 25 of /Library/WebServer/Documents/prj/wordpress-heroku/wp-content/themes/gfw-blog/scss/style.scss
+
+20: Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+21: along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+22: and Blueprint http://www.blueprintcss.org/
+23: *\/
+24: 
+25: @import 'compass/reset';
+26: @import 'compass/css3/border-radius';
+27: @import 'compass/css3/background-size';
+28: @import 'compass/css3/transition';
+29: 
+30: @import 'header-icons/*.png';
+
+Backtrace:
+/Library/WebServer/Documents/prj/wordpress-heroku/wp-content/themes/gfw-blog/scss/style.scss:25
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/import_node.rb:45:in `import'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:301:in `visit_import'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:489:in `update_stylesheet'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451@global/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Users/adrianperez/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: compass/reset.\A        Load path: /Library/WebServer/Documents/prj/wordpress-heroku/wp-content/themes/gfw-blog/scss\A         on line 25 of /Library/WebServer/Documents/prj/wordpress-heroku/wp-content/themes/gfw-blog/scss/style.scss\A \A 20: Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html\A 21: along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/\A 22: and Blueprint http://www.blueprintcss.org/\A 23: */\A 24: \A 25: @import 'compass/reset';\A 26: @import 'compass/css3/border-radius';\A 27: @import 'compass/css3/background-size';\A 28: @import 'compass/css3/transition';\A 29: \A 30: @import 'header-icons/*.png';"; }
