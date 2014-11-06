@@ -122,5 +122,5 @@
   &.goodall { height: 38px;  width: 152px; @include footer-icons-sprite(goodall); }
   &.vizzuality { height: 47px; @include footer-icons-sprite(vizzuality); }
   &.cartodb { height: 45px; @include footer-icons-sprite(cartodb); }
-  &.blueraster { height: 45px; @include footer-icons-sprite(blueraster); }
+  &.blueraster { height: 45px; width:97px; @include footer-icons-sprite(blueraster); }
 }
