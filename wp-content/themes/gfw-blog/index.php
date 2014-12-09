@@ -14,13 +14,12 @@
 $localhost = (substr($_SERVER['REMOTE_ADDR'], 0, 4) == '127.' || $_SERVER['REMOTE_ADDR'] == '::1');
 $staging = ($_SERVER['REMOTE_ADDR'] == 'http://wp-wri-staging.herokuapp.com') ? true : false;
 
-// if (!$localhost && !$staging) {
-// 	if ( ! $_COOKIE['accepted_v4'] ) {
-// 	  wp_redirect( 'http://www.globalforestwatch.org/accept_terms?return_to=' . home_url(add_query_arg(array(), $wp->request)) );
-// 	  exit;
-// 	}    
-// }
-
+if (!$localhost && $staging) {
+	if ( ! $_COOKIE['accepted_v4'] ) {
+	  wp_redirect( 'http://www.globalforestwatch.org/accept_terms?return_to=' . home_url(add_query_arg(array(), $wp->request)) );
+	  exit;
+	}    
+}
 
 get_header(); ?>
 
