@@ -7,29 +7,7 @@
  * @package GFW blog
  */
 ?>
-<div class="tag-cloud-gfw">
-  <?php
-    $args = array(
-      'smallest'                  => 8, 
-      'largest'                   => 22,
-      'unit'                      => 'pt', 
-      'number'                    => 45,  
-      'format'                    => 'flat',
-      'separator'                 => "\n",
-      'orderby'                   => 'name', 
-      'order'                     => 'ASC',
-      'exclude'                   => null, 
-      'include'                   => null, 
-      'topic_count_text_callback' => default_topic_count_text,
-      'link'                      => 'view', 
-      'taxonomy'                  => 'post_tag', 
-      'echo'                      => true,
-      'child_of'                  => null, // see Note!
-    ); 
 
-    wp_tag_cloud( $args );
-  ?>
-</div>
   </div><!-- #content -->
 <footer id="footerView" class="layout-footer">
   <div class="apps-footer mobile-hide">
@@ -62,6 +40,7 @@
           <ul>
             <li><a href="http://gfw-nav.herokuapp.com/applications#gfw-applications">GFW applications</a></li>
             <li><a href="http://gfw-nav.herokuapp.com/applications#coming-soon">Coming soon</a></li>
+            <li><a href="http://gfw-nav.herokuapp.com/applications#develop-your-own-app">Develop your own app</a></li>
           </ul>
         </div>
         <div class="col">
@@ -76,7 +55,6 @@
         <div class="col">
           <h3><a href="http://gfw-nav.herokuapp.com/getinvolved">GET INVOLVED</a></h3>
           <ul>
-            <li><a href="http://gfw-nav.herokuapp.com/getinvolved/develop-your-own-app">Develop your own app</a></li>
             <li><a href="http://gfw-nav.herokuapp.com/stories/new">Submit a story</a></li>
             <li><a href="http://gfw-nav.herokuapp.com/getinvolved/share-data">Share data</a></li>
             <li><a href="http://gfw-nav.herokuapp.com/getinvolved/help-improve-data">Help improve data</a></li>
@@ -161,7 +139,7 @@
     <a href="http://stats.pingdom.com/me0q72oj01nt" target="_blank">Global Forest Watch System Status</a> -
     <a href="mailto:gfw@wri.org">Contact us</a>
   </div>
-</footer> 
+</footer>
 
 
 <svg class="is-hidden" style="display:none">

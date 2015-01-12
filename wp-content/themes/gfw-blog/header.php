@@ -2166,3 +2166,17 @@
   </header><!-- #masthead -->
 
   <div id="content" class="site-content">
+    <div class="tag-cloud-gfw">
+      <ul>
+        <li><a href="/tag/forests/">Forests</a>
+        <li><a href="/tag/commodities/">Commodities</a>
+        <li><a href="/tag/data/">Data</a>
+        <li><a href="/tag/deforestation/">Deforestation</a>
+        <li><a href="/tag/fires/">Fires</a>
+        <li><a href="/tag/indonesia-forest-fires/">Indonesia forest fires</a>
+        <li><a href="/tag/maps/">Maps</a>
+        <li><a href="/tag/palm-oil/">Palm oil</a>
+        <li><a href="/tag/satellite/">Satellite</a>
+        </li>
+      </ul>
+    </div>

@@ -492,4 +492,7 @@ img.alignright {
   padding-bottom: 20px;
   background: #FFF;
 }
-.tag-cloud-gfw{margin: 15px auto;text-align: center;}
+.tag-cloud-gfw{margin: 15px auto;}
+.tag-cloud-gfw ul{display: flex;justify-content: center;flex-wrap: wrap;flex-flow: flow-wrap;}
+.tag-cloud-gfw ul a{margin: 6px;line-height: 30px;}
+.tag-cloud-gfw ul a:hover{text-decoration: underline;}
