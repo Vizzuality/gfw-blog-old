@@ -13,14 +13,14 @@
   <div class="apps-footer mobile-hide">
     <div class="inner">
       <ul>
-        <li><a class="world" href="http://gfw-nav.herokuapp.com/map"><svg><use xlink:href="#shape-world"></use></svg><h3>GFW Interactive Map</h3></a></li>
-        <li><a class="shape-country" href="http://gfw-nav.herokuapp.com/countries"><svg><use xlink:href="#shape-country"></use></svg><h3>Country profiles & rankings</h3></a></li>
-        <li><a class="fire" href="http://staging.blueraster.com/wri/gfw-fires/#v=map&x=&y=&l=&lyrs=Active_Fires"><svg><use xlink:href="#shape-fire"></use></svg><h3>Fires</h3></a></li>
-        <li><a class="commodities" href="http://staging.blueraster.com/wri/gfw-commodities/#v=map&lyrs=tcc%2Closs"><svg><use xlink:href="#shape-commodities"></use></svg><h3>Commodities</h3></a></li>
-        <li><a class="develop" href="http://gfw-nav.herokuapp.com/getinvolved/develop-your-own-app"><svg><use xlink:href="#shape-develop"></use></svg><h3>Develop own your app</h3></a></li>
-        <li><a class="data" href="http://gfw-nav.herokuapp.com/data"><svg><use xlink:href="#shape-download"></use></svg><h3>Download data</h3></a></li>
-        <li><a href="http://wp-wri-staging.herokuapp.com/"><svg><use xlink:href="#shape-blog"></use></svg><h3>Blog</h3></a></li>
-        <!-- <li><a class="soon" href="http://gfw-nav.herokuapp.com/applications#coming-soon"><svg><use xlink:href="#shape-soon"></use></svg><h3>Coming soon</h3></a></li> -->
+        <li><a class="world" href="http://www.globalforestwatch.org/map"><svg><use xlink:href="#shape-world"></use></svg><h3>GFW Interactive Map</h3></a></li>
+        <li><a class="shape-country" href="http://www.globalforestwatch.org/countries"><svg><use xlink:href="#shape-country"></use></svg><h3>Country profiles & rankings</h3></a></li>
+        <li><a class="fire" href="http://fires.globalforestwatch.org/#v=map&x=115&y=0&l=5&lyrs=Active_Fires"><svg><use xlink:href="#shape-fire"></use></svg><h3>Fires</h3></a></li>
+        <li><a class="commodities" href="http://commodities.globalforestwatch.org/#v=map&x=114&y=-2.58&l=5&lyrs=tcc%2Closs"><svg><use xlink:href="#shape-commodities"></use></svg><h3>Commodities</h3></a></li>
+        <li><a class="develop" href="http://www.globalforestwatch.org/getinvolved/develop-your-own-app"><svg><use xlink:href="#shape-develop"></use></svg><h3>Develop own your app</h3></a></li>
+        <li><a class="data" href="http://www.globalforestwatch.org/data"><svg><use xlink:href="#shape-download"></use></svg><h3>Download data</h3></a></li>
+        <li><a href="http://blog.globalforestwatch.org/"><svg><use xlink:href="#shape-blog"></use></svg><h3>Blog</h3></a></li>
+        <!-- <li><a class="soon" href="http://www.globalforestwatch.org/explore#coming-soon"><svg><use xlink:href="#shape-soon"></use></svg><h3>Coming soon</h3></a></li> -->
       </ul>
     </div>
   </div>
@@ -30,57 +30,60 @@
         <!-- <div class="col">
           <h3><a href="http://data.gfw.opendata.arcgis.com/datasets">Download data</a></h3>
           <ul>
-            <li><a href="http://gfw-nav.herokuapp.com/sources">Data policy</a></li>
+            <li><a href="http://www.globalforestwatch.org/sources">Data policy</a></li>
             <li><a href="http://data.gfw.opendata.arcgis.com/">GFW on ArcGIS Online</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/sources/earth_engine">GFW on Google Earth Engine</a></li>
+            <li><a href="http://www.globalforestwatch.org/sources/earth_engine">GFW on Google Earth Engine</a></li>
           </ul>
         </div> -->
         <div class="col">
-          <h3><a href="http://gfw-nav.herokuapp.com/applications">Applications</a></h3>
+          <h3><a href="http://www.globalforestwatch.org/explore">Explore</a></h3>
           <ul>
-            <li><a href="http://gfw-nav.herokuapp.com/applications#gfw-applications">GFW applications</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/applications#coming-soon">Coming soon</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/applications#develop-your-own-app">Develop your own app</a></li>
+            <li><a href="http://www.globalforestwatch.org/map">GFW Interactive Map</a></li>
+            <li><a href="http://www.globalforestwatch.org/countries">Country profiles & rankings</a></li>
+            <li><a href="http://commodities.globalforestwatch.org/#v=map&x=114&y=-2.58&l=5&lyrs=tcc%2Closs">Commodities</a></li>
+            <li><a href="http://fires.globalforestwatch.org/#v=map&x=115&y=0&l=5&lyrs=Active_Fires">Fires</a></li>
+            <li><a href="http://www.globalforestwatch.org/explore">All applications</a></li>
+            <li><a href="http://www.globalforestwatch.org/data">Download data</a></li>
           </ul>
         </div>
         <div class="col">
-          <h3><a href="http://gfw-nav.herokuapp.com/keepupdated">KEEP UPDATED</a></h3>
+          <h3><a href="http://www.globalforestwatch.org/stayinformed">Stay informed</a></h3>
           <ul>
-            <li><a href="http://wp-wri-staging.herokuapp.com/">Blog</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/keepupdated/crowdsourced-stories">Crowdsourced stories</a></li>
+            <li><a href="http://blog.globalforestwatch.org/">Blog</a></li>
+            <li><a href="http://www.globalforestwatch.org/stayinformed/crowdsourced-stories">Crowdsourced stories</a></li>
             <li><a href="http://www.wri.org/global-forest-watch-stay-informed" target="_blank">Newsletter</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/keepupdated/publications">Publications</a></li>
+            <li><a href="http://www.globalforestwatch.org/stayinformed/publications">Publications</a></li>
           </ul>
         </div>
         <div class="col">
-          <h3><a href="http://gfw-nav.herokuapp.com/getinvolved">GET INVOLVED</a></h3>
+          <h3><a href="http://www.globalforestwatch.org/getinvolved">GET INVOLVED</a></h3>
           <ul>
-            <li><a href="http://gfw-nav.herokuapp.com/stories/new">Submit a story</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/getinvolved/share-data">Share data</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/getinvolved/help-improve-data">Help improve data</a></li>
+            <li><a href="http://www.globalforestwatch.org/getinvolved/develop-your-own-app">Develop your own app</a></li>
+            <li><a href="http://www.globalforestwatch.org/stories/new">Submit a story</a></li>
+            <li><a href="http://www.globalforestwatch.org/getinvolved/share-data">Share data</a></li>
+            <li><a href="http://www.globalforestwatch.org/getinvolved/help-improve-data">Help improve data</a></li>
             <li><a href="https://groups.google.com/forum/#!forum/globalforestwatch" target="_blank">Join the discussion</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/getinvolved/apply-to-the-small-grants-fund">Apply to the Small Grants Fund</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/getinvolved/provide-feedback" target="_blank">Provide feedback</a></li>
+            <li><a href="http://www.globalforestwatch.org/getinvolved/apply-to-the-small-grants-fund">Apply to the Small Grants Fund</a></li>
+            <li><a href="http://www.globalforestwatch.org/getinvolved/provide-feedback" target="_blank">Provide feedback</a></li>
           </ul>
         </div>
         <div class="col">
-          <h3><a href="http://gfw-nav.herokuapp.com/howto">How to</a></h3>
+          <h3><a href="http://www.globalforestwatch.org/howto">How to</a></h3>
           <ul class="submenu">
-            <li><a href="http://gfw-nav.herokuapp.com/howto/visualize-data">Overview</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/howto/analyze-and-monitor-data">Analyze & monitor data</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/howto/add-a-story-to-the-map">Add a story to the map</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/howto/faqs">FAQs</a></li>
+            <li><a href="http://www.globalforestwatch.org/howto/view-data">View Data</a></li>
+            <li><a href="http://www.globalforestwatch.org/howto/conduct-analysis-and-subscribe-to-alerts">Conduct analysis & subscribe to alerts</a></li>
+            <li><a href="http://www.globalforestwatch.org/howto/submit-a-story">Submit a story</a></li>
+            <li><a href="http://www.globalforestwatch.org/howto/faqs">FAQs</a></li>
           </ul>
         </div>
         <div class="col">
-          <h3><a href="http://gfw-nav.herokuapp.com/about">About</a></h3>
+          <h3><a href="http://www.globalforestwatch.org/about">About</a></h3>
           <ul>
-            <li><a href="http://gfw-nav.herokuapp.com/about/about-gfw">About GFW</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/about/the-gfw-partnership">The GFW partnership</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/about/videos">Videos</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/about/awards_and_testimonials">Awards & testimonials</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/about/outcomes">Outcomes</a></li>
-            <li><a href="http://gfw-nav.herokuapp.com/about/contact-us">Contact us</a></li>
+            <li><a href="http://www.globalforestwatch.org/about/about-gfw">About GFW</a></li>
+            <li><a href="http://www.globalforestwatch.org/about/the-gfw-partnership">The GFW partnership</a></li>
+            <li><a href="http://www.globalforestwatch.org/about/videos">Videos</a></li>
+            <li><a href="http://www.globalforestwatch.org/about/awards_and_testimonials">Awards & testimonials</a></li>
+            <li><a href="http://www.globalforestwatch.org/about/contact-us">Contact us</a></li>
           </ul>
         </div>
       </div>
@@ -101,26 +104,23 @@
       </div>
     </div>
   </div>
-  <div class="footer-logos-btn">
-    <div class="inner">
-      <span>Core partners</span>
-      <a href="http://gfw-nav.herokuapp.com/about/the-gfw-partnership">View all partners</a>
-    </div>
-  </div>
   <div class="footer-logos">
     <div class="inner">
       <div id="footer-logos">
+        <div><a target='_blank' href='http://bnpb.go.id/' class="footer-logo bnpb"></a></div>
         <div><a href="http://earthengine.google.org/" class="footer-logo google" target="_blank"></a></div>
         <div><a href="http://www.esri.com/gfw" class="footer-logo esri" target="_blank"></a></div>
         <div><a href="http://www.geog.umd.edu/" class="footer-logo universitymaryland" target="_blank"></a></div>
         <div><a href="http://www.unep.org/" class="footer-logo unep" target="_blank"></a></div>
         <div><a href="http://www.imazon.org.br/pagina-inicial-en?set_language=en&amp;cl=en" class="footer-logo imazon" target="_blank"></a></div>
         <div><a href="http://www.cgdev.org/" class="footer-logo cfgd" target="_blank"></a></div>
+        <div><a target='_blank' href='https://www.digitalglobe.com/' class="digitalglobe"></a></div>
         <div><a href="http://osfac.net/index.php?lang=en" class="footer-logo osfac" target="_blank"></a></div>
         <div><a href="http://globalforestwatch.ca/" class="footer-logo gfwca" target="_blank"></a></div>
         <div><a href="http://www.scanex.ru/en/" class="footer-logo scanex" target="_blank"></a></div>
         <div><a href="http://www.transparentworld.ru/ru/" class="footer-logo twrus" target="_blank"></a></div>
         <div><a href="http://www.janegoodall.org/" class="footer-logo goodall" target="_blank"></a></div>
+        <div><a target='_blank' href='http://www.redd-indonesia.org/' class="footer-logo redd"></a></div>
         <div><a href="http://foreststreesagroforestry.org/" class="footer-logo cgiar" target="_blank"></a></div>
         <div><a href="http://cartodb.com/" class="footer-logo cartodb" target="_blank"></a></div>
         <div><a href="http://vizzuality.com/" class="footer-logo vizzuality" target="_blank"></a></div>
@@ -135,11 +135,16 @@
     </div>
   </div>
   <div class="terms">
-    <a href="http://gfw-nav.herokuapp.com/terms">Terms of Service</a> -
+    <a href="http://www.globalforestwatch.org/terms">Terms of Service</a> -
     <a href="http://stats.pingdom.com/me0q72oj01nt" target="_blank">Global Forest Watch System Status</a> -
     <a href="mailto:gfw@wri.org">Contact us</a>
   </div>
 </footer>
+
+
+
+
+
 
 
 <svg class="is-hidden" style="display:none">
@@ -336,6 +341,7 @@
       <path d="M 35.3381 56.9577 L 34.733 59.2971 C 45.8087 62.2481 57.1199 55.6356 60 44.5565 L 57.6831 43.9277 C 55.136 53.7272 45.1317 59.5722 35.3381 56.9577 ZM 38.227 45.7897 L 37.6209 48.1322 C 42.5733 49.4653 47.6401 46.513 48.926 41.5512 L 46.5973 40.9193 C 45.6448 44.5938 41.8922 46.7783 38.227 45.7897 ZM 48.5233 29.2497 C 48.5233 29.2497 43.3085 23.8079 34.6948 28.7976 C 26.3445 33.6347 28.2052 41.0423 28.2052 41.0423 L 37.743 35.5066 L 41.4167 41.8286 L 42.6842 41.0916 L 39.0129 34.7696 L 48.5233 29.2497 ZM 29.6019 31.7478 L 34.6948 28.7976 L 39.7807 25.8515 L 35.725 18.855 L 37 18.12 L 39.2116 21.9384 L 59.4996 10.1976 L 53.6585 0 L 33.3074 11.7405 L 35.895 16.21 L 34.62 16.945 L 30.1798 9.2798 L 19.9493 15.176 L 24.415 22.84 L 23.135 23.58 L 20.5317 19.1108 L 0 30.9554 L 6.0083 41.1535 L 26.4758 29.3088 L 24.25 25.49 L 25.53 24.75 L 29.6019 31.7478 Z"></path>
     </symbol>
 </svg>
+
 </body>
 </html>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
