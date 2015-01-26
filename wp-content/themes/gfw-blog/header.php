@@ -1831,7 +1831,7 @@
             <li class="nav-item"><a class="shape-country " href="http://www.globalforestwatch.org/countries"><svg class="icon shape-country"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-country"></use></svg><span class="tooltip1">Country <em class="mobile-hide">profiles &amp; rankings</em></span></a></li>
             <li class="nav-item"><a class="shape-fire" href="http://fires.globalforestwatch.org/#v=map&x=115&y=0&l=5&lyrs=Active_Fires"><svg class="icon shape-fire"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-fire"></use></svg><span class="tooltip1">Fires</span></a></li>
             <li class="nav-item"><a class="shape-commodities" href="http://commodities.globalforestwatch.org/#v=map&x=114&y=-2.58&l=5&lyrs=tcc%2Closs"><svg class="icon shape-commodities"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-commodities"></use></svg><span class="tooltip1">Commodities</span></a></li>
-            <li class="nav-item"><a class="shape-blog" href="http://blog.globalforestwatch.org/"><svg class="icon shape-blog"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-blog"></use></svg><span class="tooltip1">Blog</span></a></li>
+            <li class="nav-item"><a class="shape-blog current" href="http://blog.globalforestwatch.org/"><svg class="icon shape-blog"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-blog"></use></svg><span class="tooltip1">Blog</span></a></li>
           </ul>    
         </div>
         <button class="btn-menu mobile-show" id="btn-menu">
