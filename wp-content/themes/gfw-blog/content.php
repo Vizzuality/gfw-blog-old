@@ -5,9 +5,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="entry-meta">
-    <?php gfw_blog_posted_by(); ?>
-  </div><!-- .entry-meta -->
+  <!-- <div class="entry-meta">
+    <?php /* gfw_blog_posted_by(); */?>
+  </div> --><!-- .entry-meta -->
 
   <header class="entry-header">
     <h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>

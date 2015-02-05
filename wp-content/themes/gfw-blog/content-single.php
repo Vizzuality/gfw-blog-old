@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="entry-meta">
-    <?php gfw_blog_posted_by(); ?>
+    <?php /* gfw_blog_posted_by(); */ ?>
 
     <div class="share_buttons">
       <div id="fb-root"></div>
