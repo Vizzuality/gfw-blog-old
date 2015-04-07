@@ -98,6 +98,16 @@ a {
       font-size: 21px;
       @extend .fira_sans_medium;
       background: image-url('logo.png') no-repeat;
+      &:after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        bottom: 16px;
+        right: 30px;
+        background: image-url('beta.png') no-repeat;
+      }
     }
 
   }
