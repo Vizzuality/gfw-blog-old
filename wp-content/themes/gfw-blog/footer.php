@@ -15,7 +15,7 @@
 </html>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
-  <script id="loader-gfw" type="text/javascript" src="https://cdn.rawgit.com/simbiotica/gfw_assets/master/src/header-loader.js" data-current=".shape-blog"></script>
+  <script id="loader-gfw" type="text/javascript" src="https://cdn.rawgit.com/simbiotica/gfw_assets/a1c6c10126d915e4198a7adf707adb266443f3e4/src/header-loader.js" data-current=".shape-blog"></script>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
