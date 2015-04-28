@@ -1,5 +1,5 @@
 {
-	"output_path": "/wp-content/themes/gfw-blog/scss/style",
+	"output_path": "/wp-content/themes/gfw-blog/style.css",
 	"options": {
 		"cache":         true,
 		"debug":         true,

@@ -506,3 +506,42 @@ img.alignright {
 .tag-cloud-gfw ul{display: flex;justify-content: center;flex-wrap: wrap;flex-flow: flow-wrap;}
 .tag-cloud-gfw ul a{margin: 6px;line-height: 30px;}
 .tag-cloud-gfw ul a:hover{text-decoration: underline;}
+
+
+/** SEARCH FORM **/
+.search-form {
+  label {
+    &:before{    
+    content: '...';
+    display: inline;
+    position: relative;
+    left: 23px;
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    color: rgba(0,0,0,0);
+    background-color: #fefefe;
+    mask: url(img/search.svg) no-repeat 50% 50%;
+    -webkit-mask:  url(img/search.svg) no-repeat 50% 50%;
+    }
+  }
+  span {
+    display: none;
+  }
+  .search-field {
+    height: 35px;
+    line-height: 35px;
+    -webkit-appearance: none;
+    border: 0;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4px;
+    color: #fefefe;
+    font-size: 16px;
+    width: 205px;
+    margin-top: 25px;
+    padding-left: 20px;
+    margin-top: 25px;
+    padding-right: 8px;
+  }
+  .search-submit {display: none}
+}

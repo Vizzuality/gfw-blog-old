@@ -59,7 +59,7 @@
           <div class="site-branding-sep"></div>
           <h1 class="post-title"><a href="<?php the_permalink(); ?>" rel="home"><?php the_title(); ?></a></h1>
           <div class="site-branding-sep"></div>
-
+          <?php get_search_form(); ?>
           <div class="entry-meta">
             <?php
               /* translators: used between list items, there is a space after the comma */
@@ -100,6 +100,7 @@
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW News roundups</a></h1>
           <p class="site-description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
           <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
         </div>
       <?php elseif (is_category() && in_category( 'Map of the day' )) : ?>
         <div class="site-branding">
@@ -107,6 +108,7 @@
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Map of the day</a></h1>
           <p class="site-description">Connecting Global Forest Watch to current events</p>
           <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
         </div>
       <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
         <div class="site-branding">
@@ -114,6 +116,7 @@
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Feature posts</a></h1>
           <p class="site-description">Original analysis and commentary authored by GFW experts and partners.</p>
           <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
         </div>
       <?php elseif (is_category() && in_category( 'Update' )) : ?>
         <div class="site-branding">
@@ -121,6 +124,7 @@
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Update</a></h1>
           <p class="site-description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
           <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
         </div>
       <?php else : ?>
         <div class="site-branding">
@@ -128,6 +132,7 @@
           <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
           <p class="site-description"><?php bloginfo( 'description' ); ?></p>
           <div class="site-branding-sep"></div>
+          <p><?php get_search_form(); ?></p>
         </div>
       <?php endif; ?>
     </div><!-- .header-inner -->
