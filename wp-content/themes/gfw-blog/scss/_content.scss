@@ -219,11 +219,14 @@ a {
   a {
     color: #fff;
   }
-   @media (max-width: 480px){
-    font-size: 30px;
-    position: relative;
-    top: 5px;
-   }
+ @media (max-width: 480px){
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+  &.main-site-header {
+    font-size: 47px;
+  }
+ }
 }
 
 
@@ -569,16 +572,17 @@ img.alignright {
   label {
     &:before{    
     content: '...';
-    display: inline;
+    display: inline-block;
     position: relative;
     left: 23px;
     width: 15px;
-    height: 15px;
+    height: 17px;
     color: rgba(0,0,0,0);
     background-color: #fefefe;
     mask: url(img/search.svg) no-repeat 50% 50%;
     -webkit-mask:  url(img/search.svg) no-repeat 50% 50%;
     background-repeat: no-repeat;
+    left: 25px;
     }
   }
   span {
@@ -595,7 +599,7 @@ img.alignright {
     font-size: 16px;
     width: 205px;
     margin-top: 25px;
-    padding-left: 20px;
+    padding-left: 26px;
     margin-top: 25px;
     padding-right: 8px;
   }

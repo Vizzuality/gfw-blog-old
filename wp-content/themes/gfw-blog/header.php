@@ -129,7 +129,7 @@
       <?php else : ?>
         <div class="site-branding">
           <div class="site-branding-sep top"></div>
-          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+          <h1 class="site-title main-site-header"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
           <p class="site-description"><?php bloginfo( 'description' ); ?></p>
           <div class="site-branding-sep"></div>
           <p><?php get_search_form(); ?></p>
