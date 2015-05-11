@@ -1,0 +1,54 @@
+/**
+ * Easy WP Page Navigation simple style for front-end
+ *
+ * @author Kang
+ * @since 1.0
+ */
+
+.easy-wp-page-navigation {
+	clear: both;
+	margin: 10px 0 0;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+
+.easy-wp-page-navigation.align-center {
+	text-align: center;
+}
+
+.easy-wp-page-navigation.align-right {
+	text-align: right;
+}
+
+ul.easy-wp-page-nav {
+	list-style: none !important;
+	display: inline-block;
+}
+
+ul.easy-wp-page-nav li {
+	display: inline-block;
+	float: left;
+	margin: 0 3px 0 0;
+}
+
+ul.easy-wp-page-nav li:last-child {
+	margin-right: 0;
+}
+
+.easy-wp-page-navigation a,
+.easy-wp-page-navigation span {
+	display: inline-block;
+	padding: 4px 5px;
+	line-height: 1;
+	border: 1px solid #676767;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+}
+
+.easy-wp-page-navigation a:hover,
+.easy-wp-page-navigation span.current {
+	background: #676767;
+	color: #fff;
+}
