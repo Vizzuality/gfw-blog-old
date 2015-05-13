@@ -72,6 +72,7 @@ a {
   background: rgba(#000, .15);
   text-align: center;
   @media (max-width: 480px) {
+    height: 130px;
     padding: 0;
     ul {
       @include display-flex();
@@ -88,7 +89,7 @@ a {
     @media (max-width: 480px) {
       @include display-flex();
       display: flex;
-      height: 45px;
+      height: 25px;
       margin: 0 6px;
       align-items: center;
     }
@@ -100,7 +101,7 @@ a {
 
   a {
     font-size: 17px;
-    line-height: 95px;
+    line-height: 45px;
     @extend .fira_sans;
     color: #fff;
 
@@ -110,6 +111,7 @@ a {
     }
     
     &.logo{
+      line-height: 73px;
       float: left;
       margin-left: 45px;
       padding-left: 95px;
@@ -122,7 +124,7 @@ a {
         width: 30px;
         height: 18px;
         position: relative;
-        bottom: 16px;
+        bottom: -7px;
         right: 30px;
         background: image-url('beta.png') no-repeat;
       }
@@ -138,7 +140,7 @@ a {
     &.home {
       @media (max-width: 480px) {
         position: relative;
-        top: -15px;
+        top: 7px;
         left: -30px;
       }
     }
@@ -167,8 +169,9 @@ a {
     padding: 0;
     float: none;
     width: 100%;
-    position: relative;
-    top: -40px;
+    position: absolute;
+    display: block;
+    top: 70px;
   }
 }
 
@@ -191,7 +194,7 @@ a {
   min-height: 205px;
   text-align: center;
   @media (max-width: 480px) {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 }
 
@@ -259,6 +262,10 @@ a {
   text-transform: uppercase;
   color: rgba(#000, .35);
   background: #00D9A3;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    line-height: 15px;
+  }
 
   &.badge-credit {
     right: auto; left: 0;
