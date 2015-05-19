@@ -41,8 +41,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php gfw_blog_paging_nav(); ?>
-
+			<?php /* gfw_blog_paging_nav(); */ ?>
+			<?php echo easy_wp_pagenavigation(); ?>
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>

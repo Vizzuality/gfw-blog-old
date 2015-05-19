@@ -48,8 +48,7 @@
 
     <div class="header-inner">
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <a href="http://www.globalforestwatch.org/" title="GLOBAL FOREST WATCH" class="logo">&nbsp;</a>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="home">Blog</a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav><!-- #site-navigation -->
 

@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy WP Page Navigation v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-03-24 18:43+0700\n"
+"Last-Translator: admin <phamanhtuan1208@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:86 easy-wp-pagenavigation.php:144
+msgid "&laquo; First"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:87 easy-wp-pagenavigation.php:145
+msgid "Last &raquo;"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:88 easy-wp-pagenavigation.php:146
+msgid "&laquo;"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:89 easy-wp-pagenavigation.php:147
+msgid "&raquo;"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:182 inc/plugin-form.php:2
+msgid "Easy WP Page Navigation Options"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:182
+msgid "Easy WP Page Nav"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: easy-wp-pagenavigation.php:226
+msgid "Settings"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:10
+msgid "General options"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:11
+msgid "Posts per page taxonomies options"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:18
+msgid "Custom Text For First Page"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:26
+msgid "Custom Text For Last Page"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:34
+msgid "Custom Text For Previous Page"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:42
+msgid "Custom Text For Next Page"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:50
+msgid "Align Page Navigation"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:54
+msgid "Align left"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:55
+msgid "Align center"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:56
+msgid "Align right"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:63
+msgid "Fill posts per page for taxonomies your want paging, if field empty we will get default value in \"Blog pages show at most\""
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:65
+msgid "Note: All fields of this tab just apply value is number"
+msgstr ""
+
+# @ easy-wp-page-navigation
+#: inc/plugin-form.php:88
+msgid "Save"
+msgstr ""
