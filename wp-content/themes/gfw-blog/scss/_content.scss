@@ -406,7 +406,12 @@ img {
   ul { list-style: square; }
   ol { list-style: decimal; }
 
-  strong { font-weight: bold; }
+  strong {
+    font-weight: bold;
+    @media (max-width: 480px) {
+      clear: both;
+    }
+  }
 
   em { font-style: italic; }
 
