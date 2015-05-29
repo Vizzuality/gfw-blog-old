@@ -409,6 +409,7 @@ img {
   strong {
     font-weight: bold;
     @media (max-width: 480px) {
+      display: block;
       clear: both;
     }
   }
@@ -565,6 +566,10 @@ img.alignright {
   padding-left: 30px;
   padding-bottom: 20px;
   background: #FFF;
+  @media (max-width: 480px) {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 .tag-cloud-gfw {
   margin: 15px auto;
