@@ -392,6 +392,7 @@ a {
     margin-bottom: 20px;
     @extend .fira_sans_medium;
     color: #444;
+    clear: both;
   }
 
   h1 { font-size: 21px; }
@@ -551,11 +552,20 @@ object {
 }
 
 img.alignright {
-  float: right;
-  margin-right: -80px;
-  padding-left: 30px;
+  // float: right;
+  // margin-right: -80px;
+  // padding-left: 30px;
+
   padding-bottom: 20px;
   background: #FFF;
+  float: right;
+  margin: 0 0 0 20px;
+  @media (max-width: 600px) {
+    margin: 0 0 15px;
+    padding: 0;
+    float: none;
+    width: 100%;
+  }
 }
 .tag-cloud-gfw {
   margin: 15px auto;
