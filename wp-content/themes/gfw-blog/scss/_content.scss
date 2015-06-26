@@ -16,11 +16,7 @@ a {
     color: darken(#2483B2, 5%);
   }
 }
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
+
 
 
 /* =Header
@@ -396,6 +392,7 @@ img {
     margin-bottom: 20px;
     @extend .fira_sans_medium;
     color: #444;
+    clear: both;
   }
 
   h1 { font-size: 21px; }
@@ -406,13 +403,7 @@ img {
   ul { list-style: square; }
   ol { list-style: decimal; }
 
-  strong {
-    font-weight: bold;
-    @media (max-width: 480px) {
-      display: block;
-      clear: both;
-    }
-  }
+  strong { font-weight: bold; }
 
   em { font-style: italic; }
 
@@ -564,11 +555,16 @@ img.alignright {
   // float: right;
   // margin-right: -80px;
   // padding-left: 30px;
+
   padding-bottom: 20px;
   background: #FFF;
-  @media (max-width: 480px) {
-    margin-right: 0;
-    padding-left: 0;
+  float: right;
+  margin: 0 0 0 20px;
+  @media (max-width: 600px) {
+    margin: 0 0 15px;
+    padding: 0;
+    float: none;
+    width: 100%;
   }
 }
 .tag-cloud-gfw {
