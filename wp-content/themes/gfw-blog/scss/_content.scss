@@ -386,6 +386,10 @@ a {
 
   p { margin-bottom: 20px; }
   img { max-width: 100%; }
+  table {
+    max-width: 100%;
+    width: auto !important;
+  }
   h1,
   h2,
   h3 {
