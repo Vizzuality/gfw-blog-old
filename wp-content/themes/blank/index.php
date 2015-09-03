@@ -14,14 +14,15 @@ get_header(); ?>
         <header>
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
         </header>
-        <?php the_content('Read the rest of this entry &raquo;'); ?>
-        <footer>
-          <?php the_tags('Tags: ', ', ', '<br />'); ?> 
-          <?php the_category(', ') ?>
-          <?php the_time('F jS, Y') ?>
-          <?php /*edit_post_link('Edit', '', ' | '); */?>
-          <?php /* comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); */?>
-        </footer>
+        <div class="content">
+          <footer>
+            <?php /*the_tags('Tags: ', ', ', '<br />'); */?> 
+            <?php the_category(', ') ?>
+            <?php the_time('F jS, Y') ?>
+            <?php /*edit_post_link('Edit', '', ' | '); */?>
+            <?php /* comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); */?>
+          </footer>
+        </div>
       </article>
 
     <?php endwhile; ?>
