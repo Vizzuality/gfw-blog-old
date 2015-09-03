@@ -63,6 +63,13 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 .sticky h2 {
 	padding-top: 10px;
 }
+body {
+	font-family: 'Fira Sans', Georgia, serif;
+}
+a {
+	text-decoration: none;
+	border: 0;
+}
 #sidebar {
 	background-color: #EDEDE8;
 	width: 260px;
@@ -74,4 +81,35 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	width: calc(100% - 260px);
     display: block;
     float: left;
+}
+#main-sections {
+	height: 58px;
+	display: flex;
+	justify-content: flex-end;
+    align-items: center;
+	background-color: rgba(255,255,255,0.8);
+}
+#main-sections a {
+	padding: 18px 30px;
+	text-transform: uppercase;
+	color: rgb(85, 85, 85);
+	font-size: 16px;
+	background-color: transparent;
+	transition: background-color 0.5s ease;
+}
+#main-sections a:hover {
+	background-color: white;
+	border-bottom: 3px solid #97bd3d;
+    box-sizing: content-box;
+}
+header[role=banner] {
+	background: #ccc url('img/8898631382_a66b6f0bc0_o.jpg?1413278637') 50%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 308px;
+}
+header h1 {
+	margin: 0;
 }

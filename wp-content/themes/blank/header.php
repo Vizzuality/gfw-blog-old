@@ -48,6 +48,12 @@
 
   <div id="container">
     <header role="banner">
+      <nav id="main-sections">
+        <a href="#">updates</a>
+        <a href="#">news roundup</a>
+        <a href="#">featured posts</a>
+        <a href="#">map of the week</a>
+      </nav>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
       <p class="description"><?php bloginfo('description'); ?></p>
       <span class="attribution">photo: test</span>
