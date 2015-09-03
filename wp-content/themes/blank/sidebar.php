@@ -5,6 +5,7 @@
  */
 ?>
 <aside id="sidebar">
+  <span>Map of the day: <?= count(query_posts('category_id=3'));?></span>
   <?php   /* Widgetized sidebar, if you have the plugin installed. */
       if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
@@ -60,7 +61,6 @@
 
     <?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
   </nav>
-
   <nav>
     <ul>
       <?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>

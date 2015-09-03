@@ -50,4 +50,5 @@
     <header role="banner">
       <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
       <p class="description"><?php bloginfo('description'); ?></p>
+      <span class="attribution">photo: test</span>
     </header>
