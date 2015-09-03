@@ -27,11 +27,6 @@ get_header(); ?>
 
     <?php endwhile; ?>
 
-    <nav>
-      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
-      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
-
   <?php else : ?>
 
     <h2>Not Found</h2>
