@@ -63,3 +63,15 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 .sticky h2 {
 	padding-top: 10px;
 }
+#sidebar {
+	background-color: #EDEDE8;
+	width: 260px;
+    float: left;
+    display: inline;
+    height: 845px;
+}
+#main {
+	width: calc(100% - 260px);
+    display: block;
+    float: left;
+}
