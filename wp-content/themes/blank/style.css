@@ -65,22 +65,35 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 }
 body {
 	font-family: 'Fira Sans', Georgia, serif;
+	background-color: #EDEDE8;
+	margin: 0 auto;
 }
 a {
 	text-decoration: none;
 	border: 0;
+}
+#container {
+	max-width: 1600px;
+	margin: 0 auto;
 }
 #sidebar {
 	background-color: #EDEDE8;
 	width: 260px;
     float: left;
     display: inline;
-    height: 845px;
+    min-height: 845px;
 }
 #main {
 	width: calc(100% - 260px);
     display: block;
     float: left;
+    min-height: 845px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+#main .card {
+	width: 280px;
 }
 #main-sections {
 	height: 58px;
