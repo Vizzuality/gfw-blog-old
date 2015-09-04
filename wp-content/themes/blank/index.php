@@ -10,10 +10,10 @@ get_header(); ?>
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
 
-      <article id="post-<?php the_ID(); ?>" class="card">
+      <article id="post-<?php the_ID(); ?>" class="card" data-link="<?php the_permalink() ?>">
         <?php if (has_post_thumbnail( $post->ID ) ): ?>
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><img src="<?php echo $image[0]; ?>"></a>
+          <img src="<?php echo $image[0]; ?>">
         <?php endif; ?>
         <header>
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
@@ -30,7 +30,6 @@ get_header(); ?>
       </article>
 
     <?php endwhile; ?>
-
   <?php else : ?>
 
     <h2>Not Found</h2>
@@ -45,3 +44,8 @@ get_header(); ?>
 <?php get_footer(); ?>
 
 
+<script type="text/javascript">
+$('.card:not(footer a)').on('click',function(){
+  location.href=$(this).data('link')
+})
+</script>
