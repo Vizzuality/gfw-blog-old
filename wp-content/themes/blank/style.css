@@ -89,7 +89,6 @@ a {
     float: left;
     min-height: 845px;
     background-color: white;
-	margin: 1.5em 0;
     padding: 0;
     -moz-column-gap: 1.5em;
     -webkit-column-gap: 1.5em;
@@ -104,11 +103,24 @@ a {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0 #ccc;
+    border: 1px solid lightgray;
 }
 
 #main .card img {
 	max-width: 280px;
+}
+h2 a {
+	color: #555;
+	font-size: 21px;
+}
+.content footer {
+	color: #555;
+	font-size: 12px;
+	display: flex;
+    justify-content: space-between;
+}
+.content footer a {
+	color: #97bd3d;
 }
 
 @media only screen and (min-width: 900px) {
