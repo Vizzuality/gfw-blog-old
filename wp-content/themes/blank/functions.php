@@ -67,3 +67,39 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+
+function gfw_blog_setup() {
+
+  /*
+   * Make theme available for translation.
+   * Translations can be filed in the /languages/ directory.
+   * If you're building a theme based on GFW blog, use a find and replace
+   * to change 'gfw-blog' to the name of your theme in all the template files
+   */
+  load_theme_textdomain( 'gfw-blog', get_template_directory() . '/languages' );
+
+  // Add default posts and comments RSS feed links to head.
+  add_theme_support( 'automatic-feed-links' );
+
+  /*
+   * Enable support for Post Thumbnails on posts and pages.
+   *
+   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+   */
+  add_theme_support( 'post-thumbnails' );
+
+  // This theme uses wp_nav_menu() in one location.
+  register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'gfw-blog' ),
+  ) );
+
+  // Enable support for Post Formats.
+  add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+  // Setup the WordPress core custom background feature.
+  add_theme_support( 'custom-background', apply_filters( 'gfw_blog_custom_background_args', array(
+    'default-color' => 'ffffff',
+    'default-image' => '',
+  ) ) );
+}
+add_action( 'after_setup_theme', 'gfw_blog_setup' );
