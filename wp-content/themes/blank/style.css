@@ -107,6 +107,9 @@ a {
     box-shadow: 2px 2px 4px 0 #ccc;
 }
 
+#main .card img {
+	max-width: 280px;
+}
 
 @media only screen and (min-width: 900px) {
     #main {
