@@ -103,7 +103,6 @@ a {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid lightgray;
-	transition: background-color 0.5s ease;
 	cursor: pointer;
 }
 #main .card:hover {
@@ -119,6 +118,8 @@ h2 a {
 	color: #555;
 	font-size: 21px;
 }
+h2 a:hover {color: #555;}
+h2 a:visited {color: #555;}
 .content footer {
 	color: #555;
 	font-size: 12px;
