@@ -27,10 +27,19 @@
           'orderby'                  => 'count',
           'order'                    => 'DESC',
           'hide_empty'               => 1
-      ); 
+        );
+        $max = null; 
         $categories = get_categories( $args );
-        foreach($categories as $category) { 
+        foreach($categories as $category) {
           echo '<li>'.$category->name.': '.$category->count.'</li>';
+          echo '<div class="line-wrapper">';
+          if ($max == null) {
+            echo '<span class="line first" style="width:100%;"></span>';
+            $max = $category->count;
+          } else {
+            echo '<span class="line" style="width:'.($category->count*100)/$max.'%"></span>';
+          }
+          echo '</div>';
         } 
       ?>
     </ul>
