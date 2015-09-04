@@ -84,12 +84,12 @@ a {
     min-height: 845px;
 }
 #main {
-	width: calc(100% - 260px);
+	width: calc(100% - 260px - (40px*2));
     display: block;
     float: left;
     min-height: 845px;
     background-color: white;
-    padding: 0;
+    padding: 40px;
     -moz-column-gap: 1.5em;
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
@@ -97,7 +97,6 @@ a {
 #main .card {
 	display: inline-block;
     background: #fff;
-    padding: 1em;
     margin: 0 0 1.5em;
     width: 100%;
     box-sizing: border-box;
@@ -107,10 +106,10 @@ a {
 }
 
 #main .card img {
-	width: 299px;
-    position: relative;
-    left: -17px;
-    top: -17px;
+	width: 100%;
+}
+h2 {
+	padding: 0 10px;
 }
 h2 a {
 	color: #555;
@@ -121,6 +120,7 @@ h2 a {
 	font-size: 12px;
 	display: flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 .content footer a {
 	color: #97bd3d;
