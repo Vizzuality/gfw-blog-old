@@ -31,7 +31,7 @@
         $max = null; 
         $categories = get_categories( $args );
         foreach($categories as $category) {
-          echo '<li>'.$category->name.': '.$category->count.'</li>';
+          echo '<li>'.$category->name;
           echo '<div class="line-wrapper">';
           if ($max == null) {
             echo '<span class="line first" style="width:100%;"></span>';
@@ -39,7 +39,7 @@
           } else {
             echo '<span class="line" style="width:'.($category->count*100)/$max.'%"></span>';
           }
-          echo '</div>';
+          echo '<span class="total_posts">'.$category->count.'</span></div></li>';
         } 
       ?>
     </ul>
