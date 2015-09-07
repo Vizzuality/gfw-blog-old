@@ -13,9 +13,9 @@
   <section>
     <span class="title">featured gfw user</span>
     <div>
-      <img src="LOL">
-      <span>octavia</span>
-      <span>coordinator</span>
+      <img src="http://www.wri.org/sites/default/files/styles/profile/public/octavia-payne-wri.jpg?itok=p0rF4F23">
+      <span class="name">Octavia Aris Payne</span>
+      <span class="name pro">Communications Coordinator, Global Forest Watch</span>
     </div>
   </section>
   <section>
