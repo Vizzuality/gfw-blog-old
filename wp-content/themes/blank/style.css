@@ -83,6 +83,20 @@ a {
     display: inline;
     min-height: 845px;
 }
+#sidebar .title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.5);
+    display: block;
+}
+#sidebar section {
+	margin: 12px 23px;
+}
+#sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 #main {
 	width: calc(100% - 260px - (40px*2));
     display: block;
@@ -196,6 +210,7 @@ header h1 {
     font-size: 12px;
     top: -9px;
     display: flex;
+    width: 1px;
 }
 .line-wrapper {
 	width: 190px;
@@ -227,3 +242,4 @@ header h1 {
 .line-wrapper .line.first:after {
 	background-color: #97bd3d;
 }
+.search-form span{display:none}.search-form .search-field{height:35px;line-height:35px;-webkit-appearance:none;border:0;background-color:rgba(0,0,0,0.3);border-radius:4px;color:#fefefe;font-size:16px;width:205px;margin-top:25px;padding-left:26px;margin-top:25px;padding-right:8px}.search-form .search-submit{display:none}

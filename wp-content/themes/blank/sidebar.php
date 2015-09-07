@@ -7,11 +7,11 @@
 <aside id="sidebar">
 
   <section>
-    <span>search</span>
+    <span class="title">search</span>
     <?php get_search_form(); ?>
   </section>
   <section>
-    <span>featured gfw user</span>
+    <span class="title">featured gfw user</span>
     <div>
       <img src="LOL">
       <span>octavia</span>
@@ -19,7 +19,7 @@
     </div>
   </section>
   <section>
-    <span>tags</span>
+    <span class="title">tags</span>
     <ul>
       <?php
 
