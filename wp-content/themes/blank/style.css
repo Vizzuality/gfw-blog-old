@@ -193,6 +193,9 @@ header h1 {
 }
 .total_posts {
     position: relative;
+    font-size: 12px;
+    top: -9px;
+    display: flex;
 }
 .line-wrapper {
 	width: 190px;

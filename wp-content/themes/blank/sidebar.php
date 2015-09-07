@@ -39,7 +39,7 @@
           } else {
             echo '<span class="line" style="width:'.($category->count*100)/$max.'%"></span>';
           }
-          echo '</div><span class="total_posts" style="right:'.(100 - (($category->count*100)/$max)).'%">'.$category->count.'</span></li>';
+          echo '<span class="total_posts" style="left:calc(100% - '.(100 - (($category->count*100)/$max)).'% + 2px)">'.$category->count.'</span></div></li>';
         } 
       ?>
     </ul>
