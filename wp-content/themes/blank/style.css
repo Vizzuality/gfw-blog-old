@@ -191,6 +191,9 @@ header[role=banner] {
 header h1 {
 	margin: 0;
 }
+.total_posts {
+    position: relative;
+}
 .line-wrapper {
 	width: 190px;
     height: 10px;
