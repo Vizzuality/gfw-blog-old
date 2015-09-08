@@ -82,6 +82,8 @@ a {
     float: left;
     display: inline;
     min-height: 845px;
+    position: relative;
+    z-index: 1;
 }
 #sidebar .title {
     font-size: 14px;
