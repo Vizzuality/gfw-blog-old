@@ -91,17 +91,24 @@ a {
     font-weight: 500;
 }
 #sidebar section {
-	margin: 12px 23px;
+	margin: 60px 23px;
 }
 #sidebar section:first-of-type {
 	margin: 50px 23px 0;
 }
-#sidebar section img {
-	height: 60px;
+#sidebar img {
+    height: 70px;
     border-radius: 50px;
+    float: left;
+    margin: 10px;
 }
-#sidebar section .name {
-	
+#sidebar .name {
+    font-size: 12px;
+    line-height: 14px;
+}
+#sidebar .name a,
+#sidebar .name a:visited {
+    color: #97bd3d;
 }
 #sidebar ul {
 	list-style: none;
