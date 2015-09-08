@@ -31,6 +31,7 @@
         $max = null; 
         $categories = get_categories( $args );
         foreach($categories as $category) {
+          if ($category->count < 2) return;
           echo '<li>'.$category->name;
           echo '<div class="line-wrapper">';
           if ($max == null) {
