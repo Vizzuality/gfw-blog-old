@@ -126,6 +126,11 @@ a {
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
 }
+.single #main {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+}
 @media only screen and (min-width: 480px) {
     #main {
         -moz-column-count: 1;
