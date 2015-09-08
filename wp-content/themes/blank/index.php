@@ -30,8 +30,9 @@ get_header(); ?>
           </footer>
         </div>
       </article>
-
     <?php endwhile; ?>
+    <span class="prev-p"></span>
+    <span class="prev-p next"></span>
   <?php else : ?>
 
     <h2>Not Found</h2>
