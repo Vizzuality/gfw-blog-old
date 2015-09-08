@@ -100,7 +100,9 @@ a {
 	height: 60px;
     border-radius: 50px;
 }
-#sidebar section div span
+#sidebar section .name {
+	
+}
 #sidebar ul {
 	list-style: none;
 	margin: 0;
@@ -213,6 +215,33 @@ header[role=banner] {
 }
 header h1 {
 	margin: 0;
+}
+header h1 a {
+    font-size: 47px;
+    font-weight: 300;
+    color: #fff;
+    margin: 30px 40px 0;
+    display: block;
+}
+header h1 a:visited,
+header h1 a:hover {
+    color: #fff;
+}
+header p {
+    line-height: 24px;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 300;
+    margin: 15px 40px 0;
+}
+header > span {
+    float: right;
+    color: #fff;
+    margin: 0 40px;
+    font-size: 10px;
+    position: relative;
+    top: 75px;
+    text-transform: uppercase;
 }
 .total_posts {
     position: relative;
