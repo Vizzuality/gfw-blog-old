@@ -319,6 +319,7 @@ header > span {
 }
 .search-form .search-submit{ display:none; }
 .prev-p {
+    visibility: visible;
     height: 100px;
     width: 100px;
     border-radius: 100%;
@@ -349,4 +350,7 @@ header > span {
 .prev-p.next:before {
     left: 20px;
     transform: scale(1.3);
+}
+.navigation-dir {
+    visibility: hidden;
 }

@@ -31,8 +31,8 @@ get_header(); ?>
         </div>
       </article>
     <?php endwhile; ?>
-    <?php posts_nav_link('','<span class="prev-p"></span>',''); ?>
-    <?php posts_nav_link('','','<span class="prev-p next"></span>'); ?>
+    <span class="navigation-dir"><?php posts_nav_link('','<span class="prev-p"></span>',''); ?></span>
+    <span class="navigation-dir"><?php posts_nav_link('','','<span class="prev-p next"></span>'); ?></span>
   <?php else : ?>
 
     <h2>Not Found</h2>
