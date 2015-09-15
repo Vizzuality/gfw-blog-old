@@ -126,10 +126,19 @@ a {
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
 }
-.single #main{
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
-        column-count: 1;
+.single #main {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+}
+h2.pagetitle {
+    background-color: white;
+    width: calc(100% - 260px - (100px*2));
+    position: relative;
+    padding: 40px 100px 0;
+    font-weight: 300;
+    font-size: 35px;
+    margin: 0px 0 -30px;
 }
 @media only screen and (min-width: 480px) {
     #main {

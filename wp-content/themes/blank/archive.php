@@ -6,11 +6,6 @@
 
 get_header(); ?>
 
-<div id="main" role="main">
-
-  <?php if (have_posts()) : ?>
-
-  <section>
     <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
     <?php /* If this is a category archive */ if (is_category()) { ?>
     <h2 class="pagetitle">Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
@@ -27,19 +22,17 @@ get_header(); ?>
     <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
     <h2 class="pagetitle">Blog Archives</h2>
     <?php } ?>
+<div id="main" role="main">
 
-    <nav>
-      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
-      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
+  <?php if (have_posts()) : ?>
 
+  <section>
     <?php while (have_posts()) : the_post(); ?>
       <article id="post-<?php the_ID(); ?>" class="card" data-link="<?php the_permalink() ?>">
           <img src="http://gfw.blog.s3.amazonaws.com/2015/06/17360624152_79047c6646_k-300x199.png<?php /*echo $image[0];*/ ?>">
         
         <?php if (has_post_thumbnail( $post->ID ) ): ?>
-          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-          <!-- <img src="http://gfw.blog.s3.amazonaws.com/2015/06/17360624152_79047c6646_k-300x199.png<?php /*echo $image[0];*/ ?>"> -->
+          <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>pagetitle
         <?php endif; ?>
         <header>
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>

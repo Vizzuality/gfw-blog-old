@@ -15,7 +15,6 @@ get_header(); ?>
         
         <?php if (has_post_thumbnail( $post->ID ) ): ?>
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-          <!-- <img src="http://gfw.blog.s3.amazonaws.com/2015/06/17360624152_79047c6646_k-300x199.png<?php /*echo $image[0];*/ ?>"> -->
         <?php endif; ?>
         <header>
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
