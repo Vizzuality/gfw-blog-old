@@ -139,6 +139,8 @@ h2.pagetitle {
     font-weight: 300;
     font-size: 35px;
     margin: 0px 0 -30px;
+    float: left;
+    color: rgb(85,85,85);
 }
 @media only screen and (min-width: 480px) {
     #main {
