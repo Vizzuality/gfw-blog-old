@@ -127,7 +127,8 @@ a {
     column-gap: 1.5em;
 }
 .single #main,
-.search #main {
+.search #main,
+.category #main {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
