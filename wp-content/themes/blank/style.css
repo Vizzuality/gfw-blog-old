@@ -126,7 +126,8 @@ a {
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
 }
-.single #main {
+.single #main,
+.search #main {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
@@ -182,6 +183,7 @@ h2 {
 h2 a {
 	color: #555;
 	font-size: 21px;
+    font-weight: 400;
 }
 h2 a:hover {color: #555;}
 h2 a:visited {color: #555;}
@@ -198,12 +200,15 @@ h2 a:visited {color: #555;}
 .content footer a:hover {
 	text-decoration: underline;
 }
+.content footer span {
+    opacity: 0.5;
+}
 #main-sections {
 	height: 58px;
 	display: flex;
 	justify-content: flex-end;
     align-items: center;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgb(255,255,255);
 }
 #main-sections a {
 	padding: 18px 30px;
