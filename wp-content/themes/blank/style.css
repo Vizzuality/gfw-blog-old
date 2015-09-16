@@ -193,6 +193,9 @@ h2.pagetitle {
 #main .card img {
 	width: 100%;
 }
+.post a {
+    color: #2483B2;
+}
 h2 {
 	padding: 0 10px;
     line-height: 23px;
