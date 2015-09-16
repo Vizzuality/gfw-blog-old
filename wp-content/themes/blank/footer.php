@@ -34,5 +34,27 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
+  <script type="text/javascript">
+  $.fn.followTo = function (pos) {
+    var $this = this,
+        $window = $(window);
+ 
+    $window.scroll(function (e) {
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                top: $('.pagination').offset().top
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: '650px'
+            });
+        }
+    });
+  };
+   
+  $('.prev-p-cont').followTo($('.pagination').offset().top - 650);
+</script>
 </body>
 </html>

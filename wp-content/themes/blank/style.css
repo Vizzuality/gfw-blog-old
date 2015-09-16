@@ -349,7 +349,6 @@ header > span {
 .search-form .search-submit{ display:none; }
 .prev-p-cont {
     position: fixed;
-    top: 650px;
     display: flex;
     width: calc(100% - 315px);
     justify-content: space-between;
@@ -398,6 +397,7 @@ header > span {
     line-height:13px;
     display: flex;
     justify-content: center;
+    z-index: 4;
 }
  
 .pagination span, .pagination a {
