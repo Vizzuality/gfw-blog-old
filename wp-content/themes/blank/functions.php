@@ -131,6 +131,7 @@ function pagination($pages = '', $range = 4)
                  echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
              }
          }
+         echo "<a href='".get_pagenum_link(($i-1))."' class=\"inactive\">... ".($i-1)."</a>";
          echo "</div>\n";
      }
 }
