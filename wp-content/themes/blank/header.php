@@ -76,8 +76,8 @@
         <p class="description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
         <span class="attribution">MARCO SIMOLA/ CIFOR</span>
       <?php else : ?>
-        <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-        <p class="description"><?php bloginfo('description'); ?></p>
+        <h1><a href="<?php echo get_option('home'); ?>/">Blog</a></h1>
+        <p class="description">The GFW blog catalyzes conversations around improved forest management by providing timely, credible analysis on threats to global forests.</p>
         <span class="attribution">MARCO SIMOLA/ CIFOR</span>
       <?php endif; ?>
     </header>
