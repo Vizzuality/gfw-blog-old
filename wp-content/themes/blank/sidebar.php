@@ -12,9 +12,9 @@
   </section>
   <section>
     <span class="title">featured gfw user</span>
-    <div>
+    <div class="f-user">
       <img src="http://www.wri.org/sites/default/files/styles/profile/public/octavia-payne-wri.jpg?itok=p0rF4F23">
-      <span class="name"><a href="#">Octavia Aris Payne</a></span>
+      <span class="name"><a href="http://www.wri.org/profile/octavia-aris-payne" target="_blank">Octavia Aris Payne</a></span>
       <span class="name pro">Communications Coordinator, Global Forest Watch</span>
     </div>
   </section>
@@ -32,7 +32,7 @@
         $categories = get_categories( $args );
         foreach($categories as $category) {
           if ($category->count < 2) return;
-          echo '<li>'.$category->name;
+          echo '<li><a href="/category/'.$category->slug.'">'.$category->name.'</a>';
           echo '<div class="line-wrapper">';
           if ($max == null) {
             echo '<span class="line first" style="width:100%;"></span>';

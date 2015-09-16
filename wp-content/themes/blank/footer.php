@@ -35,6 +35,11 @@
   <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
   <script type="text/javascript">
+  $('.card:not(footer a)').on('click',function(){
+    location.href=$(this).data('link')
+  })
+  </script>
+  <script type="text/javascript">
   $.fn.followTo = function (pos) {
     var $this = this,
         $window = $(window);

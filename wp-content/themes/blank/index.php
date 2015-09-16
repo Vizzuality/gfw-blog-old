@@ -51,8 +51,4 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
-<script type="text/javascript">
-$('.card:not(footer a)').on('click',function(){
-  location.href=$(this).data('link')
-})
-</script>
+
