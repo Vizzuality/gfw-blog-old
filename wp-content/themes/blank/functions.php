@@ -123,15 +123,16 @@ function pagination($pages = '', $range = 4)
  
      if(1 != $pages)
      {
-         echo "<div class=\"pagination\">";
-         for ($i=1; $i <= $pages; $i++)
-         {
-             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-             {
-                 echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
-             }
-         }
-         echo "<a href='".get_pagenum_link(($i-1))."' class=\"inactive\">... ".($i-1)."</a>";
-         echo "</div>\n";
+      echo "<div class=\"pagination\">";
+      for ($i=1; $i <= $pages; $i++)
+      {
+        if ($i == $pages) {
+          echo "<a href='".get_pagenum_link(($i))."' class=\"inactive\">...&nbsp;&nbsp;&nbsp;".($i)."</a>";
+        }
+        else if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+           echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+        }
+      }
+      echo "</div>\n";
      }
 }
