@@ -414,8 +414,7 @@ header > span {
 }
  
 .pagination a:hover{
-    color:#fff;
-    background: #3279BB;
+    color:#97bd3d;
 }
  
 .pagination .current{
