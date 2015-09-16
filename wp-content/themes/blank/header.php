@@ -48,6 +48,7 @@
 
   <div id="container">
     <header role="banner">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
       <nav id="main-sections">
         <a href="#">updates</a>
         <a href="#">news roundup</a>
