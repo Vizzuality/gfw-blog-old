@@ -55,7 +55,45 @@
         <a href="#">featured posts</a>
         <a href="#">map of the week</a>
       </nav>
-      <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-      <p class="description"><?php bloginfo('description'); ?></p>
-      <span class="attribution">photo: test</span>
+    <?php if (is_single()) : ?>
+      <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
+        <p class="description"><?php echo get_the_category_list( __( ', ', 'gfw-blog' ) ); ?></p>
+        <span class="attribution"><?php gfw_blog_posted_on(); ?></span>
+    <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW News roundups</a></h1>
+          <p class="site-description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
+          <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
+        </div>
+      <?php elseif (is_category() && in_category( 'Map of the day' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Map of the day</a></h1>
+          <p class="site-description">Connecting Global Forest Watch to current events</p>
+          <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
+        </div>
+      <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Feature posts</a></h1>
+          <p class="site-description">Original analysis and commentary authored by GFW experts and partners.</p>
+          <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
+        </div>
+      <?php elseif (is_category() && in_category( 'Update' )) : ?>
+        <div class="site-branding">
+          <div class="site-branding-sep top"></div>
+          <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">GFW Update</a></h1>
+          <p class="site-description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
+          <div class="site-branding-sep"></div>
+          <?php get_search_form(); ?>
+        </div>
+      <?php else : ?>
+        <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+        <p class="description"><?php bloginfo('description'); ?></p>
+        <span class="attribution">photo: test</span>
+      <?php endif; ?>
     </header>

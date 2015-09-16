@@ -265,7 +265,8 @@ header[role=banner] {
     -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    height: 308px;
+    min-height: 400px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
 }
 header h1 {
 	margin: 0;
@@ -287,6 +288,9 @@ header p {
     color: #fff;
     font-weight: 300;
     margin: 15px 40px 0;
+}
+.description a {
+    color: #fff;
 }
 header > span {
     float: right;

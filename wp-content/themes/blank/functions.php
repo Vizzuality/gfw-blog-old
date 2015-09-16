@@ -103,7 +103,18 @@ function gfw_blog_setup() {
   ) ) );
 }
 add_action( 'after_setup_theme', 'gfw_blog_setup' );
+function gfw_blog_posted_on() {
+  $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
+  $time_string = sprintf( $time_string,
+    esc_attr( get_the_date( 'c' ) ),
+    esc_html( get_the_date() )
+  );
+
+  printf( __( 'Posted on %1$s', 'gfw-blog' ),
+    sprintf( '%1$s', $time_string )
+  );
+}
 function pagination($pages = '', $range = 4)
 {  
      $showitems = ($range * 2)+1;  
