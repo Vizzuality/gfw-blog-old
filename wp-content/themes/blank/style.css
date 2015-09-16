@@ -81,7 +81,6 @@ a {
 	width: 260px;
     float: left;
     display: inline;
-    min-height: 845px;
     position: relative;
     z-index: 1;
 }
@@ -122,11 +121,13 @@ a {
     float: left;
     background-color: white;
     padding: 50px 100px;
+}
+#main .columns {
     -moz-column-gap: 1.5em;
     -webkit-column-gap: 1.5em;
     column-gap: 1.5em;
 }
-.single #main {
+.single #main .columns{
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
@@ -143,28 +144,21 @@ h2.pagetitle {
     color: rgb(85,85,85);
 }
 @media only screen and (min-width: 480px) {
-    #main {
+    #main .columns {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
     }
 }
-/*@media only screen and (min-width: 768px) {
-	 #main {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}*/
 @media only screen and (min-width: 1024px) {
-    #main {
+    #main .columns {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
 		column-count: 2;
     }
 }
 @media only screen and (min-width: 1200px) {
-    #main {
+    #main .columns {
 		-moz-column-count: 3;
 		-webkit-column-count: 3;
 		column-count: 3;
@@ -189,11 +183,12 @@ h2.pagetitle {
 }
 h2 {
 	padding: 0 10px;
-}
-h2 a {
-	color: #555;
+    line-height: 23px;
 	font-size: 21px;
     font-weight: 400;
+}
+h2 a {
+    color: #555;
 }
 h2 a:hover {color: #555;}
 h2 a:visited {color: #555;}
@@ -233,6 +228,25 @@ h2 a:visited {color: #555;}
 	border-bottom: 3px solid #97bd3d;
     box-sizing: content-box;
 }
+a.logo {
+    position: absolute;
+    line-height:73px;
+    float:left;
+    margin-left:45px;
+    padding-left:95px;
+    font-size:21px;
+    background:url('img/logo.png') no-repeat;
+}
+a.logo:after {
+    content:"";
+    display:block;
+    width:30px;
+    height:18px;
+    position:relative;
+    bottom:-7px;
+    right:30px;
+    background:url('img/beta.png?1422438711') no-repeat;
+}
 header[role=banner] {
 	background: #ccc url('img/8898631382_a66b6f0bc0_o.jpg?1413278637') 50%;
     -moz-background-size: cover;
@@ -248,7 +262,7 @@ header h1 a {
     font-size: 47px;
     font-weight: 300;
     color: #fff;
-    margin: 30px 40px 0;
+    margin: 90px 40px 0;
     display: block;
 }
 header h1 a:visited,
@@ -268,7 +282,7 @@ header > span {
     margin: 0 40px;
     font-size: 10px;
     position: relative;
-    top: 75px;
+    top: 25px;
     text-transform: uppercase;
 }
 .total_posts {
@@ -333,16 +347,23 @@ header > span {
     border-bottom: 2px solid rgba(0,0,0,0.3);
 }
 .search-form .search-submit{ display:none; }
+.prev-p-cont {
+    position: fixed;
+    top: 650px;
+    display: flex;
+    width: calc(100% - 315px);
+    justify-content: space-between;
+    z-index: 2;
+    margin: 0 0 0 -60px;
+    max-width: 1285px;
+}
 .prev-p {
     visibility: visible;
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
-    top: 750px;
-    background-color: #f7f7f7;
-    position: absolute;
-    display: block;
-    left: -50px;
+    background-color: #97bd3d;
+    display: inline-block;
     cursor: pointer;
 }
 .prev-p.next {
@@ -353,19 +374,51 @@ header > span {
     display: inline-block;
     position: relative;
     width: 23px;
-    height: 25px;
+    height: 13px;
     color: transparent;
-    background-color: #555;
+    background-color: white;
     mask: url(img/arrow.svg) no-repeat 50% 50%;
     -webkit-mask: url(img/arrow.svg) no-repeat 50% 50%;
-    left: 60px;
-    top: 38px;
+    left: 14px;
+    top: 14px;
     transform: rotate(180deg) scale(1.3);
 }
 .prev-p.next:before {
-    left: 20px;
+    left: 4px;
     transform: scale(1.3);
 }
 .navigation-dir {
     visibility: hidden;
+}
+.pagination {
+    clear:both;
+    padding:20px 0;
+    position:relative;
+    font-size:11px;
+    line-height:13px;
+    display: flex;
+    justify-content: center;
+}
+ 
+.pagination span, .pagination a {
+    float: left;
+    color: #555555;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 24px;
+    margin: 0 10px 0 0;
+    background: none;
+    text-decoration: none;
+}
+ 
+.pagination a:hover{
+    color:#fff;
+    background: #3279BB;
+}
+ 
+.pagination .current{
+    cursor: default;
+    border-bottom: 2px solid #97bd3d;
 }
