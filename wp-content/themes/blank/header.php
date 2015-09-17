@@ -59,6 +59,10 @@
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
       <p class="description"><?php echo get_the_category_list( __( ', ', 'gfw-blog' ) ); ?></p>
       <span class="attribution"><?php gfw_blog_posted_on(); ?></span>
+      <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+      <script type="text/javascript">
+      document.querySelectorAll('header[role=banner]')[0].style.background = '#ccc url("<? echo $image[0] ?>") 50%'
+      </script>
     <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/">GFW News roundups</a></h1>
       <p class="description">A recurring digest of news stories on forest science, conservation, and monitoring</p>
