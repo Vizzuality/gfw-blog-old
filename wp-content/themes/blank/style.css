@@ -373,6 +373,7 @@ header > span {
 }
 .search-form .search-submit{ display:none; }
 .prev-p-cont {
+    top: 650px;
     position: fixed;
     display: flex;
     width: calc(100% - 315px);
