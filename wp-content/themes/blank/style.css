@@ -480,7 +480,14 @@ header > span {
     }
     .prev-p-cont {
         width: calc(100% - 51px);
-        margin: -35px 0 -25px 5px;
+        margin: 12px 0 0px 5px;
+    }
+    .prev-p {
+        position: relative;
+        z-index: 5;
+    }
+    .prev-p.next {
+        left: 0;
     }
 }
 @media only screen and (min-width: 1024px) {
