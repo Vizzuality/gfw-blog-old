@@ -456,6 +456,13 @@ header > span {
     }
 }
 @media only screen and (max-width: 376px) {
+    #main-sections {
+        visibility: hidden;
+        margin-bottom: -120px;
+    }   
+    header[role=banner] {
+        min-height: 280px;
+    }
     #main {
         width: calc(100% - (20px*2)); 
         padding: 20px;
