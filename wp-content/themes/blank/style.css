@@ -298,6 +298,13 @@ header p {
     color: #fff;
     font-weight: 300;
     margin: 15px 190px 0;
+    display: inline;
+    float: left;
+}
+header p.posted {
+    display: inline;
+    float: right;
+    margin: 15px 20px 0;
 }
 .description a {
     color: #fff;
@@ -309,6 +316,7 @@ header > span {
     font-size: 10px;
     position: absolute;
     bottom: 20px;
+    left: 0;
     text-transform: uppercase;
 }
 .total_posts {

@@ -58,7 +58,8 @@
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
       <p class="description"><?php echo get_the_category_list( __( ', ', 'gfw-blog' ) ); ?></p>
-      <span class="attribution"><?php gfw_blog_posted_on(); ?></span>
+      <p class="posted"><?php gfw_blog_posted_on(); ?></p>
+      <span class="attribution"><?php echo get_post_meta($post->ID, 'PhotoAttribution', true); ?></span>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
       <script type="text/javascript">
       document.querySelectorAll('header[role=banner]')[0].style.background = '#ccc url("<? echo $image[0] ?>") 50%'
@@ -71,17 +72,17 @@
       <h1><a href="<?php echo get_option('home'); ?>/">GFW Map of the day</a></h1>
       <p class="description">Connecting Global Forest Watch to current events</p>
       <span class="attribution">MARCO SIMOLA/ CIFOR</span>
-      <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
-        <h1><a href="<?php echo get_option('home'); ?>/">GFW Feature posts</a></h1>
-        <p class="description">Original analysis and commentary authored by GFW experts and partners.</p>
-        <span class="attribution">MARCO SIMOLA/ CIFOR</span>
-      <?php elseif (is_category() && in_category( 'Update' )) : ?>
-        <h1><a href="<?php echo get_option('home'); ?>/">GFW Update</a></h1>
-        <p class="description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
-        <span class="attribution">MARCO SIMOLA/ CIFOR</span>
-      <?php else : ?>
-        <h1><a href="<?php echo get_option('home'); ?>/">Blog</a></h1>
-        <p class="description">The GFW blog catalyzes conversations around improved forest management by providing timely, credible analysis on threats to global forests.</p>
-        <span class="attribution">MARCO SIMOLA/ CIFOR</span>
-      <?php endif; ?>
+    <?php elseif (is_category() && in_category( 'Feature posts' )) : ?>
+      <h1><a href="<?php echo get_option('home'); ?>/">GFW Feature posts</a></h1>
+      <p class="description">Original analysis and commentary authored by GFW experts and partners.</p>
+      <span class="attribution">MARCO SIMOLA/ CIFOR</span>
+    <?php elseif (is_category() && in_category( 'Update' )) : ?>
+      <h1><a href="<?php echo get_option('home'); ?>/">GFW Update</a></h1>
+      <p class="description">Short posts on recent news, updates to the GFW site, and reports on new analysis</p>
+      <span class="attribution">MARCO SIMOLA/ CIFOR</span>
+    <?php else : ?>
+      <h1><a href="<?php echo get_option('home'); ?>/">Blog</a></h1>
+      <p class="description">The GFW blog catalyzes conversations around improved forest management by providing timely, credible analysis on threats to global forests.</p>
+      <span class="attribution">MARCO SIMOLA/ CIFOR</span>
+    <?php endif; ?>
     </header>
