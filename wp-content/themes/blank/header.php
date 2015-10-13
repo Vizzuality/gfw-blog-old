@@ -62,7 +62,8 @@
       <span class="attribution"><?php echo get_post_meta($post->ID, 'PhotoAttribution', true); ?></span>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
       <script type="text/javascript">
-      document.querySelectorAll('header[role=banner]')[0].style.background = '#ccc url("<? echo $image[0] ?>") 50%'
+      document.querySelectorAll('header[role=banner]')[0].style.background = 'url("<? echo $image[0] ?>") 50% 50% / cover rgb(204, 204, 204)';
+      document.querySelectorAll('header[role=banner]')[0].style.backgroundSize = 
       </script>
     <?php elseif (is_category() && in_category( 'News roundups' )) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/">GFW News roundups</a></h1>
