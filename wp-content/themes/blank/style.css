@@ -434,6 +434,19 @@ header > span {
     cursor: default;
     border-bottom: 2px solid #97bd3d;
 }
+#mobile-sidebar {
+    display: none;
+}
+#mobile-sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+#mobile-sidebar a {
+    color: #555;
+    font-size: 12px;
+    text-transform: capitalize;
+}
 @media only screen and (max-width: 769px) {
     #main {
         width: calc(100% - (50px*2)); 
@@ -454,8 +467,14 @@ header > span {
         width: calc(100% - 13px);
         margin: 0px 0 0 -45px;
     }
+    #mobile-sidebar {
+        display: block;
+    }
 }
 @media only screen and (max-width: 376px) {
+    #mobile-sidebar li:not(:last-child) {
+        display: none;
+    }
     #main-sections {
         visibility: hidden;
         margin-bottom: -120px;
