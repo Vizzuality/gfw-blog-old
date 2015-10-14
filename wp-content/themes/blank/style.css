@@ -448,6 +448,10 @@ header > span {
     text-transform: capitalize;
 }
 @media only screen and (max-width: 769px) {
+    #main-sections {
+        visibility: hidden;
+        margin-bottom: -120px;
+    }  
     #main {
         width: calc(100% - (50px*2)); 
         padding: 50px;
@@ -460,8 +464,22 @@ header > span {
     #sidebar {
         display: none;
     }
+    header[role=banner] {
+        min-height: 220px;
+    }
+    header h1 {
+        margin: 130px 0 0;
+    }
+    header h1 a {
+        font-size: 34px;
+    }
     header p {
-        margin: 15px 80px 0;
+        line-height: 20px;
+        font-size: 15px;
+        margin: 5px 40px 0;
+    }
+    header p {
+        margin: 15px 40px 0;
     }
     .prev-p-cont {
         width: calc(100% - 13px);
@@ -470,17 +488,33 @@ header > span {
     #mobile-sidebar {
         display: block;
     }
+    a.logo {
+        background-size: contain;
+        width: 60px;
+        height: 60px;
+    }
+    a.logo:after {
+        bottom: 25px;
+        right: 61px;
+    }
 }
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 585px) {
     #mobile-sidebar li:not(:last-child) {
         display: none;
-    }
-    #main-sections {
-        visibility: hidden;
-        margin-bottom: -120px;
-    }   
+    } 
     header[role=banner] {
-        min-height: 280px;
+        min-height: 250px;
+    }
+    header h1 {
+        margin: 130px 0 0;
+    }
+    header h1 a {
+        font-size: 34px;
+    }
+    header p {
+        line-height: 20px;
+        font-size: 15px;
+        margin: 5px 40px 0;
     }
     #main {
         width: calc(100% - (20px*2)); 
@@ -494,9 +528,6 @@ header > span {
     #sidebar {
         display: none;
     }
-    header p {
-        margin: 15px 40px 0;
-    }
     .prev-p-cont {
         width: calc(100% - 51px);
         margin: 12px 0 0px 5px;
@@ -508,6 +539,7 @@ header > span {
     .prev-p.next {
         left: 0;
     }
+
 }
 @media only screen and (min-width: 1024px) {
     #main .columns {
