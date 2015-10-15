@@ -50,10 +50,10 @@
     <header role="banner">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
       <nav id="main-sections">
-        <a href="#">updates</a>
-        <a href="#">news roundup</a>
-        <a href="#">featured posts</a>
-        <a href="#">map of the week</a>
+        <a href="/category/update/">updates</a>
+        <a href="/category/news/">news roundup</a>
+        <a href="/category/feature/">featured posts</a>
+        <a href="/category/mapoftheday/">map of the week</a>
       </nav>
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
