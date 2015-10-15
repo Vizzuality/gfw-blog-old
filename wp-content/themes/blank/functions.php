@@ -111,7 +111,7 @@ function gfw_blog_posted_on() {
     esc_html( get_the_date() )
   );
 
-  printf( __( 'Posted on %1$s', 'gfw-blog' ),
+  printf( __( '%1$s', 'gfw-blog' ),
     sprintf( '%1$s', $time_string )
   );
 }
