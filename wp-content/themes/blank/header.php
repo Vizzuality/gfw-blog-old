@@ -57,8 +57,7 @@
       </nav>
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
-      <p class="description"><?php echo get_the_category_list( __( ', ', 'gfw-blog' ) ); ?></p>
-      <p class="posted"><?php gfw_blog_posted_on(); ?></p>
+      <p class="description"><?php gfw_blog_posted_on(); ?></p>
       <span class="attribution"><?php echo get_post_meta($post->ID, 'PhotoAttribution', true); ?></span>
       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
       <script type="text/javascript">

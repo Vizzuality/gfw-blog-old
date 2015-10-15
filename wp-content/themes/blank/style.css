@@ -296,7 +296,7 @@ header > span {
     margin: 0 40px;
     font-size: 10px;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     text-transform: uppercase;
 }
@@ -450,6 +450,9 @@ header > span {
     text-transform: capitalize;
 }
 @media only screen and (max-width: 769px) {
+    .post {
+        padding: 0;
+    }
     #main-sections {
         visibility: hidden;
         margin-bottom: -120px;
@@ -501,9 +504,6 @@ header > span {
     }
 }
 @media only screen and (max-width: 585px) {
-    .post {
-        padding: 0;
-    }
     #mobile-sidebar li:not(:last-child) {
         display: none;
     } 
