@@ -263,6 +263,7 @@ header h1 {
 header h1 a {
     font-size: 47px;
     font-weight: 300;
+    line-height: 53px;
     color: #fff;
     margin: 90px 40px 0;
     display: block;
@@ -500,6 +501,9 @@ header > span {
     }
 }
 @media only screen and (max-width: 585px) {
+    .post {
+        padding: 0;
+    }
     #mobile-sidebar li:not(:last-child) {
         display: none;
     } 
