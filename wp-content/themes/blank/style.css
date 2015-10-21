@@ -518,7 +518,8 @@ header > span {
         margin: 130px 0 0;
     }
     header h1 a {
-        font-size: 34px;
+        font-size: 30px;
+        line-height: 28px;
     }
     header p {
         line-height: 20px;
