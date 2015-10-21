@@ -5,15 +5,6 @@
  */
 
 get_header(); ?>
-<div id="mobile-sidebar">
-  <ul>
-    <li><a href="#">updates</a></li>
-    <li><a href="#">news roundup</a></li>
-    <li><a href="#">featured posts</a></li>
-    <li><a href="#">map of the week</a></li>
-    <li><?php get_search_form(); ?></li>
-  </ul>
-</div>
 <div id="main" role="main">
   <div class="columns">
     <?php if (have_posts()) : ?>
