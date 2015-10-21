@@ -25,6 +25,10 @@ get_header(); ?>
     <footer>
       <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
       <p>Category: <?php the_category(', ') ?>.
+    <nav>
+      <div><?php previous_post_link('&laquo; %link') ?></div>
+      <div><?php next_post_link('%link &raquo;') ?></div>
+    </nav>
         <div id="comments" class="comments-area">
           <div id="disqus_thread"></div>
           <script type="text/javascript">
@@ -44,13 +48,6 @@ get_header(); ?>
       <?php edit_post_link('Edit this entry','','.'); ?>
       </p>
     </footer>
-    <nav>
-      <div><?php previous_post_link('&laquo; %link') ?></div>
-      <div><?php next_post_link('%link &raquo;') ?></div>
-    </nav>
-
-    <?php comments_template(); ?>
-
   </article>
 
 <?php endwhile; else: ?>
