@@ -29,6 +29,7 @@ get_header(); ?>
       <div><?php previous_post_link('&laquo; %link') ?></div>
       <div><?php next_post_link('%link &raquo;') ?></div>
     </nav>
+    <hr>
         <div id="comments" class="comments-area">
           <div id="disqus_thread"></div>
           <script type="text/javascript">
