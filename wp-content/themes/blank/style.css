@@ -266,12 +266,12 @@ header h1 {
 }
 header h1 a {
     font-size: 47px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 53px;
     color: #fff;
     margin: 90px 40px 0;
     display: block;
-    -webkit-font-smoothing: auto;
+    /*-webkit-font-smoothing: auto;*/
 }
 header h1 a:visited,
 header h1 a:hover {
