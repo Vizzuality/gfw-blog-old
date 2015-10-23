@@ -238,8 +238,8 @@ a.logo {
     position: absolute;
     line-height:73px;
     float:left;
-    margin-left:12%;
-    padding-left:95px;
+    margin-left: 185px;
+    padding-left: 95px;
     font-size:21px;
     background:url('img/logo.png') no-repeat;
 }
@@ -455,6 +455,11 @@ header > span {
     color: #555;
     font-size: 12px;
     text-transform: capitalize;
+}
+@media only screen and (max-width: 1049px) {
+    a.logo {
+        margin-left:15px;
+    }
 }
 @media only screen and (max-width: 850px) {
     .post {
