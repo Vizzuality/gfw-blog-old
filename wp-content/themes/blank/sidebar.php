@@ -19,7 +19,7 @@
     </div>
   </section>
   <section>
-    <span class="title">tags</span>
+    <span class="title">categories</span>
     <ul>
       <?php
 

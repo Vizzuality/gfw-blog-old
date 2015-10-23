@@ -574,3 +574,8 @@ header > span {
         column-count: 3;
     }
 }
+.fb_iframe_widget {
+    position: relative;
+    top: -7px;
+    left: -33px;
+}

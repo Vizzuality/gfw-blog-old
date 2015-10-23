@@ -24,7 +24,6 @@ get_header(); ?>
     </div>
     <footer>
       <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
-      <p>Category: <?php the_category(', ') ?>.
     <nav>
       <div><?php previous_post_link('&laquo; %link') ?></div>
       <div><?php next_post_link('%link &raquo;') ?></div>
