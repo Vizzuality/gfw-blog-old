@@ -13,7 +13,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" class="card" data-link="<?php the_permalink() ?>">
           <pre><? echo $post->ID ?></pre>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-          <pre><? echo $image ?></pre>
+          <pre><? var_dump($image) ?></pre>
 
             <img src="<?php $image[0]; ?>">
           
