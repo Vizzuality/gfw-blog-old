@@ -13,9 +13,9 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://www.wri.org/sites/default/files/styles/profile/public/octavia-payne-wri.jpg?itok=p0rF4F23">
-      <span class="name"><a href="http://www.wri.org/profile/octavia-aris-payne" target="_blank">Octavia Aris Payne</a></span>
-      <span class="name pro">Communications Coordinator, Global Forest Watch</span>
+      <img src="http://gfw.blog.s3.amazonaws.com/2015/10/MG_0379.jpg">
+      <span class="name"><a href="http://blog.globalforestwatch.org/2015/10/gfw-user-profile-sebastien-desbureaux/" target="_blank">Sébastien Desbureaux</a></span>
+      <span class="name pro">PhD student at Université d’Auvergne</span>
     </div>
   </section>
   <section>
