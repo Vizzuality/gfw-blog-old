@@ -12,44 +12,42 @@ get_header(); ?>
 
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header>
-      <h2><?php the_title(); ?></a></h2>
     </header>
     <?php the_content('Read the rest of this entry &raquo;'); ?>
     <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-    <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+    
+    <div class="share_buttons">
+      <div id="fb-root"></div>
+      <a href="http://twitter.com/share" target="_blank" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="Global Forest Watch">Tweet</a>
+      <div class="g-plusone" data-size="medium" data-href="<?php the_permalink(); ?>"></div>
+      <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    </div>
     <footer>
-      <p>This entry was posted by <?php the_author() ?>
-      on <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('l, F jS, Y') ?></time>
-      at <time><?php the_time() ?></time>
-      and is filed under <?php the_category(', ') ?>.
-      You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
-
-      <?php if ( comments_open() && pings_open() ) {
-        // Both Comments and Pings are open ?>
-        You can <a href="#respond">leave a response</a>, or <a href="<?php trackback_url(); ?>" rel="trackback">trackback</a> from your own site.
-
-      <?php } elseif ( !comments_open() && pings_open() ) {
-        // Only Pings are Open ?>
-        Responses are currently closed, but you can <a href="<?php trackback_url(); ?> " rel="trackback">trackback</a> from your own site.
-
-      <?php } elseif ( comments_open() && !pings_open() ) {
-        // Comments are open, Pings are not ?>
-        You can skip to the end and leave a response. Pinging is currently not allowed.
-
-      <?php } elseif ( !comments_open() && !pings_open() ) {
-        // Neither Comments, nor Pings are open ?>
-        Both comments and pings are currently closed.
-
-      <?php } edit_post_link('Edit this entry','','.'); ?>
-      </p>
-    </footer>
+      <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
     <nav>
       <div><?php previous_post_link('&laquo; %link') ?></div>
       <div><?php next_post_link('%link &raquo;') ?></div>
     </nav>
+    <hr>
+        <div id="comments" class="comments-area">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'gfw20'; // required: replace example with your forum shortname
 
-    <?php comments_template(); ?>
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
 
+      <?php edit_post_link('Edit this entry','','.'); ?>
+      </p>
+    </footer>
   </article>
 
 <?php endwhile; else: ?>
@@ -59,5 +57,5 @@ get_header(); ?>
 <?php endif; ?>
 
 </div>
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

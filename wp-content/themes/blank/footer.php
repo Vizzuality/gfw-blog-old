@@ -4,16 +4,6 @@
  * @subpackage HTML5_Boilerplate
  */
 ?>
-
-  <footer>
-      <p>
-        <?php bloginfo('name'); ?> is proudly powered by
-        <a href="http://wordpress.org/">WordPress</a>, and built using the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-        <br /><a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a>
-        and <a href="<?php bloginfo('comments_rss2_url'); ?>">Comments (RSS)</a>.
-        <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
-      </p>
-  </footer>
 </div> <!--! end of #container -->
 
   <!-- Javascript at the bottom for fast page loading -->
@@ -31,12 +21,37 @@
   <!-- WordPress.com does not allow Google Analytics code to be built into themes they host. 
        Add this section from HTML Boilerplate manually (html5-boilerplate/index.html), or use a Google Analytics WordPress Plugin-->
 	   
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+  <!-- social -->
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+
+  <!-- analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-48182293-1']);
+    _gaq.push(['_setDomainName', 'blog.globalforestwatch.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
   </script>
 			   
   <?php wp_footer(); ?>
@@ -44,5 +59,32 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
+  <script type="text/javascript">
+  $('.card:not(footer a)').on('click',function(){
+    location.href=$(this).data('link')
+  })
+  </script>
+  <script type="text/javascript">
+  $.fn.followTo = function (pos) {
+    var $this = this,
+        $window = $(window);
+ 
+    $window.scroll(function (e) {
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                top: $('.pagination').offset().top
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: '650px'
+            });
+        }
+    });
+  };
+   
+  $('.prev-p-cont').followTo($('.pagination').offset().top - 650);
+</script>
 </body>
 </html>

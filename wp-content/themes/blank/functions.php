@@ -67,3 +67,83 @@ function versioned_resource($relative_url){
 
   return $relative_url.$file_version;
 }
+
+function gfw_blog_setup() {
+
+  /*
+   * Make theme available for translation.
+   * Translations can be filed in the /languages/ directory.
+   * If you're building a theme based on GFW blog, use a find and replace
+   * to change 'gfw-blog' to the name of your theme in all the template files
+   */
+  load_theme_textdomain( 'gfw-blog', get_template_directory() . '/languages' );
+
+  // Add default posts and comments RSS feed links to head.
+  add_theme_support( 'automatic-feed-links' );
+
+  /*
+   * Enable support for Post Thumbnails on posts and pages.
+   *
+   * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+   */
+  add_theme_support( 'post-thumbnails' );
+
+  // This theme uses wp_nav_menu() in one location.
+  register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'gfw-blog' ),
+  ) );
+
+  // Enable support for Post Formats.
+  add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+
+  // Setup the WordPress core custom background feature.
+  add_theme_support( 'custom-background', apply_filters( 'gfw_blog_custom_background_args', array(
+    'default-color' => 'ffffff',
+    'default-image' => '',
+  ) ) );
+}
+add_action( 'after_setup_theme', 'gfw_blog_setup' );
+function gfw_blog_posted_on() {
+  $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+
+  $time_string = sprintf( $time_string,
+    esc_attr( get_the_date( 'c' ) ),
+    esc_html( get_the_date() )
+  );
+
+  printf( __( '%1$s', 'gfw-blog' ),
+    sprintf( '%1$s', $time_string )
+  );
+}
+function pagination($pages = '', $range = 4)
+{  
+     $showitems = ($range * 2)+1;  
+ 
+     global $paged;
+     if(empty($paged)) $paged = 1;
+ 
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }   
+ 
+     if(1 != $pages)
+     {
+      echo "<div class=\"pagination\">";
+      for ($i=1; $i <= $pages; $i++)
+      {
+        if ($i == $pages) {
+          echo "<a href='".get_pagenum_link(($i))."' class=\"inactive\">...&nbsp;&nbsp;&nbsp;".($i)."</a>";
+        }
+        else if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems )) {
+           echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+        }
+      }
+      echo "</div>\n";
+     }
+}
