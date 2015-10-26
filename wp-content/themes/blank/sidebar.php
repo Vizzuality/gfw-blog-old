@@ -13,7 +13,7 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://gfw.blog.s3.amazonaws.com/2015/10/MG_0379.jpg">
+      <img src="http://gfw.blog.s3.amazonaws.com/2015/10/sebas-square.png">
       <span class="name"><a href="http://blog.globalforestwatch.org/2015/10/gfw-user-profile-sebastien-desbureaux/" target="_blank">Sébastien Desbureaux</a></span>
       <span class="name pro">PhD student at Université d’Auvergne</span>
     </div>
