@@ -87,10 +87,10 @@
     </header>
     <div id="mobile-sidebar">
       <ul>
-        <li><a href="#">updates</a></li>
-        <li><a href="#">news roundup</a></li>
-        <li><a href="#">featured posts</a></li>
-        <li><a href="#">map of the week</a></li>
+        <li><a href="/category/update/">updates</a></li>
+        <li><a href="/category/news/">news roundup</a></li>
+        <li><a href="/category/feature/">featured posts</a></li>
+        <li><a href="/category/mapoftheday/">map of the week</a></li>
         <li><?php get_search_form(); ?></li>
       </ul>
     </div>
