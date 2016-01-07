@@ -13,9 +13,9 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://gfw.blog.s3.amazonaws.com/2015/10/sebas-square.png">
-      <span class="name"><a href="http://blog.globalforestwatch.org/2015/10/gfw-user-profile-sebastien-desbureaux/" target="_blank">Sébastien Desbureaux</a></span>
-      <span class="name pro">PhD student at Université d’Auvergne</span>
+      <img src="http://gfw.blog.s3.amazonaws.com/2016/01/campaign-on-mangrove-protection.jpg">
+      <span class="name"><a href="http://blog.globalforestwatch.org/2016/1/gfw-user-profile-roger-ngoufo/" target="_blank">Roger Ngoufo</a></span>
+      <span class="name pro">President of Cameroon Environmental Watch</span>
     </div>
   </section>
   <section>
