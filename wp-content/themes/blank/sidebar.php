@@ -13,10 +13,9 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://gfw.blog.s3.amazonaws.com/2016/01/campaign-on-mangrove-protection.jpg">
+      <img src="http://gfw.blog.s3.amazonaws.com/2016/02/CraigLeisher_1.png">
       <span class="name"><a href="http://blog.globalforestwatch.org/2016/02/gfw-user-profile-craig-leisher/" target="_blank">Craig Leisher</a></span>
       <span class="name pro">Director of Monitoring and Evaluations in Africa</span>
-      
     </div>
   </section>
   <section>
