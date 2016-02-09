@@ -109,6 +109,7 @@ a {
     line-height: 14px;
     position: relative;
     top: 8px;
+    display: block;
 }
 #sidebar .pro {
     top: 12px;
