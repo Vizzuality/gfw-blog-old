@@ -13,9 +13,9 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://gfw.blog.s3.amazonaws.com/2016/02/CraigLeisher_1.png">
-      <span class="name"><a href="http://blog.globalforestwatch.org/2016/02/gfw-user-profile-craig-leisher/" target="_blank">Craig Leisher</a></span>
-      <span class="name pro">Director of Monitoring and Evaluations in Africa</span>
+      <img src="http://gfw.blog.s3.amazonaws.com/2016/03/DavidTorres_small.jpeg">
+      <span class="name"><a href="http://blog.globalforestwatch.org/2016/03/gfw-user-profile-david-torres/" target="_blank">David Torres</a></span>
+      <span class="name pro">Operations Officer for Nature Services Peru</span>
     </div>
   </section>
   <section>
