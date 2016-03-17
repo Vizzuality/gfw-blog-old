@@ -13,7 +13,7 @@
   <section>
     <span class="title">featured gfw user</span>
     <div class="f-user">
-      <img src="http://gfw.blog.s3.amazonaws.com/2016/03/DavidTorres_small.jpeg">
+      <img src="http://gfw.blog.s3.amazonaws.com/2016/03/davidtorres.png">
       <span class="name"><a href="http://blog.globalforestwatch.org/2016/03/gfw-user-profile-david-torres/" target="_blank">David Torres</a></span>
       <span class="name pro">Operations Officer for Nature Services Peru</span>
     </div>
