@@ -12,7 +12,7 @@
   </section>
   <section>
     <?php
-      $featuredUser = get_page_by_title( 'FEATURED GFW USER TEMPLATE' );
+      $featuredUser = get_page_by_title( 'FEATURED GFW USER TEMPLATE',OBJECT,'post' );
       $FeaturedUserPic = get_post_meta($featuredUser->ID, 'FeaturedUserPic',true);
       $FeaturedUserUrl = get_post_meta($featuredUser->ID, 'FeaturedUserUrl',true);
       $FeaturedUserName = get_post_meta($featuredUser->ID, 'FeaturedUserName',true);
