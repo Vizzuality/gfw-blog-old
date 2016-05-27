@@ -147,3 +147,29 @@ function pagination($pages = '', $range = 4)
       echo "</div>\n";
      }
 }
+
+add_action( 'wp_ajax_get_post_by_tag', 'get_post_by_tag' );
+function get_post_by_tag(){
+  $args=array(
+    'tag' => $_REQUEST['tag'],
+    'showposts'=>10
+    );
+  $my_query = new WP_Query($args);
+
+  foreach ($my_query->posts as $mypost) {
+    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $mypost->ID ), 'single-post-thumbnail' );
+    $thispost = array(
+      'id' => $mypost->ID,
+      'link' => $mypost->guid,
+      'title' => $mypost->post_title,
+      'date' => $mypost->post_date,
+      'categories' => get_the_category($mypost->ID),
+      'picture' => $image[0],
+      'class' => 'card'
+      );
+    $returnedposts[] = $thispost;
+  }
+  echo json_encode($returnedposts);
+  wp_reset_query();
+  exit();
+}

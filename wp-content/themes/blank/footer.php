@@ -47,7 +47,6 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ​
     ga('create', "UA-48182293-1", 'globalforestwatch.org');
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
@@ -84,7 +83,48 @@
     });
   };
    
-  $('.prev-p-cont').followTo($('.pagination').offset().top - 650);
+  var $pagination = $('.pagination');
+  if (!!$pagination[0]) {
+    $('.prev-p-cont').followTo($pagination.offset().top - 650);
+  }
+  $('#toggleMoreTagsSidebar').on('click',function(){
+    $('#sidebar').find('.tags-list').toggleClass('open');
+  });
+  $('#sidebar').on('click','input',function() {
+    if (!this.checked) return;
+    $.ajax(
+      {
+        url:'<?php echo get_home_url().'/wp-admin/admin-ajax.php' ?>',
+        type:'post',
+        // dataType: 'JSON',
+        data: {
+          action:'get_post_by_tag',
+          tag: this.value
+        },
+        success: function(response) {
+          return repaintPosts(JSON.parse(response));
+         },
+        error: function (request, status, error) {
+          console.log(request.responseText);
+        }
+      })
+  })
+  function repaintPosts(posts){
+    var $columns = $('#main').find('.columns').first();
+    $columns.addClass('reppost');
+    $columns.find('article').remove();
+    for (i in posts){
+      var categories = '';
+      for (j in posts[i].categories) {
+        categories += '<a href="<?php echo get_home_url()?>/category/'+posts[i].categories[j].slug+'/" title="View all posts in '+posts[i].categories[j].name+'" rel="category tag">'+posts[i].categories[j].name+'</a>'
+      }
+      $('<article/>', {
+          id: 'post-'+posts[i].id,
+          'class': 'card',
+          'data-link': posts[i]['guid'],
+      }).append('<img src="'+posts[i].picture+'"><header><h2><a href="'+posts[i].link+'" rel="bookmark" title="Permanent Link to '+posts[i].title+'">'+posts[i].title+'</a></h2></header><div class="content"><footer>'+categories+'<span>'+posts[i].date+'</span></footer></div>').appendTo($columns);
+    }
+  }
 </script>
 </body>
 </html>
