@@ -103,11 +103,8 @@
           tag: tag
         },
         success: function(response) {
-          var currenttags = $.query.get("ctags");
-          if (currenttags.length > 0) currenttags.push(tag);
-          else currenttags = [tag];
-          history.pushState('', document.title, $.query.SET("ctags", currenttags));
-          return repaintPosts(JSON.parse(response));
+          updateURLTagParams('add',tag);
+          return repaintPosts(JSON.parse(response), tag);
          },
         error: function (request, status, error) {
           console.log(request.responseText);
@@ -115,27 +112,43 @@
       })
   }
   $('#sidebar').on('click','input',function() {
-    if (!this.checked) return;
+    if (!this.checked) return removeTagsArticle(this.value);
     callAjaxTags(this.value);
   });
   var $directions = $('.navigation-dir');
   $directions.on('click',function(){
 
   });
-  function repaintPosts(posts){
+  function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
-    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').remove() : null;
+    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : null;
     for (i in posts){
       var categories = '';
       for (j in posts[i].categories) {
-        categories += '<a href="<?php echo get_home_url()?>/category/'+posts[i].categories[j].slug+'/" title="View all posts in '+posts[i].categories[j].name+'" rel="category tag">'+posts[i].categories[j].name+'</a>'
+        categories += '<a href="<?php echo get_home_url()?>/category/'+posts[i].categories[j].slug+'/" title="View all posts in '+posts[i].categories[j].name+'" rel="category tag">'+posts[i].categories[j].name+'</a>';
       }
       $('<article/>', {
           id: 'post-'+posts[i].id,
-          'class': 'card',
+          'class': 'card reppostedtag card-type-'+tag,
           'data-link': posts[i]['guid'],
       }).append('<img src="'+posts[i].picture+'"><header><h2><a href="'+posts[i].link+'" rel="bookmark" title="Permanent Link to '+posts[i].title+'">'+posts[i].title+'</a></h2></header><div class="content"><footer>'+categories+'<span>'+posts[i].date+'</span></footer></div>').appendTo($columns);
     }
+  };
+  var removeTagsArticle = function(tag) {
+    updateURLTagParams('remove',tag);
+    $('.card-type-'+tag).remove();
+    if ($('.reppostedtag').length == 0) $('.original-content').show();
+  }
+  var updateURLTagParams = function(action, tag) {
+    var currenttags = $.query.get("ctags");
+    if (action == 'add') {
+      if (currenttags.length > 0) currenttags.push(tag);
+      else currenttags = [tag];
+    }
+    if (action == 'remove') {
+      currenttags.splice(currenttags.indexOf(tag), 1);
+    }
+    history.pushState('', document.title, $.query.SET("ctags", currenttags));
   }
 </script>
 </body>
