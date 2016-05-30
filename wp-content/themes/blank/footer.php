@@ -110,7 +110,7 @@
         error: function (request, status, error) {
           console.log(request.responseText);
         }
-      })
+      });
   }
   $('#sidebar').on('click','input',function() {
     if (!this.checked) return removeTagsArticle(this.value);
@@ -130,7 +130,7 @@
   });
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
-    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : null;
+    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('article').remove();
     for (i in posts){
       var categories = '';
       for (j in posts[i].categories) {
@@ -173,8 +173,8 @@
           return tags.indexOf(item) == pos;
       });
       var tagsDOM = $('#sidebar').find('.tags-list');
+      callAjaxTags(tags.toString(), true);
       for (var i = 0; i < tags.length; i ++) {
-        callAjaxTags(tags[i], true);
         tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
       }
   }
