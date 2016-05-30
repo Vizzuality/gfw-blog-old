@@ -88,7 +88,9 @@
     $('.prev-p-cont').followTo($pagination.offset().top - 650);
   }
   $('#toggleMoreTagsSidebar').on('click',function(){
-    $('#sidebar').find('.tags-list').toggleClass('open');
+    var $target = $('#sidebar').find('.tags-list');
+    $target.toggleClass('open');
+    $(this).text(($target.hasClass('open')) ? 'Less' : 'More...');
   });
   $('#sidebar').on('click','input',function() {
     if (!this.checked) return;

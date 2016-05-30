@@ -98,13 +98,19 @@ a {
 #sidebar section:first-of-type {
 	margin: 50px 23px 0;
 }
-#sidebar .tags-list{
+#sidebar .tags-list {
     overflow: hidden;
-    height: 180px;
     width: 100%;
 }
-#sidebar .tags-list.open{
+#sidebar .tags-list ul{
+    overflow: inherit;
+    height: 170px;
+}
+#sidebar .tags-list.open ul{
     height: 100%;
+}
+#sidebar .tags-list .title:last-child {
+    cursor: pointer;
 }
 #sidebar img {
     height: 70px;

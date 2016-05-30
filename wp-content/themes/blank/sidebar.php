@@ -52,9 +52,9 @@
         } 
       ?>
     </ul>
+    <a class="title" id="toggleMoreTagsSidebar">More...</a>
   </section>
   <section>
-    <a class="title" id="toggleMoreTagsSidebar">More...</a>
   </section>
 </aside>
 
