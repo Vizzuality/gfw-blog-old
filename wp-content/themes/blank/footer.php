@@ -92,7 +92,7 @@
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less' : 'More...');
   });
-  var callAjaxTags = function(tag,blockFillTag) {    
+  var callAjaxTags = function(tag,blockFillTag,offset) {    
     $.ajax(
       {
         url:'<?php echo get_home_url().'/wp-admin/admin-ajax.php' ?>',
@@ -100,7 +100,8 @@
         // dataType: 'JSON',
         data: {
           action:'get_post_by_tag',
-          tag: tag
+          tag: tag,
+          offset: offset || 0
         },
         success: function(response) {
           if (! !!blockFillTag) updateURLTagParams('add',tag);
@@ -116,11 +117,16 @@
     $('.navigation-dir').addClass('change-default');
     callAjaxTags(this.value);
   });
-  $('.navigation-dir.change-default').on('click',function(e) {
-    debugger
+  $('.prev-p-cont').on('click','.change-default',function(e){
     e.preventDefault();
     e.stopPropagation();
-    debugger
+    var currentOffset = $.query.get('coffset');
+    if (~~currentOffset == 0) currentOffset = 30;
+    history.pushState('', document.title, $.query.SET('coffset', currentOffset));
+    var tags = $.query.get('ctags');
+    for (var i = 0; i < tags.length; i++){
+      callAjaxTags(tags[i],true,currentOffset);
+    }
   });
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
