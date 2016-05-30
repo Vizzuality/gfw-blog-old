@@ -145,6 +145,7 @@ a {
     position: relative;
     top: -1px;
     left: 2px;
+    text-transform: capitalize;
 }
 #sidebar ul a:hover {
     color: #333;
