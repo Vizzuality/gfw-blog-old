@@ -120,8 +120,8 @@
   $('.prev-p-cont').on('click','.change-default',function(e){
     e.preventDefault();
     e.stopPropagation();
-    var currentOffset = $.query.get('coffset');
-    if (~~currentOffset == 0) currentOffset = 30;
+    var currentOffset = ~~$.query.get('coffset') + 10;
+    if (~~currentOffset == 0) currentOffset = 10;
     history.pushState('', document.title, $.query.SET('coffset', currentOffset));
     var tags = $.query.get('ctags');
     for (var i = 0; i < tags.length; i++){
