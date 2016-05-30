@@ -92,7 +92,7 @@
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less' : 'More...');
   });
-  var callAjaxTags = function(tag) {    
+  var callAjaxTags = function(tag,blockFillTag) {    
     $.ajax(
       {
         url:'<?php echo get_home_url().'/wp-admin/admin-ajax.php' ?>',
@@ -103,7 +103,7 @@
           tag: tag
         },
         success: function(response) {
-          updateURLTagParams('add',tag);
+          if (! !!blockFillTag) updateURLTagParams('add',tag);
           return repaintPosts(JSON.parse(response), tag);
          },
         error: function (request, status, error) {
@@ -113,11 +113,14 @@
   }
   $('#sidebar').on('click','input',function() {
     if (!this.checked) return removeTagsArticle(this.value);
+    $('.navigation-dir').addClass('change-default');
     callAjaxTags(this.value);
   });
-  var $directions = $('.navigation-dir');
-  $directions.on('click',function(){
-
+  $('.navigation-dir.change-default').on('click',function(e) {
+    debugger
+    e.preventDefault();
+    e.stopPropagation();
+    debugger
   });
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
@@ -137,7 +140,10 @@
   var removeTagsArticle = function(tag) {
     updateURLTagParams('remove',tag);
     $('.card-type-'+tag).remove();
-    if ($('.reppostedtag').length == 0) $('.original-content').show();
+    if ($('.reppostedtag').length == 0){
+      $('.original-content').show();
+      $('.navigation-dir').removeClass('change-default')
+    }
   }
   var updateURLTagParams = function(action, tag) {
     var currenttags = $.query.get("ctags");
@@ -148,8 +154,30 @@
     if (action == 'remove') {
       currenttags.splice(currenttags.indexOf(tag), 1);
     }
-    history.pushState('', document.title, $.query.SET("ctags", currenttags));
+    if (currenttags.length > 0){
+      history.pushState('', document.title, $.query.SET("ctags", currenttags));
+    }
+    else {
+      $.query.empty();
+      history.pushState('', document.title, '<?php echo get_home_url(); ?>');
+    }
+  };
+  var loadPreviousTags = function(tags) {
+      tags = tags.filter(function(item, pos) {
+          return tags.indexOf(item) == pos;
+      });
+      var tagsDOM = $('#sidebar').find('.tags-list');
+      for (var i = 0; i < tags.length; i ++) {
+        callAjaxTags(tags[i], true);
+        tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
+      }
   }
+  $(function() {
+      var tags = $.query.get('ctags');
+      if (tags.length > 0) {
+        loadPreviousTags(tags);
+      }
+  });
 </script>
 </body>
 </html>
