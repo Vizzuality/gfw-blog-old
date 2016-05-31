@@ -92,7 +92,8 @@
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less' : 'More...');
   });
-  var callAjaxTags = function(tag,blockFillTag,offset) {    
+  var callAjaxTags = function(tag,blockFillTag,offset) {   
+    if (! !!tag) tag = '';
     $.ajax(
       {
         url:'<?php echo get_home_url().'/wp-admin/admin-ajax.php' ?>',
@@ -136,6 +137,7 @@
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
     (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('.reppostedtag').remove();
+    $columns.find('.original-content').hide();
     for (i in posts){
       var categories = '';
       for (j in posts[i].categories) {
@@ -176,16 +178,18 @@
       history.pushState('', document.title, '<?php echo get_home_url(); ?>');
     }
   };
-  var loadPreviousTags = function(tags) {
-      tags = tags.filter(function(item, pos) {
-          return tags.indexOf(item) == pos;
-      });
-      var tagsDOM = $('#sidebar').find('.tags-list');
-      callAjaxTags(tags.toString(), true);
-      tags = tags[0].split(',');
-      for (var i = 0; i < tags.length; i ++) {
-        tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
-      }
+  var loadPreviousTags = function(tags) {    
+    tags = tags.filter(function(item, pos) {
+        return tags.indexOf(item) == pos;
+    });
+    if (! Array.isArray(tags[0])) return false;
+
+    callAjaxTags(tags.toString(), true);
+    tags = tags[0].split(',');
+    var tagsDOM = $('#sidebar').find('.tags-list');
+    for (var i = 0; i < tags.length; i ++) {
+      tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
+    }
   }
   $(function() {
       var tags = $.query.get('ctags');

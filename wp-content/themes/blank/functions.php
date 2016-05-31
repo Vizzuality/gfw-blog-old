@@ -152,7 +152,7 @@ add_action( 'wp_ajax_get_post_by_tag', 'get_post_by_tag' );
 add_action( 'wp_ajax_nopriv_get_post_by_tag', 'get_post_by_tag' );
 function get_post_by_tag(){
   $args=array(
-    'tag'         => '',
+    'tag'         => $_REQUEST['tag'],
     'showposts'   => 10,
     'order'       => 'DESC',
     'orderby'     => 'date',
