@@ -135,7 +135,7 @@
   });
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
-    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('article').remove();
+    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('.reppostedtag').remove();
     for (i in posts){
       var categories = '';
       for (j in posts[i].categories) {
@@ -163,8 +163,9 @@
       else currenttags = [tag];
     }
     if (action == 'remove') {
-      var currenttags = currenttags[0].split(',');
+      currenttags = currenttags[0].split(',');
       currenttags.splice(currenttags.indexOf(tag),1);
+      currenttags = [currenttags.toString()];
     }
     if (currenttags.length > 0){
       $.query.REMOVE('ctags');
