@@ -189,17 +189,20 @@ input[type="checkbox"] + label {
     height: 20px;
     border-radius: 4px;
     background-color: #ffffff;
+    background-image: none;
     border: solid 1px #dededd;
     display: inline-block;
     cursor: pointer;
     position: relative;
     top: -5px;
-    transition: all .25s ease;
 }
 input[type="checkbox"]:checked + label {
-    background-color: #cecece;
+    background-image:url('img/check.svg');
+    background-position: 4px 4px;
+    background-size: 13px;
+    background-repeat: no-repeat;
 }
-input[type="checkbox"]:checked + label:after {
+/*input[type="checkbox"]:checked + label:after {
     display: block;
     background-color: #eee;
     height: 11px;
@@ -210,7 +213,7 @@ input[type="checkbox"]:checked + label:after {
     position: relative;
     left: 4px;
     top: 4px;
-}
+}*/
 .f-user {
     line-height: 17px;
 }

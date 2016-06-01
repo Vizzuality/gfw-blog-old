@@ -113,12 +113,10 @@
         }
       });
   }
-  $('#sidebar').on('click','input,label',function() {
-    var me = this;
-    if (me.tagName == 'LABEL') me = me.parentElement.querySelector('input');
-    if (!me.checked) return removeTagsArticle(me.value);
+  $('#sidebar').on('change','input',function() {
+    if (!this.checked) return removeTagsArticle(this.value);
     $('.navigation-dir').addClass('change-default');
-    var elem = $(me).parents('.tags-list').find(':checked');
+    var elem = $(this).parents('.tags-list').find(':checked');
     var tags = new Array(elem.length);
     for (var i = 0; i < elem.length; i ++) {
       tags[i] = elem[i].value;
