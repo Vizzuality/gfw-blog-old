@@ -34,13 +34,20 @@
         $args = array(
           'orderby'                  => 'count',
           'order'                    => 'DESC',
+          'post_type'               => 'post',
+          'post_status'              => 'publish',
           'hide_empty'               => 1
         );
         $max = null; 
         $categories = get_tags( $args );
         foreach($categories as $category) {
           if ($category->count < 2) break;
-          echo '<li><input type="checkbox" value="'.$category->slug.'"><a href="'.get_home_url().'/tag/'.$category->slug.'">'.$category->name.' ('.$category->count.')</a></li>';
+          if ($max == null) {
+            $max = $category->count;
+            echo '<li><a href="'.get_home_url().'/tag/'.$category->slug.'"><span style="width:100%;"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></a><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+          } else {
+            echo '<li><a href="'.get_home_url().'/tag/'.$category->slug.'"><span style="width:'.($category->count*100)/$max.'%"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></a><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+          }
           // echo '<div class="line-wrapper">';
           // if ($max == null) {
           //   echo '<span class="line first" style="width:100%;"></span>';
@@ -52,7 +59,7 @@
         } 
       ?>
     </ul>
-    <a class="title" id="toggleMoreTagsSidebar">More...</a>
+    <a class="title" id="toggleMoreTagsSidebar">More tags ▼</a>
   </section>
   <section>
   </section>

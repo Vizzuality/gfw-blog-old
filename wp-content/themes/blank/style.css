@@ -102,15 +102,20 @@ a {
     overflow: hidden;
     width: 100%;
 }
-#sidebar .tags-list ul{
-    overflow: inherit;
-    height: 170px;
+#sidebar .tags-list ul {
+    overflow-y: scroll;
+    height: 250px;
 }
-#sidebar .tags-list.open ul{
-    height: 100%;
+#sidebar .tags-list.open ul {
+    height: 430px;
 }
 #sidebar .tags-list .title:last-child {
     cursor: pointer;
+    color: #97be32;
+    font-size: 11px;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    font-weight: 300;
 }
 #sidebar img {
     height: 70px;
@@ -141,14 +146,70 @@ a {
     font-size: 12px;
     color: #555;
     display: inline-block;
-    padding: 6px 0 6px 3px;
+    padding: 3px 0 3px 3px;
     position: relative;
     top: -1px;
     left: 2px;
-    text-transform: capitalize;
+    width: 180px;
+    text-transform: uppercase;
+    height: 28px;
+    line-height: 28px;
+    background: #eee;
+    margin: 0 10px 8px 0;
 }
 #sidebar ul a:hover {
     color: #333;
+}
+#sidebar ul a span {
+    color: #97bd3d;
+    padding: 0 6px;
+    background-color: white;
+    display: inline-block;
+    max-width: 140px;
+}
+#sidebar ul a span b {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 140px;
+    overflow: hidden;
+    display: block;
+    font-weight: normal;
+}
+#sidebar ul em {
+    float: right;
+    font-style: initial;
+    font-size: 11px;
+    padding: 0 5px 0px 0;
+}
+#sidebar ul input {
+    display: none;
+}
+input[type="checkbox"] + label {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #dededd;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+    transition: all .25s ease;
+}
+input[type="checkbox"]:checked + label {
+    background-color: #cecece;
+}
+input[type="checkbox"]:checked + label:after {
+    display: block;
+    background-color: #eee;
+    height: 11px;
+    width: 11px;
+    border-radius: 100%;
+    content: ' ';
+    box-shadow: 0px 0px 1px #999;
+    position: relative;
+    left: 4px;
+    top: 4px;
 }
 .f-user {
     line-height: 17px;
