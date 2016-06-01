@@ -50,10 +50,11 @@
     <header role="banner">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
       <nav id="main-sections">
-        <a href="/category/update/">updates</a>
-        <a href="/category/news/">news roundup</a>
-        <a href="/category/feature/">featured posts</a>
-        <a href="/category/mapoftheday/">map of the week</a>
+        <a href="/category/data/">datas</a>
+        <a href="/category/suply-chain/">suply chain</a>
+        <a href="/category/fires/">fires</a>
+        <a href="/category/climate/">climate</a>
+        <a href="/category/gfw community/">gfw community</a>
       </nav>
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
