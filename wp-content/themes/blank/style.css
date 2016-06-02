@@ -103,11 +103,13 @@ a {
     width: 100%;
 }
 #sidebar .tags-list ul {
-    overflow-y: scroll;
     height: 250px;
+    overflow: auto;
+    transition: height .25s ease;
 }
 #sidebar .tags-list.open ul {
-    height: 430px;
+    overflow-y: scroll;
+    height: 435px;
 }
 #sidebar .tags-list .title:last-child {
     cursor: pointer;
