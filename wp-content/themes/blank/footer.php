@@ -87,8 +87,12 @@
   if (!!$pagination[0]) {
     $('.prev-p-cont').followTo($pagination.offset().top - 650);
   }
+  /**cache**/
+    var $sidebar    = $('#sidebar'),
+        $pagetitle  = $('.pagetitle');
+  /****/
   $('#toggleMoreTagsSidebar').on('click',function(){
-    var $target = $('#sidebar').find('.tags-list');
+    var $target = $sidebar.find('.tags-list');
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less tags ▲' : 'More tags ▼');
   });
@@ -113,7 +117,7 @@
         }
       });
   }
-  $('#sidebar').on('change','input',function() {
+  $sidebar.on('change','input',function() {
     var isAll = (this.value == 'all');
     var elem = $(this).parents('.tags-list').find('ul :checked');
     if (isAll && !this.checked) {return toggleAllTags(elem, false)}
@@ -121,9 +125,14 @@
     togglePagination('hide');
     if (isAll) {return toggleAllTags(!!elem.length, true);}
     var tags = new Array(elem.length);
+    var $title =$pagetitle;
+    $title.text('Posts Tagged ');
     for (var i = 0; i < elem.length; i ++) {
       tags[i] = elem[i].value;
+      var separator = (i == elem.length -1)? '.' : ', ';
+      $title.append('\''+elem[i].dataset.name+'\'' + separator);
     }
+    $title.show();
     callAjaxTags(tags.toString());
   });
   $('.prev-p-cont').on('click','.change-default',function(e){
@@ -139,7 +148,7 @@
   });
   var toggleAllTags = function(elems, select) {
     if (!elems || (!!elems && !!select)) {
-      elems = $('#sidebar').find('.tags-list input');
+      elems = $sidebar.find('.tags-list input');
       select = true;
     } 
     for (var i = 0; i < elems.length; i ++) {
@@ -170,6 +179,9 @@
       $('.original-content').show();
       togglePagination('show');
     }
+    var text  = $pagetitle.text(),
+        substr = new RegExp('\''+$('#tagoption-'+tag).data('name') + '\', ',"g");
+    $pagetitle.text(text.replace(substr,""));
   }
   var updateURLTagParams = function(action, tag) {
     var currenttags = $.query.get("ctags");
@@ -197,7 +209,7 @@
     });
     callAjaxTags(tags.toString(), true);
     tags = tags[0].split(',');
-    var tagsDOM = $('#sidebar').find('.tags-list');
+    var tagsDOM = $sidebar.find('.tags-list');
     for (var i = 0; i < tags.length; i ++) {
       tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
     }
