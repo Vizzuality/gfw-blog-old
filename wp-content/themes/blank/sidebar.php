@@ -30,7 +30,6 @@
     <span class="title">tags<span class="slug-content all">Select all <input type="checkbox" value="all" id="tagoption-all" ><label for="tagoption-all"><span></span></label></span></span>
     <ul>
       <?php
-
         $args = array(
           'orderby'                  => 'count',
           'order'                    => 'DESC',

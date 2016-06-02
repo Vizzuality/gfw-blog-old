@@ -114,9 +114,12 @@
       });
   }
   $('#sidebar').on('change','input',function() {
+    var isAll = (this.value == 'all');
+    var elem = $(this).parents('.tags-list').find('ul :checked');
+    if (isAll && !this.checked) {return toggleAllTags(elem, false)}
     if (!this.checked) return removeTagsArticle(this.value);
     togglePagination('hide');
-    var elem = $(this).parents('.tags-list').find(':checked');
+    if (isAll) {return toggleAllTags(!!elem.length, true);}
     var tags = new Array(elem.length);
     for (var i = 0; i < elem.length; i ++) {
       tags[i] = elem[i].value;
@@ -134,6 +137,16 @@
       callAjaxTags(tags[i],true,currentOffset);
     }
   });
+  var toggleAllTags = function(elems, select) {
+    if (!elems || (!!elems && !!select)) {
+      elems = $('#sidebar').find('.tags-list input');
+      select = true;
+    } 
+    for (var i = 0; i < elems.length; i ++) {
+      $(elems[i]).prop('checked', select);
+    }
+    callAjaxTags('',true);
+  };
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
     (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('.reppostedtag').remove();
@@ -155,7 +168,7 @@
     $('.card-type-'+tag).remove();
     if ($('.reppostedtag').length == 0){
       $('.original-content').show();
-      $('.navigation-dir').removeClass('change-default')
+      togglePagination('show');
     }
   }
   var updateURLTagParams = function(action, tag) {
@@ -188,10 +201,21 @@
     for (var i = 0; i < tags.length; i ++) {
       tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
     }
+  };
+  var togglePagination = function(mode) {
+    if (!mode) return false;
+    if (mode == 'show') {
+      $('.pagination').fadeIn();
+      $('.navigation-dir').fadeIn();
+    } else if (mode == 'hide') {
+      $('.pagination').fadeOut();
+      $('.navigation-dir').fadeOut();
+    }
   }
   $(function() {
       var tags = $.query.get('ctags');
       if (tags.length > 0) {
+        if (! !!tags[0].length) return false;
         loadPreviousTags(tags);
       }
   });
