@@ -6,6 +6,7 @@
 
 get_header(); ?>
 
+<h2 class="tagstitle pagetitle"></h2>
 <div id="main" role="main">
   <div class="columns">
     <?php if (have_posts()) : ?>
