@@ -115,7 +115,7 @@
   }
   $('#sidebar').on('change','input',function() {
     if (!this.checked) return removeTagsArticle(this.value);
-    $('.navigation-dir').addClass('change-default');
+    togglePagination('hide');
     var elem = $(this).parents('.tags-list').find(':checked');
     var tags = new Array(elem.length);
     for (var i = 0; i < elem.length; i ++) {
