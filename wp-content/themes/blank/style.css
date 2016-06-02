@@ -144,7 +144,7 @@ a {
 	margin: 0;
 	padding: 0;
 }
-#sidebar ul a {
+#sidebar ul .slug-content {
     font-size: 12px;
     color: #555;
     display: inline-block;
@@ -159,17 +159,17 @@ a {
     background: #eee;
     margin: 0 10px 8px 0;
 }
-#sidebar ul a:hover {
+#sidebar ul .slug-content:hover {
     color: #333;
 }
-#sidebar ul a span {
+#sidebar ul .slug-content span {
     color: #97bd3d;
     padding: 0 6px;
     background-color: white;
     display: inline-block;
     max-width: 140px;
 }
-#sidebar ul a span b {
+#sidebar ul .slug-content span b {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 140px;

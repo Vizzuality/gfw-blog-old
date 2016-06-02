@@ -44,9 +44,9 @@
           if ($category->count < 2) break;
           if ($max == null) {
             $max = $category->count;
-            echo '<li><a href="'.get_home_url().'/tag/'.$category->slug.'"><span style="width:100%;"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></a><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+            echo '<li><span class="slug-content"><span style="width:100%;"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></span><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
           } else {
-            echo '<li><a href="'.get_home_url().'/tag/'.$category->slug.'"><span style="width:'.($category->count*100)/$max.'%"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></a><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+            echo '<li><span class="slug-content"><span style="width:'.($category->count*100)/$max.'%"><b>'.$category->name.'</b></span> <em>'.$category->count.'</em></span><input type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
           }
           // echo '<div class="line-wrapper">';
           // if ($max == null) {
