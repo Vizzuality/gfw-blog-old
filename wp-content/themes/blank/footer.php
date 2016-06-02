@@ -145,7 +145,7 @@
     for (var i = 0; i < elems.length; i ++) {
       $(elems[i]).prop('checked', select);
     }
-    callAjaxTags('',true);
+    callAjaxTags('',false);
   };
   function repaintPosts(posts, tag){
     var $columns = $('#main').find('.columns').first();
