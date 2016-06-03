@@ -12,14 +12,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/main.js") ?>
-
-  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
-       change the UA-XXXXX-X to be your site's ID -->
-  <!-- WordPress.com does not allow Google Analytics code to be built into themes they host. 
-       Add this section from HTML Boilerplate manually (html5-boilerplate/index.html), or use a Google Analytics WordPress Plugin-->
 	   
   <!-- social -->
   <script>(function(d, s, id) {
@@ -83,20 +77,22 @@
     });
   };
    
-  var $pagination = $('.pagination');
+  /**cache**/
+    var $sidebar    = $('#sidebar'),
+        $pagetitle  = $('.pagetitle'),
+        $main       = $('#main'),
+        $pagination = $('.pagination');
+  /****/
+
   if (!!$pagination[0]) {
     $('.prev-p-cont').followTo($pagination.offset().top - 650);
   }
-  /**cache**/
-    var $sidebar    = $('#sidebar'),
-        $pagetitle  = $('.pagetitle');
-  /****/
   $('#toggleMoreTagsSidebar').on('click',function(){
     var $target = $sidebar.find('.tags-list');
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less tags ▲' : 'More tags ▼');
   });
-  var callAjaxTags = function(tag,blockFillTag,offset) {   
+  var callAjaxTags = function(tag,blockFillTag,offset,infinite) {   
     if (! !!tag) tag = '';
     $.ajax(
       {
@@ -110,7 +106,7 @@
         },
         success: function(response) {
           if (! !!blockFillTag) updateURLTagParams('add',tag);
-          return repaintPosts(JSON.parse(response), tag);
+          return repaintPosts(JSON.parse(response), tag, infinite);
          },
         error: function (request, status, error) {
           console.log(request.responseText);
@@ -135,15 +131,12 @@
     $title.show();
     callAjaxTags(tags.toString());
   });
-  $('.prev-p-cont').on('click','.change-default',function(e){
-    e.preventDefault();
-    e.stopPropagation();
+  $main.on('click','#loadmorePostsTags',function(e){
     var currentOffset = ~~$.query.get('coffset') + 10;
-    if (~~currentOffset == 0) currentOffset = 10;
     history.pushState('', document.title, $.query.SET('coffset', currentOffset));
     var tags = $.query.get('ctags');
     for (var i = 0; i < tags.length; i++){
-      callAjaxTags(tags[i],true,currentOffset);
+      callAjaxTags(tags[i],true,currentOffset,true);
     }
   });
   var toggleAllTags = function(elems, select) {
@@ -156,9 +149,11 @@
     }
     callAjaxTags('',false);
   };
-  function repaintPosts(posts, tag){
+  function repaintPosts(posts, tag, infinite){
     var $columns = $('#main').find('.columns').first();
-    (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('.reppostedtag').remove();
+    if (!infinite) {
+      (!$columns.hasClass('reppost')) ? $columns.addClass('reppost').find('article').addClass('original-content').hide() : $columns.find('.reppostedtag').remove();
+    }
     $columns.find('.original-content').hide();
     for (i in posts){
       var categories = '';
@@ -203,7 +198,7 @@
       history.pushState('', document.title, '<?php echo get_home_url(); ?>');
     }
   };
-  var loadPreviousTags = function(tags) {    
+  var loadPreviousTags = function(tags) {
     tags = tags.filter(function(item, pos) {
         return tags.indexOf(item) == pos;
     });
@@ -216,12 +211,14 @@
   };
   var togglePagination = function(mode) {
     if (!mode) return false;
+    $('#loadmorePostsTags').remove();
     if (mode == 'show') {
-      $('.pagination').fadeIn();
+      $pagination.fadeIn();
       $('.navigation-dir').fadeIn();
     } else if (mode == 'hide') {
-      $('.pagination').fadeOut();
+      $pagination.fadeOut();
       $('.navigation-dir').fadeOut();
+      $main.append('<div id="loadmorePostsTags">Load more...</div>')
     }
   }
   $(function() {
