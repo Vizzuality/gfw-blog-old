@@ -158,7 +158,7 @@ function get_post_by_tag(){
     'orderby'     => 'date',
     'post_type'   => 'post',
     'post_status' => 'publish',
-    'offset'      => $_REQUEST['offset']+20 || 0
+    'offset'      => (int)$_REQUEST['offset'] || 0
     );
   $my_query = new WP_Query($args);
 
