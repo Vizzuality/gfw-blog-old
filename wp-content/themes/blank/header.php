@@ -85,7 +85,8 @@
         <a href="/category/suply-chain/">suply chain</a>
         <a href="/category/fires/">fires</a>
         <a href="/category/climate/">climate</a>
-        <a href="/category/gfw community/">gfw community</a>
+        <a href="/category/gfw-community/">gfw community</a>
+        <a href="/category/features/">new features</a>
       </nav>
     <div id="mobile-sidebar">
       <ul>
