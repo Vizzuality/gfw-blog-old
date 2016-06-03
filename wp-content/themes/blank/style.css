@@ -687,10 +687,10 @@ header > span {
 #loadmorePostsTags span{
     color: white;
     background: #97bd3d;
-    font-size: 21px;
+    font-size: 12px;
     text-transform: uppercase;
-    height: 38px;
-    line-height: 40px;
+    height: 36px;
+    line-height: 36px;
     padding: 0px 20px;
     position: relative;
     display: inline-block;
