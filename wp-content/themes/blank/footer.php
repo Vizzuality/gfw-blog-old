@@ -132,7 +132,7 @@
     callAjaxTags(tags.toString());
   });
   $main.on('click','#loadmorePostsTags',function(e){
-    var currentOffset = ~~$.query.get('coffset') + 1;
+    var currentOffset = ~~$.query.get('coffset') + 10;
     history.pushState('', document.title, $.query.SET('coffset', currentOffset));
     var tags = $.query.get('ctags');
     for (var i = 0; i < tags.length; i++){
