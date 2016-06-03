@@ -330,20 +330,21 @@ h2 a:visited {color: #555;}
     opacity: 0.5;
 }
 #main-sections {
-	height: 58px;
-	display: flex;
-	justify-content: flex-end;
+    height: 58px;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-	background-color: rgb(255,255,255);
+    background-color: #EDEDED;
 }
 #main-sections a {
-	padding: 13px 30px;
-	text-transform: uppercase;
-	color: rgb(85, 85, 85);
-	font-size: 16px;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    color: #666;
+    font-size: 16px;
     border-bottom: 5px solid transparent;
     border-top: 5px solid transparent;
-	transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    box-shadow: 0px -1px 1px rgba(0,0,0,.3);
 }
 #main-sections a:hover {
 	background-color: white;
@@ -369,6 +370,10 @@ a.logo:after {
     right:30px;
     background:url('img/beta.png?1422438711') no-repeat;
 }
+#container {
+    position: relative;
+    top: -70px;
+}
 header[role=banner] {
 	background: #ccc url('img/8898631382_a66b6f0bc0_o.jpg?1413278637') 50%;
     -moz-background-size: cover;
@@ -381,7 +386,8 @@ header[role=banner] {
     -webkit-font-smoothing: antialiased;
 }
 header h1 {
-	margin: 0 100px 0 150px;
+    margin: 70px 100px 0 260px;
+    padding: 1px 0 0;
 }
 header h1 a {
     font-size: 47px;
@@ -401,7 +407,7 @@ header p {
     font-size: 19px;
     color: #fff;
     font-weight: 300;
-    margin: 15px 190px 0;
+    margin: 15px 190px 0px 301px;
     display: inline;
     float: left;
 }

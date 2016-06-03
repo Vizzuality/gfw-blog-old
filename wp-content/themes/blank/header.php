@@ -49,13 +49,7 @@
   <div id="container">
     <header role="banner">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
-      <nav id="main-sections">
-        <a href="/category/data/">datas</a>
-        <a href="/category/suply-chain/">suply chain</a>
-        <a href="/category/fires/">fires</a>
-        <a href="/category/climate/">climate</a>
-        <a href="/category/gfw community/">gfw community</a>
-      </nav>
+      
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
       <p class="description"><?php gfw_blog_posted_on(); ?></p>
@@ -86,6 +80,13 @@
       <span class="attribution">MARCO SIMOLA/ CIFOR</span>
     <?php endif; ?>
     </header>
+    <nav id="main-sections">
+        <a href="/category/data/">datas</a>
+        <a href="/category/suply-chain/">suply chain</a>
+        <a href="/category/fires/">fires</a>
+        <a href="/category/climate/">climate</a>
+        <a href="/category/gfw community/">gfw community</a>
+      </nav>
     <div id="mobile-sidebar">
       <ul>
         <li><a href="/category/update/">updates</a></li>
