@@ -674,7 +674,28 @@ header > span {
     .prev-p.next {
         left: 0;
     }
-
+}
+#loadmorePostsTags {
+    text-align: center;
+}
+#loadmorePostsTags span{
+    color: white;
+    background: #97bd3d;
+    font-size: 21px;
+    text-transform: uppercase;
+    height: 38px;
+    line-height: 40px;
+    padding: 0px 20px;
+    position: relative;
+    display: inline-block;
+    border-radius: 40px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.15s linear;
+}
+#loadmorePostsTags span:hover {
+    background: #789631;
 }
 @media only screen and (min-width: 1024px) {
     #main .columns {

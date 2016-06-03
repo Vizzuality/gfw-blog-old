@@ -130,10 +130,11 @@
     }
     $title.show();
     callAjaxTags(tags.toString());
+    $.query.SET('coffset', 0);
   });
   $main.on('click','#loadmorePostsTags',function(e){
     var currentOffset = ~~$.query.get('coffset') + 10;
-    history.pushState('', document.title, $.query.SET('coffset', currentOffset));
+    $.query.SET('coffset', currentOffset);
     var tags = $.query.get('ctags');
     for (var i = 0; i < tags.length; i++){
       callAjaxTags(tags[i],true,currentOffset,true);
@@ -208,6 +209,7 @@
     for (var i = 0; i < tags.length; i ++) {
       tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
     }
+    togglePagination('hide');
   };
   var togglePagination = function(mode) {
     if (!mode) return false;
@@ -218,7 +220,7 @@
     } else if (mode == 'hide') {
       $pagination.fadeOut();
       $('.navigation-dir').fadeOut();
-      $main.append('<div id="loadmorePostsTags">Load more...</div>')
+      $main.append('<div id="loadmorePostsTags"><span>Load more...</span></div>')
     }
   }
   $(function() {
