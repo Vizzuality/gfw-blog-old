@@ -153,12 +153,12 @@ add_action( 'wp_ajax_nopriv_get_post_by_tag', 'get_post_by_tag' );
 function get_post_by_tag(){
   $args=array(
     'tag'         => $_REQUEST['tag'],
-    'showposts'   => 10,
-    'order'       => 'DESC',
-    'orderby'     => 'date',
+    'posts_per_page'   => 10,
+    // 'order'       => 'DESC',
+    // 'orderby'     => 'date',
     'post_type'   => 'post',
-    'post_status' => 'publish',
-    'offset'      => (int)$_REQUEST['offset'] || 0
+    // 'post_status' => 'publish',
+    'offset'       => $_REQUEST['offset']*10
     );
   $my_query = new WP_Query($args);
 
