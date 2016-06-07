@@ -8,6 +8,7 @@ get_header(); ?>
 
 <h2 class="tagstitle pagetitle"></h2>
 <div id="main" role="main">
+  <p class="tagstitle-list"></p>
   <div class="columns">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>

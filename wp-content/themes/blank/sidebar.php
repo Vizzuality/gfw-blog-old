@@ -61,7 +61,7 @@
     <a class="title" id="toggleMoreTagsSidebar">More tags ▼</a>
   </section>
   <section class="tags-list">
-        <span class="title">languages<!--<span class="slug-content all">Select all  <input type="checkbox" value="all_l" id="tagoption-all_l" ><label for="tagoption-all_l"><span></span></label></span> --></span>
+        <span class="title">languages<span class="slug-content all">Select all  <input type="checkbox" value="all_l" id="tagoption-all_l" ><label for="tagoption-all_l"><span></span></label></span> </span>
     <ul>
       <li>
         <span class="slug-content"><span style="width:100%;"><b>English</b></span> <em>13</em></span></li>

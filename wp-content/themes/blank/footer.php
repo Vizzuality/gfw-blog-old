@@ -78,10 +78,11 @@
   };
    
   /**cache**/
-    var $sidebar    = $('#sidebar'),
-        $pagetitle  = $('.pagetitle'),
-        $main       = $('#main'),
-        $pagination = $('.pagination');
+    var $sidebar        = $('#sidebar'),
+        $pagetitle      = $('.pagetitle'),
+        $main           = $('#main'),
+        $pagination     = $('.pagination');
+        $tagslisttitle  = $('.tagstitle-list');
   /****/
 
   if (!!$pagination[0]) {
@@ -113,6 +114,10 @@
         }
       });
   }
+  $tagslisttitle.on('click','.x',function(){
+    $('#tagoption-'+$(this).parent().data('slug')).click();
+    $(this).parent().remove();
+  });
   $sidebar.on('change','input',function() {
     var isAll = (this.value == 'all');
     var elem = $(this).parents('.tags-list').find('ul :checked');
@@ -121,14 +126,15 @@
     togglePagination('hide');
     if (isAll) {return toggleAllTags(!!elem.length, true);}
     var tags = new Array(elem.length);
-    var $title =$pagetitle;
-    $title.text('Posts Tagged ');
+
+    $pagetitle.text('Posts tagged with your selection');
+    $tagslisttitle.empty();
     for (var i = 0; i < elem.length; i ++) {
       tags[i] = elem[i].value;
-      var separator = (i == elem.length -1)? '.' : ', ';
-      $title.append('\''+elem[i].dataset.name+'\'' + separator);
+      $tagslisttitle.append(paintGreenTag(elem[i].value,elem[i].dataset.name));
     }
-    $title.show();
+    $pagetitle.show();
+    $tagslisttitle.show();
     callAjaxTags(tags.toString());
     $.query.SET('coffset', 0);
   });
@@ -140,6 +146,9 @@
       callAjaxTags(tags[i],true,currentOffset,true);
     }
   });
+  var paintGreenTag = function(slug,name) {
+    return '<span data-slug="'+slug+'"><span class="text">'+name+'</span><span class="x">×</span></span>';
+  }
   var toggleAllTags = function(elems, select) {
     if (!elems || (!!elems && !!select)) {
       elems = $sidebar.find('.tags-list input');
@@ -169,6 +178,7 @@
     }
   };
   var removeTagsArticle = function(tag) {
+    $tagslisttitle.find('*[data-slug="'+tag+'"]').remove();
     updateURLTagParams('remove',tag);
     $('.card-type-'+tag).remove();
     if ($('.reppostedtag').length == 0){
@@ -206,9 +216,14 @@
     callAjaxTags(tags.toString(), true);
     tags = tags[0].split(',');
     var tagsDOM = $sidebar.find('.tags-list');
+    $tagslisttitle.empty();
+    $pagetitle.text('Posts tagged with your selection');
     for (var i = 0; i < tags.length; i ++) {
-      tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
+      var prevtag = tagsDOM.find('[value='+tags[i]+']').prop('checked', true);
+      $tagslisttitle.append(paintGreenTag(tags[i],prevtag.data('name')));
     }
+    $pagetitle.show();
+    $tagslisttitle.show();
     togglePagination('hide');
   };
   var togglePagination = function(mode) {

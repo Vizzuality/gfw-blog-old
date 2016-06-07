@@ -275,6 +275,42 @@ h2.pagetitle.tagstitle {
     overflow: hidden;
     height: 30px;
 }
+.tagstitle-list {
+    display: none;
+    margin: -10px 0 40px;
+}
+.tagstitle-list > span {
+    display: inline-block;
+    height: 22px;
+    background-color: #f5fce3;
+    margin: 0 10px 0px 0;
+
+}
+.tagstitle-list > span .text {
+    font-size: 11px;
+    letter-spacing: 0.1px;
+    color: #97be32;
+    line-height: 22px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.tagstitle-list > span .x {
+    color: #a4c64b;
+    font-weight: 100;
+    display: inline;
+    font-size: 22px;
+    position: relative;
+    height: 22px;
+    vertical-align: text-bottom;
+    padding: 0px 10px 0px 0;
+    line-height: 22px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.tagstitle-list > span .x:hover {
+    color: #6F8635;
+}
 #main .card {
 	display: inline-block;
     background: #fff;
@@ -350,6 +386,7 @@ h2 a:visited {color: #555;}
     left: 0;
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 #supply-chain-menu li {
     display: flex;
