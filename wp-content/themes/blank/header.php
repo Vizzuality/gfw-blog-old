@@ -81,19 +81,29 @@
     <?php endif; ?>
     </header>
     <nav id="main-sections">
-        <a href="/category/data/">datas</a>
-        <a href="/category/suply-chain/">suply chain</a>
-        <a href="/category/fires/">fires</a>
-        <a href="/category/climate/">climate</a>
-        <a href="/category/gfw-community/">gfw community</a>
-        <a href="/category/features/">new features</a>
-      </nav>
+      <ul>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">home</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>data/">data</a></li>
+        <li id="supply-chain-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>suply-chain/">supply chain</a>
+          <ul>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/agriculture">agriculture</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/logging">logging</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/mining">mining</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/infrastructure">infrastructure</a></li>
+          </ul>
+        </li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fires/">fires</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/climate/">climate</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/gfw-community/">gfw community</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/features/">new features</a></li>
+      </ul>
+    </nav>
     <div id="mobile-sidebar">
       <ul>
-        <li><a href="/category/update/">updates</a></li>
-        <li><a href="/category/news/">news roundup</a></li>
-        <li><a href="/category/feature/">featured posts</a></li>
-        <li><a href="/category/mapoftheday/">map of the week</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/update/">updates</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/news/">news roundup</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/feature/">featured posts</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/mapoftheday/">map of the week</a></li>
         <li><?php get_search_form(); ?></li>
       </ul>
     </div>
