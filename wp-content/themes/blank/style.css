@@ -244,15 +244,37 @@ a.logo {
     font-size:21px;
     background:url('img/logo.png') no-repeat;
 }
-a.logo:after {
-    content:"";
-    display:block;
-    width:30px;
-    height:18px;
-    position:relative;
-    bottom:-7px;
-    right:30px;
-    background:url('img/beta.png?1422438711') no-repeat;
+a.logo .ribbon {
+    color: #fff;
+    text-indent: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(5px,8px);
+}
+a.logo .ribbon span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    background: #b6b6ba;
+    padding: 3px 5px 2px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+​
+a.logo .ribbon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 0 5px;
+    border-color: transparent transparent transparent #969696;
 }
 header[role=banner] {
 	background: #ccc url('img/8898631382_a66b6f0bc0_o.jpg?1413278637') 50%;
