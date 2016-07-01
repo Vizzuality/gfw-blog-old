@@ -238,11 +238,11 @@ h2 a:visited {color: #555;}
 a.logo {
     position: absolute;
     line-height:73px;
-    float:left;
     margin-left: 185px;
     padding-left: 95px;
     font-size:21px;
     background:url('img/logo.png') no-repeat;
+    height: 90px;
 }
 a.logo .ribbon {
     color: #fff;
