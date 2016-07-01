@@ -533,6 +533,7 @@ header > span {
         width: 60px;
         height: 60px;
         margin-left:15px;
+        padding: 0;
     }
     a.logo:after {
         bottom: 25px;
