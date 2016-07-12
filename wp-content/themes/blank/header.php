@@ -36,7 +36,7 @@
 
     <!-- Wordpress Head Items -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
+
     <?php wp_head(); ?>
 <div id="headerGfw"></div>
 
@@ -82,9 +82,9 @@
     </header>
     <nav id="main-sections">
       <ul>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">home</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>data/">data</a></li>
-        <li id="supply-chain-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>suply-chain/">supply chain</a>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php if (is_home()) echo 'selected' ?>">home</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>data/" class="<?php if (is_category() && in_category( 'data' )) echo 'selected' ?>">data</a></li>
+        <li id="supply-chain-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>suply-chain/" class="<?php if (is_category() && in_category( 'supplychain' )) echo 'selected' ?>">supply chain</a>
           <ul>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/agriculture">agriculture</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/logging">logging</a></li>
@@ -92,10 +92,10 @@
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/infrastructure">infrastructure</a></li>
           </ul>
         </li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fires/">fires</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/climate/">climate</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/gfw-community/">gfw community</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/features/">new features</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fires/" class="<?php if (is_category() && in_category( 'fires' )) echo 'selected' ?>">fires</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/climate/" class="<?php if (is_category() && in_category( 'climate' )) echo 'selected' ?>">climate</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/gfw-community/" class="<?php if (is_category() && in_category( 'community' )) echo 'selected' ?>">gfw community</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>category/features/" class="<?php if (is_category() && in_category( 'features' )) echo 'selected' ?>">new features</a></li>
       </ul>
     </nav>
     <div id="mobile-sidebar">

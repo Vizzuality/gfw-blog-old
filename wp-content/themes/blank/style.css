@@ -406,7 +406,8 @@ h2 a:visited {color: #555;}
     width: 100%;
     text-align: center;
 }
-#main-sections a:hover {
+#main-sections a:hover,
+#main-sections a.selected {
 	background-color: white;
 	border-bottom: 5px solid #97bd3d;
     box-sizing: content-box;
