@@ -60,13 +60,23 @@
     </ul>
     <a class="title" id="toggleMoreTagsSidebar">More tags ▼</a>
   </section>
-  <section class="tags-list">
+  <section class="tags-list lang">
         <span class="title">languages<span class="slug-content all">Select all  <input type="checkbox" value="all_l" id="tagoption-all_l" ><label for="tagoption-all_l"><span></span></label></span> </span>
     <ul>
-      <li>
-        <span class="slug-content"><span style="width:100%;"><b>English</b></span> <em>13</em></span></li>
-        <li><span class="slug-content"><span style="width:70%;"><b>Spanish</b></span> <em>10</em></span></li>
-        <li><span class="slug-content"><span style="width:50%;"><b>French</b></span> <em>7</em></span></li>
+      <?php
+      $count_posts = wp_count_posts();
+      ?>
+      <li><span class="slug-content"><span style="width:100%;"><b>English</b></span> <em><?php echo $count_posts->publish; ?></em></span><input data-name="all" type="checkbox" value="all" id="tagoption-all" ><label for="tagoption-all"><span></span></label></li>
+      <?php
+        $max = null;
+        $langs = array("fr", "zh", "id", "es", "pt");
+        foreach (get_categories('orderby=count&order=DESC') as $category ) 
+        {
+          if (in_array($category->slug, $langs)) {
+            echo '<li><span class="slug-content"><span style="width:'.($category->count*100)/$count_posts->publish.'%""><b>' . $category->name . '</b></span> <em>' . $category->count . '</em></span><input data-name="'.$category->name.'" type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+          }
+        }
+      ?>
     </ul>
   </section>
 </aside>

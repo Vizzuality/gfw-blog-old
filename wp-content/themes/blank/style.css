@@ -170,6 +170,9 @@ a {
     text-transform: lowercase;
     font-size: 13px;
 }
+#sidebar .lang .slug-content.all {
+    left: 54px;
+}
 #sidebar .tags-list .slug-content.all input[type="checkbox"] + label {
     position: relative;
     top: 1px;
