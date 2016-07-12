@@ -69,7 +69,7 @@
       <li><span class="slug-content"><span style="width:100%;"><b>English</b></span> <em><?php echo $count_posts->publish; ?></em></span><input data-name="all" type="checkbox" value="all" id="tagoption-all" ><label for="tagoption-all"><span></span></label></li>
       <?php
         $max = null;
-        $langs = array("fr", "zh", "id", "es", "pt");
+        $langs = array("fr-lang", "zh-lang", "id-lang", "es-lang", "pt-lang");
         foreach (get_categories('orderby=count&order=DESC') as $category ) 
         {
           if (in_array($category->slug, $langs)) {
