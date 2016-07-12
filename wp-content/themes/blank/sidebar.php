@@ -73,7 +73,7 @@
         foreach (get_categories('orderby=count&order=DESC') as $category ) 
         {
           if (in_array($category->slug, $langs)) {
-            echo '<li><span class="slug-content"><span style="width:'.($category->count*100)/$count_posts->publish.'%""><b>' . $category->name . '</b></span> <em>' . $category->count . '</em></span><input data-name="'.$category->name.'" type="checkbox" value="'.$category->slug.'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
+            echo '<li><span class="slug-content"><span style="width:'.($category->count*100)/$count_posts->publish.'%""><b>' . $category->name . '</b></span> <em>' . $category->count . '</em></span><input data-name="'.$category->name.'" type="checkbox" value="'.substr($category->slug,0, -5).'" id="tagoption-'.$category->slug.'" ><label for="tagoption-'.$category->slug.'"><span></span></label></li>';
           }
         }
       ?>
