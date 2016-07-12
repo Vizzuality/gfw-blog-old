@@ -120,7 +120,7 @@
   });
   $sidebar.on('change','input',function() {
     var isAll = (this.value == 'all');
-    var elem = $(this).parents('.tags-list').find('ul :checked');
+    var elem = $sidebar.find('.tags-list').find('ul :checked');
     if (isAll && !this.checked) {return toggleAllTags(elem, false)}
     if (!this.checked) return removeTagsArticle(this.value);
     togglePagination('hide');
@@ -190,6 +190,7 @@
     $pagetitle.text(text.replace(substr,""));
   }
   var updateURLTagParams = function(action, tag) {
+    debugger
     var currenttags = $.query.get("ctags");
     if (action == 'add') {
       if (currenttags.length > 0) currenttags[0] = tag;
