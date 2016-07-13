@@ -226,6 +226,20 @@ a {
     font-size: 11px;
     padding: 0 5px 0px 0;
 }
+#sidebar .feed a {
+    color: #555555;
+    font-size: 12px;
+}
+#sidebar .feed svg {
+    margin: 0 0 0 5px;
+}
+#sidebar .feed path {
+    fill: #97bd3d;
+    transition: fill .25s ease-in;
+}
+#sidebar .feed:hover path {
+    fill: #7d9e2e;
+}
 /*input[type="checkbox"]:checked + label:after {
     display: block;
     background-color: #eee;
