@@ -119,9 +119,14 @@
     $(this).parent().remove();
   });
   $sidebar.on('change','input',function() {
-    var isAll = (this.value == 'all');
+    var isAll = (this.value == 'all' || this.value == 'all_e' || this.value == 'all_l');
     var elem = $sidebar.find('.tags-list').find('ul :checked');
-    if (isAll && !this.checked) {return toggleAllTags(elem, false)}
+    if (isAll && !this.checked) {
+      if (this.value == 'all_e') $('#tagoption-all_l').prop('checked', false);
+      return toggleAllTags(elem, false);
+    }
+    if (!isAll && $('#tagoption-all').is(':checked')) {$('#tagoption-all').prop('checked', false)};
+    if (this.value == 'all_e' && $('#tagoption-all_l').is(':checked')) {$('#tagoption-all_l').prop('checked', false)};
     if (!this.checked) return removeTagsArticle(this.value);
     togglePagination('hide');
     if (isAll) {return toggleAllTags(!!elem.length, true);}
@@ -190,7 +195,6 @@
     $pagetitle.text(text.replace(substr,""));
   }
   var updateURLTagParams = function(action, tag) {
-    debugger
     var currenttags = $.query.get("ctags");
     if (action == 'add') {
       if (currenttags.length > 0) currenttags[0] = tag;

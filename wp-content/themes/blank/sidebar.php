@@ -70,7 +70,7 @@
       <?php
       $count_posts = wp_count_posts();
       ?>
-      <li><span class="slug-content"><span style="width:100%;"><b>English</b></span> <em><?php echo $count_posts->publish; ?></em></span><input data-name="all" type="checkbox" value="all" id="tagoption-all" ><label for="tagoption-all"><span></span></label></li>
+      <li><span class="slug-content"><span style="width:100%;"><b>English (all)</b></span> <em><?php echo $count_posts->publish; ?></em></span><input data-name="all" type="checkbox" value="all_e" id="tagoption-all_e" ><label for="tagoption-all_e"><span></span></label></li>
       <?php
         $max = null;
         $langs = array("fr-lang", "zh-lang", "id-lang", "es-lang", "pt-lang");
