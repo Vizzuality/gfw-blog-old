@@ -126,7 +126,7 @@
       return toggleAllTags(elem, false);
     }
     if (!isAll && $('#tagoption-all').is(':checked')) {$('#tagoption-all').prop('checked', false)};
-    if (this.value == 'all_e' && $('#tagoption-all_l').is(':checked')) {$('#tagoption-all_l').prop('checked', false)};
+    if ((!isAll || this.value == 'all_e') && $('#tagoption-all_l').is(':checked')) {$('#tagoption-all_l').prop('checked', false)};
     if (!this.checked) return removeTagsArticle(this.value);
     togglePagination('hide');
     if (isAll) {return toggleAllTags(!!elem.length, true);}
