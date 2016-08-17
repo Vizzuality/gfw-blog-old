@@ -115,7 +115,7 @@
       });
   }
   $tagslisttitle.on('click','.x',function(){
-    $('#tagoption-'+$(this).parent().data('slug')).click();
+    $('#tagoption-'+$(this).parent().data('slug')+'-lang').click();
     $(this).parent().remove();
   });
   $sidebar.on('change','input',function() {
