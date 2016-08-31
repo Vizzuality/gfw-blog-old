@@ -260,6 +260,17 @@
       { opacity: 0 },
       { queue: false, duration: 'slow' }
     );
+  });
+  $('#gfw-community-menu').on('mouseenter', function(e){
+    $(this).find('ul').stop().css('opacity', 0).slideDown('slow').animate(
+      { opacity: 1 },
+      { queue: false, duration: 'slow' }
+    )
+  }).on('mouseleave', function(){
+    $(this).find('ul').stop().css('opacity', 1).slideUp('slow').animate(
+      { opacity: 0 },
+      { queue: false, duration: 'slow' }
+    );
   })
 </script>
 </body>
