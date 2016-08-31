@@ -94,8 +94,8 @@
         </li>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>fires/" class="<?php if (is_category() && in_category( 'fires' )) echo 'selected' ?>">fires</a></li>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>climate/" class="<?php if (is_category() && in_category( 'climate' )) echo 'selected' ?>">climate</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/" class="<?php if (is_category() && in_category( 'community' )) echo 'selected' ?>">gfw community</a>
-        <ul>
+        <li id="gfw-community-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/" class="<?php if (is_category() && in_category( 'community' )) echo 'selected' ?>">gfw community</a>
+          <ul>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/partner posts">partner posts</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/user-profiles">user profiles</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/events">events</a></li>
