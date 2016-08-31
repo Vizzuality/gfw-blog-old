@@ -395,7 +395,8 @@ h2 a:visited {color: #555;}
     width: 100%;
     position: relative;
 }
-#supply-chain-menu ul {
+#supply-chain-menu ul,
+#gfw-community-menu ul {
     display: none;
     position: absolute;
     top: 55px;
@@ -404,7 +405,8 @@ h2 a:visited {color: #555;}
     height: auto;
     z-index: 1;
 }
-#supply-chain-menu li {
+#supply-chain-menu li,
+#gfw-community-menu li {
     display: flex;
     background-color: #fff;
 }
