@@ -1,0 +1,374 @@
+.embedly-wrap {
+  width:90%;
+  margin:0 auto;
+  position:relative;
+  padding:20px;
+  font-size: 16px;
+  font-weight: 500;
+  /* font weight should be 500 */
+}
+.embedly-ui {
+  color: #36495e;
+  font-family: 'museo-sans-fontspring', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background:#fff;
+}
+
+.embedly-ui a {
+  text-decoration:none;
+  color: #36495e;
+}
+.embedly-ui a.emb-button {
+  color: #fff;
+}
+.embedly-ui h1 {
+  font-family: 'proxima-nova-extra-condensed-fontspring';
+  font-size: 70px;
+  line-height: 80px;
+  margin:0;
+}
+/* Overrides color of checkmarks in checkboxes*/
+.embedly-ui input[type="checkbox"]:checked:before {
+  color: #36495e;
+}
+
+.embedly-analytics {
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.embedly-analytics .active-viewers, .embedly-analytics .historical-viewers {
+  margin: 30px 0 70px;
+}
+
+.embedly-analytics p {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+}
+.embedly-ui-header-wrapper {
+  height:99px;
+  text-align: center;
+  vertical-align: middle;
+}
+.embedly-ui-header {
+  position:relative;
+  width: 100%;
+}
+.embedly-ui-logo {
+  background:url('../img/wordpressicon-93x88.png') no-repeat 0 0;
+  display:block;
+  height:88px;
+  width:93px;
+  overflow:hidden;
+  text-indent:100%;
+  white-space:nowrap;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.embedly-ui-key-wrap {
+  margin-left: 30px;
+  margin-right:30px;
+  margin-bottom: 30px;
+  background:#fff;
+  padding:1px;
+}
+.embedly-ui-key-form {
+  background:#fff;
+  border-radius:0px;
+  padding:14px;
+}
+#welcome-blurb{
+  text-align: left;
+  margin: 30px;
+}
+#welcome-blurb h2 {
+  size: 14px;
+  color: #36495e;
+}
+#welcome-blurb h3 {
+  size: 18px;
+  color: #36495e;
+}
+.embedly-footer {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  float:bottom;
+  color: #808080;
+}
+.embedly-footer .dashicons:before {
+  color: #808080;
+}
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+/*styles for advanced dropdown*/
+.dropdown-wrapper h3 {
+  font-weight: bold;
+  color: #36495e;
+}
+.advanced-wrapper p {
+  letter-spacing: 0.25px;
+}
+#embedly-settings-saved {
+  margin-left: 30px;
+  font-weight: normal;
+  display: none;
+}
+.advanced-body {
+  display: none;
+  padding: 5px;
+}
+.advanced-body p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.advanced-selections {
+  float: left;
+  width: 20%;
+}
+.advanced-wrapper .advanced-body li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.max-width-input-container p {
+  margin-top: 12px;
+}
+.card-preview-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px; /* to acommodate the sharing buttons */
+  width: 65%;
+  min-height: 550px;
+  float: right;
+  vertical-align: middle;
+  border: 2px solid #F1F1F2;
+}
+.card-preview-container.dark-theme {
+  background-color: #3A3A3A;
+}
+.card-preview-container.dark-theme h3 {
+  color: #EEE; /* matches card text */
+}
+.card-preview-container h3 {
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+/* end styles for advanced dropdown menu*/
+
+/* styles for tutorial dropdown */
+.tutorial-body {
+  display: none;
+  padding: 5px;
+}
+.tutorial-wrapper {
+  clear: both;
+}
+.embedly-create-account-btn-wrap {
+  /*page-break-inside: '';*/
+}
+.embedly-create-account-btn-wrap a {
+  color: #4CC6E6;
+}
+.embedly-create-account-btn-wrap p {
+  color: #808080;
+}
+#create-account-btn {
+  font-size: 20px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.emb-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: solid 0 #1eb0d7;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: 'museo-sans-fontspring',Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.25rem 1.5rem;
+  background-color: #36495e;
+  color: #FFF;
+  transition: background-color 300ms ease-out;
+  letter-spacing: .75px;
+}
+.emb-button:hover {
+  background-color:#556d82;
+}
+.emb-button-long {
+  width: 100%;
+}
+/* welcome page styles */
+.welcome-page-body section{
+  margin: 50px 0;
+}
+#twitter-icon {
+  font-size: 25px;
+  margin: 4px;
+}
+.welcome-page-body p {
+  font-size: 20px;
+  margin: 0 auto;
+}
+#embedly-welcome-blurb {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#connect-button {
+  outline: none;
+  background-color: #4CC6E6;
+  font-size: 20px;
+}
+.inner-connect-button{
+  vertical-align: center;
+}
+#connect-btn-img {
+  height: 21px;
+  width: auto;
+  vertical-align: middle;
+}
+span.inner-button-span {
+  vertical-align: middle;
+}
+#embedly-which {
+  padding: 20px;
+  display: none;
+  background-color: #4CC6E6;
+}
+#embedly-which p {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 16px;
+}
+#embedly-which a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+#embedly-which-list li {
+  margin: 10px;
+  font-size: 14px;
+}
+#embedly-connect-failed-refresh {
+  display: none;
+}
+/* wp styles */
+#wpwrap {
+  background-color: #FFF;
+}
+/* Background color along admin panel right side*/
+#wpcontent {
+  background-color: #FFF;
+}
+/* Background color for rest of setting page*/
+#wpbody-content {
+  background-color:#FFF;
+}
+.embedly-di .dashicons {
+    margin:0px;
+    padding:3px;
+    vertical-align:middle;
+    color:#000000;
+}
+.embedly-di .dashicons:before {
+    -webkit-font-smoothing: antialiased;
+    font:400 20px/1 dashicons;
+    color: #36495e;
+}
+.embedly-di .dashicons:hover:before {
+  color: #4CC6E6;
+}
+.embedly-di .dashicons.di-center {
+    margin:0;
+}
+.embedly-di .dashicons.di-center:before {
+    content:"\f134";
+}
+.embedly-di .dashicons.di-none:before {
+    content:"\f138";
+}
+/* reverses divicon-align-none to appear as a right align*/
+.embedly-di .dashicons.di-reverse {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+ul.align-select {
+  list-style-type: none;
+  margin: 2000;
+  padding: 0;
+}
+ul.align-select li {
+  display: inline;
+}
+/* Hilights selected align icon */
+span.selected-align-select {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #36495e;
+}
+span.selected-align-select:hover {
+  outline-color: #4CC6E6; /* outline color */
+}
+
+/* BEGIN STYLES FOR NEW USER MODAL */
+.embedly-new-user-modal {
+  text-align: center;
+  vertical-align: middle;
+}
+.dashicons-twitter:before {
+  color: #55acee;
+}
+
+/* END STYLES FOR NEW USER MODAL */
+#embedly-max-width {
+  width: 80%;
+  height: 40px;
+  border: 1px solid #36495e;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #808080;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #808080;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #808080;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #808080;
+}
+
+.embedly-default-card-settings {
+  width: 50%;
+}
+.embedly-default-card-settings ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
