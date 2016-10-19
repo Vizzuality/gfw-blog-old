@@ -59,7 +59,7 @@ HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
 	background: #f7f7f7;
 	padding: 0 10px 10px;
 }
-	
+
 .sticky h2 {
 	padding-top: 10px;
 }
@@ -431,24 +431,49 @@ h2 a:visited {color: #555;}
     box-sizing: content-box;
 }
 a.logo {
-    position: absolute;
-    line-height:73px;
-    float:left;
-    margin-left: 185px;
-    padding-left: 95px;
-    font-size:21px;
-    background:url('img/logo.png') no-repeat;
+	height: 90px;
+  position: absolute;
+  line-height:73px;
+  float:left;
+  margin-left: 185px;
+  padding-left: 95px;
+  font-size:21px;
+  background:url('img/logo.png') no-repeat;
 }
-a.logo:after {
-    content:"";
-    display:block;
-    width:30px;
-    height:18px;
-    position:relative;
-    bottom:-7px;
-    right:30px;
-    background:url('img/beta.png?1422438711') no-repeat;
+a.logo .ribbon {
+  color: white;
+  text-indent: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  -webkit-transform: translate(5px, 8px);
+  transform: translate(5px, 8px);
 }
+a.logo .ribbon > span {
+  display: block;
+  position: relative;
+  z-index: 2;
+  background: #b6b6ba;
+  padding: 3px 5px 2px;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Fira Sans";
+}
+a.logo .ribbon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 0 5px;
+  border-color: transparent transparent transparent #9c9ca1;
+}
+
 #container {
     position: relative;
     top: -70px;
@@ -622,7 +647,7 @@ header > span {
     justify-content: center;
     z-index: 4;
 }
- 
+
 .pagination span, .pagination a {
     float: left;
     color: #555555;
@@ -635,11 +660,11 @@ header > span {
     background: none;
     text-decoration: none;
 }
- 
+
 .pagination a:hover{
     color:#97bd3d;
 }
- 
+
 .pagination .current{
     cursor: default;
     border-bottom: 2px solid #97bd3d;
@@ -669,9 +694,9 @@ header > span {
     #main-sections {
         visibility: hidden;
         margin-bottom: -120px;
-    }  
+    }
     #main {
-        width: calc(100% - (50px*2)); 
+        width: calc(100% - (50px*2));
         padding: 50px;
     }
     #main .columns {
@@ -711,16 +736,16 @@ header > span {
         width: 60px;
         height: 60px;
         margin-left:15px;
+				padding-left: 0;
     }
-    a.logo:after {
-        bottom: 25px;
-        right: 61px;
+    a.logo .ribbon {
+        right: 1px;
     }
 }
 @media only screen and (max-width: 585px) {
     #mobile-sidebar li:not(:last-child) {
         display: none;
-    } 
+    }
     header[role=banner] {
         min-height: 250px;
     }
@@ -737,7 +762,7 @@ header > span {
         margin: 5px 40px 0;
     }
     #main {
-        width: calc(100% - (20px*2)); 
+        width: calc(100% - (20px*2));
         padding: 20px;
     }
     #main .columns {
