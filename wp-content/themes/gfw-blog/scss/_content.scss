@@ -58,7 +58,7 @@ a {
   &.news-header {
     background-image: image-url('8018537027_7af7e33c6b_o.jpg');
   }
-  
+
   &.mapoftheday-header {
     background-image: image-url('mapoftheday.jpg');
   }
@@ -109,24 +109,48 @@ a {
     &.home {
       float: left;
     }
-    
+
     &.logo{
       line-height: 73px;
       float: left;
       margin-left: 45px;
       padding-left: 95px;
       font-size: 21px;
+      height: 90px;
       @extend .fira_sans_medium;
       background: image-url('logo.png') no-repeat;
-      &:after {
-        content: "";
-        display: block;
-        width: 30px;
-        height: 18px;
-        position: relative;
-        bottom: -7px;
-        right: 30px;
-        background: image-url('beta.png') no-repeat;
+      .ribbon {
+        color:white;
+        text-indent:0px;
+        position:absolute;
+        bottom:0;
+        right: 5px;
+        -webkit-transform:translate(5px, 8px);
+        transform:translate(5px, 8px);
+        > span {
+          display:block;
+          position:relative;
+          z-index:2;
+          background:#b6b6ba;
+          padding:3px 5px 2px;
+          line-height:1;
+          font-weight:500;
+          font-size:10px;
+          text-transform:uppercase;
+          font-family: "Fira Sans";
+        }
+        &:after {
+          content:"";
+          position:absolute;
+          z-index:1;
+          right:0;
+          bottom:100%;
+          width:0;
+          height:0;
+          border-style:solid;
+          border-width:5px 0 0 5px;
+          border-color:transparent transparent transparent #9c9ca1;
+        }
       }
       @media (max-width: 480px) {
         margin-left: 0;
@@ -591,7 +615,7 @@ img.alignright {
 /** SEARCH FORM **/
 .search-form {
   label {
-    &:before{    
+    &:before{
     content: '...';
     display: inline-block;
     position: relative;
