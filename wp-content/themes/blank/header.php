@@ -17,20 +17,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-    
+
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/normalize.css") ?>
     <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/main.css") ?>
-    
+
     <!-- Wordpress Templates require a style.css in theme root directory -->
     <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."style.css") ?>
-    
+
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/vendor/modernizr-2.6.1.min.js") ?>
 
@@ -48,8 +48,8 @@
 
   <div id="container">
     <header role="banner">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo">&nbsp;</a>
-      
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo"><span class="ribbon"><span>Blog</span></span></a>
+
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>
       <p class="description"><?php gfw_blog_posted_on(); ?></p>
