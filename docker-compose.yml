@@ -1,0 +1,12 @@
+wordpress:
+  build: .
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+  volumes:
+    - ./wp-content/themes/blank:/var/www/html/wp-content/themes/blank
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example

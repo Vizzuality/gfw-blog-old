@@ -87,6 +87,11 @@ WordPress needs to update the database. After push, navigate to:
 WordPress will prompt for updating the database. After that you'll be good
 to go.
 
+## Develop
+
+To easy theme develop install [docker](https://www.docker.com/) and launch `docker-compose up` in the root of the folder
+It will set up a fully working wordpress with the theme added.
+
 ## Wiki
 
 * [Custom Domains](https://github.com/mhoofman/wordpress-heroku/wiki/Custom-Domains)
