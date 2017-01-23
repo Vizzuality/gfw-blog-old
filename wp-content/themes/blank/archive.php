@@ -33,13 +33,13 @@ get_header(); ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
           <?php endif; ?>
             <img src="<? echo $image[0];?>">
-          
+
           <header>
             <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           </header>
           <div class="content">
             <footer>
-              <?php /*the_tags('Tags: ', ', ', '<br />'); */?> 
+              <?php /*the_tags('Tags: ', ', ', '<br />'); */?>
               <?php the_category(', ') ?>
               <span><?php the_time('F jS, Y') ?></span>
               <?php /*edit_post_link('Edit', '', ' | '); */?>

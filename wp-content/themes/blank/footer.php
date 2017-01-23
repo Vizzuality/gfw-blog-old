@@ -14,7 +14,7 @@
 
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/plugins.js") ?>
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/main.js") ?>
-	   
+
   <!-- social -->
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,7 +49,7 @@
   <?php wp_footer(); ?>
   <div id="footerGfw"></div>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/jquery.query-object.js"></script>
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
   <script type="text/javascript">
@@ -61,7 +61,7 @@
   $.fn.followTo = function (pos) {
     var $this = this,
         $window = $(window);
- 
+
     $window.scroll(function (e) {
         if ($window.scrollTop() > pos) {
             $this.css({
@@ -76,7 +76,7 @@
         }
     });
   };
-   
+
   /**cache**/
     var $sidebar        = $('#sidebar'),
         $pagetitle      = $('.pagetitle'),
@@ -84,16 +84,13 @@
         $pagination     = $('.pagination');
         $tagslisttitle  = $('.tagstitle-list');
   /****/
-
-  if (!!$pagination[0]) {
-    $('.prev-p-cont').followTo($pagination.offset().top - 650);
-  }
+  
   $('#toggleMoreTagsSidebar').on('click',function(){
     var $target = $sidebar.find('.tags-list');
     $target.toggleClass('open');
     $(this).text(($target.hasClass('open')) ? 'Less tags ▲' : 'More tags ▼');
   });
-  var callAjaxTags = function(tag,blockFillTag,offset,infinite) {   
+  var callAjaxTags = function(tag,blockFillTag,offset,infinite) {
     if (! !!tag) tag = '';
     $.ajax(
       {
@@ -158,7 +155,7 @@
     if (!elems || (!!elems && !!select)) {
       elems = $sidebar.find('.tags-list input');
       select = true;
-    } 
+    }
     for (var i = 0; i < elems.length; i ++) {
       $(elems[i]).prop('checked', select);
     }
