@@ -48,7 +48,6 @@
 
   <div id="container">
     <header role="banner">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo"><span class="ribbon"><span>Blog</span></span></a>
 
     <?php if (is_single()) : ?>
       <h1><a href="<?php echo get_option('home'); ?>/"><?php the_title(); ?></a></h1>

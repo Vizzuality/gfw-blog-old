@@ -14,7 +14,15 @@
 </body>
 </html>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>  
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+  <script type="text/javascript">
+    window.liveSettings = {
+      picker: '#transifexTranslateElement',
+      api_key: "9eda410a7db74687ba40771c56abd357",
+      detectlang: false,
+      site: 'gfw-global'
+    };
+  </script>
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
 </div><!-- #page -->
 
