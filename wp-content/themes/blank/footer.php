@@ -56,7 +56,15 @@
       picker: '#transifexTranslateElement',
       api_key: "9eda410a7db74687ba40771c56abd357",
       detectlang: false,
-      site: 'gfw-global'
+      site: 'gfw-global',
+      menuOptions: {
+        options: [
+          {
+            title: 'logo',
+            url: 'http://www.globalforestwatch.org/'
+          }
+        ]
+      }
     };
   </script>
   <script id="loader-gfw" type="text/javascript" src="http://globalforestwatch.org/gfw-assets" data-current=".shape-blog"></script>
