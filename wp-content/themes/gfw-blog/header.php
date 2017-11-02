@@ -48,7 +48,6 @@
 
     <div class="header-inner">
       <nav id="site-navigation" class="main-navigation" role="navigation">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" class="logo"><span class="ribbon"><span>Blog</span></span></a>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
       </nav><!-- #site-navigation -->
 
