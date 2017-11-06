@@ -316,6 +316,11 @@ h2 .add-button .add-button-bubble {
     font-size: 26px;
     font-weight: 200;
 }
+h2 .stories-description {
+    font-size: 21px;
+    font-weight: 400;
+    margin-top: 15px;
+}
 .tagstitle-list {
     display: none;
     margin: -10px 0 40px;

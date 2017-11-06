@@ -15,6 +15,7 @@ get_header(); ?>
           <div class="add-button-text">Add your own story</div>
           <div class="add-button-bubble">+</div>
         </a>
+        <div class="stories-description">Stories submitted by GFW users</div>
       <?php } ?>
     </h2>
     <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
