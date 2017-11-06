@@ -294,7 +294,7 @@ h2.pagetitle.tagstitle {
 }
 h2 .add-button {
     position: absolute;
-    right: 0;
+    right: 100px;
     top: 30px;
     display: flex;
     align-items: center;
