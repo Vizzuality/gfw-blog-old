@@ -83,6 +83,7 @@
       <ul>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php if (is_home()) echo 'selected' ?>">home</a></li>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>data/" class="<?php if (is_category() && in_category( 'data' )) echo 'selected' ?>">data</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>stories/" class="<?php if (is_category() && in_category( 'stories' )) echo 'selected' ?>">stories</a></li>
         <li id="supply-chain-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/" class="<?php if (is_category() && in_category( 'supplychain' )) echo 'selected' ?>">supply chain</a>
           <ul>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/agriculture">agriculture</a></li>

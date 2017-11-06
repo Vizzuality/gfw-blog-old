@@ -292,6 +292,30 @@ h2.pagetitle.tagstitle {
     overflow: hidden;
     height: 30px;
 }
+h2 .add-button {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 400;
+}
+h2 .add-button .add-button-text {
+    margin-right: 7px;
+}
+h2 .add-button .add-button-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #97bd3d;
+    border-radius: 100%;
+    color: white;
+    font-size: 26px;
+    font-weight: 200;
+}
 .tagstitle-list {
     display: none;
     margin: -10px 0 40px;
