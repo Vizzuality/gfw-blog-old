@@ -100,7 +100,7 @@
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/events">events</a></li>
           </ul>
         </li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/features/" class="<?php if (is_category() && in_category( 'features' )) echo 'selected' ?>">new features</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/features/" class="<?php if (is_category() && in_category( 'features' )) echo 'selected' ?>">updates</a></li>
       </ul>
     </nav>
     <div id="mobile-sidebar">
