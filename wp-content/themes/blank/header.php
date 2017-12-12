@@ -82,6 +82,7 @@
     <nav id="main-sections">
       <ul>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="<?php if (is_home()) echo 'selected' ?>">home</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>places-to-watch/" class="<?php if (is_category() && in_category( 'places-to-watch' )) echo 'selected' ?>">places to watch</a></li>
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>data/" class="<?php if (is_category() && in_category( 'data' )) echo 'selected' ?>">data</a></li>
         <li id="supply-chain-menu"><a href="<?php echo esc_url( home_url( '/' ) ); ?>supplychain/" class="<?php if (is_category() && in_category( 'supplychain' )) echo 'selected' ?>">supply chain</a>
           <ul>
@@ -100,15 +101,15 @@
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>gfw-community/events">events</a></li>
           </ul>
         </li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/features/" class="<?php if (is_category() && in_category( 'features' )) echo 'selected' ?>">updates</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>features/" class="<?php if (is_category() && in_category( 'features' )) echo 'selected' ?>">updates</a></li>
       </ul>
     </nav>
     <div id="mobile-sidebar">
       <ul>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/update/">updates</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/news/">news roundup</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/feature/">featured posts</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/mapoftheday/">map of the week</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>update/">updates</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>news/">news roundup</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>feature/">featured posts</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>mapoftheday/">map of the week</a></li>
         <li><?php get_search_form(); ?></li>
       </ul>
     </div>
