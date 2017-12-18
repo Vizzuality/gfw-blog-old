@@ -423,41 +423,48 @@ h2 a:visited {color: #555;}
 #main-sections li {
     display: inherit;
     width: 100%;
+    height: 58px;
     position: relative;
+}
+#main-sections > ul > li {
+    border-right: 1px solid rgba(85, 85, 85, .2);
+}
+#main-sections > ul > li:first-child {
+    border-left: 1px solid rgba(85, 85, 85, .2);
 }
 #supply-chain-menu ul,
 #gfw-community-menu ul {
     display: none;
     position: absolute;
-    top: 55px;
-    left: 0;
+    top: 58px;
+    left: -1px;
     width: 100%;
     height: auto;
     z-index: 2;
+    border: 1px solid rgba(85, 85, 85, .2);
+    border-top: 0;
 }
 #supply-chain-menu li,
 #gfw-community-menu li {
     display: flex;
-    background-color: #fff;
+    border-top: 1px solid rgba(85, 85, 85, .2);
 }
 #main-sections a {
-    padding: 13px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     color: #333;
     opacity: 0.8;
     font-size: 14px;
     letter-spacing: 0.1px;
-    border-bottom: 5px solid transparent;
-    border-top: 5px solid transparent;
     transition: background-color 0.5s ease;
-    box-shadow: 0px -1px 1px rgba(0,0,0,0.1);
     width: 100%;
     text-align: center;
 }
 #main-sections a:hover,
 #main-sections a.selected {
 	background-color: white;
-	border-bottom: 5px solid #97bd3d;
     box-sizing: content-box;
 }
 a.logo {
