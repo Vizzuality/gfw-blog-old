@@ -40,7 +40,7 @@
     <?php $canonical = get_post_meta($post->ID, 'Canonical',true); ?>
     <?php if (!empty($canonical)): ?>
       <link rel="canonical" href="<?php echo $canonical;?>" />
-    <?php endif;
+    <?php endif;?>
     <?php wp_head(); ?>
 <div id="headerGfw"></div>
 
