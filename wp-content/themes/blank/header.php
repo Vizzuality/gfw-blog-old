@@ -36,7 +36,7 @@
 
     <!-- Wordpress Head Items -->
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
     <?php $canonical = get_post_meta($post->ID, 'Canonical',true); ?>
     <?php if (!empty($canonical)): ?>
       <link rel="canonical" href="<?php echo $canonical;?>" />
