@@ -1,6 +1,0 @@
-CREATE
-    TRIGGER new_trig_1 BEFORE/AFTER INSERT/UPDATE/DELETE
-    ON <table>
-    FOR EACH ROW BEGIN
-		<SQL>
-    END
