@@ -48,8 +48,8 @@
   </script>
   <?php wp_footer(); ?>
   <div id="footerGfw"></div>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/jquery.query-object.js"></script>
 	<script type="text/javascript">
     window.liveSettings = {
