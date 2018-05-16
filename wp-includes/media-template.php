@@ -139,12 +139,6 @@ function wp_print_media_templates() {
 		<div class="attachment-preview type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
 			<# if ( data.uploading ) { #>
 				<div class="media-progress-bar"><div></div></div>
-			<# } else if ( 'image' === data.type ) { #>
-				<div class="thumbnail">
-					<div class="centered">
-						<img src="{{ data.size.url }}" draggable="false" />
-					</div>
-				</div>
 			<# } else { #>
 				<img src="{{ data.icon }}" class="icon" draggable="false" />
 				<div class="filename">
